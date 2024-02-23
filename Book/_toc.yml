@@ -1,4 +1,4 @@
 format: jb-article
 root: docs/index
 sections:
-- file: docs/about_py
+- file: docs/history

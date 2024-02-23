@@ -4,7 +4,6 @@ Tyto učební texty byly vytvořeny na základě přednášek na [Fakultě stroj
 
 ```{note}
 Tyto testy byly vytvořeny pomocí nsystému Sphinx [Jupyter Book
-2.0](https://beta.jupyterbook.org/intro.html). Návod, jak je sestavit ze zdrojových kódů, naleznete v Jupyteru
-Book dokumentaci.
+2.0](https://beta.jupyterbook.org/intro.html). Návod, jak je sestavit ze zdrojových kódů, naleznete v dokumentaci k Jupiter Book.
 ```
 
