@@ -172,32 +172,36 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_Uvod_historie_definice.html">Úvod do biomechaniky</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_MOCAP.html">Popis pohybu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_Rozd%C4%9Blen%C3%AD_pohyb%C5%AF.html">Rozdělení pohybů</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_MOCAP.html">Popis pohybu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_Rozd%C4%9Blen%C3%AD_pohyb%C5%AF.html">Rozdělení pohybů</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="4%20Ur%C4%8Den%C3%AD%20polohy.html">Určení polohy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4%20Ur%C4%8Den%C3%AD%20polohy.html">Určení polohy</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="5_Kinematika_bodu.html">Kinematika bodu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html">Souřadnicový systém</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7_Pohyb_ve_v%C3%ADce_rozm%C4%9Brech.html">Pohyb ve více rozměrech</a></li>
-<li class="toctree-l1"><a class="reference internal" href="8_Stupn%C4%9B_volnosti.html">Stupně volnosti</a></li>
-<li class="toctree-l1"><a class="reference internal" href="9_S%C3%ADla.html">Síla</a></li>
-<li class="toctree-l1"><a class="reference internal" href="14_S%C3%ADly_v_biomechanice.html">Síly v biomechanice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_Kinematika_bodu.html">Kinematika bodu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html">Souřadnicový systém</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_Pohyb_ve_v%C3%ADce_rozm%C4%9Brech.html">Pohyb ve více rozměrech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_Stupn%C4%9B_volnosti.html">Stupně volnosti</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="9_S%C3%ADla.html">Síla</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="14_S%C3%ADly_v_biomechanice.html">Síly v biomechanice</a></li>
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Moment síly</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11_Rovnov%C3%A1ha.html">Rovnováha</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Moment síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_Rovnov%C3%A1ha.html">Rovnováha</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="10_T%C4%9B%C5%BEi%C5%A1t%C4%9B_t%C4%9Bla.html">Těžiště</a></li>
-<li class="toctree-l1"><a class="reference internal" href="13_Stabilita.html">Stabilita</a></li>
-
-
-
-
+<li class="toctree-l2"><a class="reference internal" href="10_T%C4%9B%C5%BEi%C5%A1t%C4%9B_t%C4%9Bla.html">Těžiště</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_Stabilita.html">Stabilita</a></li>
 
 
 
 
 
+
+
+
+
+</ul>
+</details></li>
 </ul>
 
     </div>
@@ -367,7 +371,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -383,6 +389,14 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#znamenkova-konvence">Znaménková konvence</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -407,6 +421,10 @@ pohyb.</p>
 <blockquote>
 <div><p><strong>Rameno síly</strong> je kolmou vzdáleností mezi středem otáčení a nositelkou síly.</p>
 </div></blockquote>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Vztah <span class="math notranslate nohighlight">\(M = F\,r\)</span> platí jenom tehdy, když je rameno síly a síla navzájem kolmé.</p>
+</div>
 <img alt="_images/moment.svg" src="_images/moment.svg" />
 <p>Síla <span class="math notranslate nohighlight">\(F_1\)</span> způsobí otáčení, síla <span class="math notranslate nohighlight">\(F_2\)</span> nezpůsobí otáčení.</p>
 <p>Moment síly nám určuje nakolik je daná síla schopna vykonat rotační pohyb. Pro názornost si představme si, že potřebujeme otočit volantem auta. Je zjevné, že maximální točivý účinek dosáhneme, když budeme působit sílou ve směru kolmice na poloměr otáčení volantu. Na druhé straně se nám nepovede otočit volantem, budeme li působit sílou směrem od středu rotace.</p>
@@ -415,12 +433,47 @@ pohyb.</p>
 <div class="math notranslate nohighlight">
 \[M = F_r \, r_r = F d \sin \alpha\]</div>
 <img alt="_images/moment3.svg" src="_images/moment3.svg" />
-<blockquote>
-<div><p>Určete, ve které poloze abdukce působí tíhová síla největší addukčním účinkem.</p>
-</div></blockquote>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Úloha
+Určete, ve které poloze abdukce působí tíhová síla největší addukčním účinkem</p>
+</div>
 <img alt="_images/42.jpg" src="_images/42.jpg" />
-<p>Abdukce a addukce jsou rotačním pohybem. Rotační účinek tíhové síly je dán momentem síly. Protože je tíha horní končetiny stálá, je moment určen velikostí ramena síly. Tíhová síla působí vertikálně, t.j. rameno síly je horizontální vzdálenost mezi středem   rotace ramenního klobu a působištem síly. Maximální moment je tedy v
+<div class="dropdown admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Řešení
+Abdukce a addukce jsou rotačním pohybem. Rotační účinek tíhové síly je dán momentem síly. Protože je tíha horní končetiny stálá, je moment určen velikostí ramena síly. Tíhová síla působí vertikálně, t.j. rameno síly je horizontální vzdálenost mezi středem   rotace ramenního klobu a působištem síly. Maximální moment je tedy v
 poloze (c) na obrázku.</p>
+</div>
+<section id="znamenkova-konvence">
+<h2>Znaménková konvence<a class="headerlink" href="#znamenkova-konvence" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p><strong>V rovině</strong>:</p>
+<ul class="simple">
+<li><p><strong>Kladný moment</strong>: Síla způsobuje otáčení <strong>proti směru hodinových ručiček</strong> (levotočivé otáčení).</p></li>
+<li><p><strong>Záporný moment</strong>: Síla způsobuje otáčení <strong>ve směru hodinových ručiček</strong> (pravotočivé otáčení).</p></li>
+</ul>
+</li>
+<li><p><strong>V prostoru</strong> - pravidlo pravé ruky</p>
+<ul>
+<li><p>Používá se hlavně v <strong>3D analýze</strong> s osovým systémem <span class="math notranslate nohighlight">\(x-y-z\)</span>.</p></li>
+<li><p>Moment síly (vektorový moment) je definován jako <strong>vektorový součin</strong> síly a ramene:</p>
+<div class="math notranslate nohighlight">
+\[\vec{\mathbf{M}} = \vec{\mathbf{r}} \times \vec{\mathbf{F}}\]</div>
+</li>
+<li><p>Směr momentu odpovídá <strong>pravotočivému šroubovému pravidlu</strong>:
+- Pokud prsty pravé ruky sledují směr otáčení způsobeného silou, vztyčený palec ukazuje směr momentu.
+- V rovině x-y je moment kladný, pokud směřuje <strong>ven z roviny</strong> (kladný směr osy z), a záporný, pokud směřuje ven z roviny (kladný směr osy <span class="math notranslate nohighlight">\(z\)</span>)</p></li>
+</ul>
+</li>
+</ol>
+<img alt="https://pressbooks.library.upei.ca/statics/wp-content/uploads/sites/56/2021/03/Screen-Shot-2021-07-30-at-9.37.47-PM-1024x671.png" src="https://pressbooks.library.upei.ca/statics/wp-content/uploads/sites/56/2021/03/Screen-Shot-2021-07-30-at-9.37.47-PM-1024x671.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Poznámka
+V naší analýze budeme častěji používát <strong>mechanickou konvenci</strong> (proti směru hodinových ručiček kladný moment). Důležité je být konzistentní v použití jedné konvence v celém výpočtu.</p>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -477,6 +530,22 @@ poloze (c) na obrázku.</p>
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#znamenkova-konvence">Znaménková konvence</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

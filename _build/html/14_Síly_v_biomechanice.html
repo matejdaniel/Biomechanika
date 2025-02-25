@@ -172,32 +172,36 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_Uvod_historie_definice.html">Úvod do biomechaniky</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_MOCAP.html">Popis pohybu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_Rozd%C4%9Blen%C3%AD_pohyb%C5%AF.html">Rozdělení pohybů</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_MOCAP.html">Popis pohybu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_Rozd%C4%9Blen%C3%AD_pohyb%C5%AF.html">Rozdělení pohybů</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="4%20Ur%C4%8Den%C3%AD%20polohy.html">Určení polohy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4%20Ur%C4%8Den%C3%AD%20polohy.html">Určení polohy</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="5_Kinematika_bodu.html">Kinematika bodu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html">Souřadnicový systém</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7_Pohyb_ve_v%C3%ADce_rozm%C4%9Brech.html">Pohyb ve více rozměrech</a></li>
-<li class="toctree-l1"><a class="reference internal" href="8_Stupn%C4%9B_volnosti.html">Stupně volnosti</a></li>
-<li class="toctree-l1"><a class="reference internal" href="9_S%C3%ADla.html">Síla</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Síly v biomechanice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_Kinematika_bodu.html">Kinematika bodu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html">Souřadnicový systém</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_Pohyb_ve_v%C3%ADce_rozm%C4%9Brech.html">Pohyb ve více rozměrech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_Stupn%C4%9B_volnosti.html">Stupně volnosti</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="9_S%C3%ADla.html">Síla</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Síly v biomechanice</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="12_Moment_s%C3%ADly.html">Moment síly</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11_Rovnov%C3%A1ha.html">Rovnováha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12_Moment_s%C3%ADly.html">Moment síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_Rovnov%C3%A1ha.html">Rovnováha</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="10_T%C4%9B%C5%BEi%C5%A1t%C4%9B_t%C4%9Bla.html">Těžiště</a></li>
-<li class="toctree-l1"><a class="reference internal" href="13_Stabilita.html">Stabilita</a></li>
-
-
-
-
+<li class="toctree-l2"><a class="reference internal" href="10_T%C4%9B%C5%BEi%C5%A1t%C4%9B_t%C4%9Bla.html">Těžiště</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_Stabilita.html">Stabilita</a></li>
 
 
 
 
 
+
+
+
+
+</ul>
+</details></li>
 </ul>
 
     </div>
@@ -392,7 +396,7 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Síly v biomechanice</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#externi-sily-vnejsi-sily">Externí síly (vnější síly)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gravitacni-sila-f-g">Gravitační síla (<span class="math notranslate nohighlight">\(F_g\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gravitacni-sila-vec-f-g">Gravitační síla (<span class="math notranslate nohighlight">\(\vec{F}_g\)</span>)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reakcni-sila-podlozky-ground-reaction-force-grf">Reakční síla podložky (Ground Reaction Force - GRF)</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tlak-p"><strong>Tlak <span class="math notranslate nohighlight">\(p\)</span></strong></a></li>
 </ul>
@@ -427,8 +431,8 @@
 <blockquote>
 <div><p><strong>Externí síly</strong> jsou ty, které působí na tělo z okolního prostředí. Mají významný vliv na rovnováhu, stabilitu a pohyb těla.</p>
 </div></blockquote>
-<section id="gravitacni-sila-f-g">
-<h3>Gravitační síla (<span class="math notranslate nohighlight">\(F_g\)</span>)<a class="headerlink" href="#gravitacni-sila-f-g" title="Link to this heading">#</a></h3>
+<section id="gravitacni-sila-vec-f-g">
+<h3>Gravitační síla (<span class="math notranslate nohighlight">\(\vec{F}_g\)</span>)<a class="headerlink" href="#gravitacni-sila-vec-f-g" title="Link to this heading">#</a></h3>
 <p>Gravitační síla (tíhová síla), kterou Země přitahuje tělo k sobě.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -437,7 +441,7 @@
 <p>kde <span class="math notranslate nohighlight">\(m\)</span> je hmotnost těla a <span class="math notranslate nohighlight">\(g\)</span> gravitační zrychlení (přibližně 9.81 m/s²).  Značí se také <span class="math notranslate nohighlight">\(\vec{W}\)</span>.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p><strong>Charaketeristika</strong></p></th>
+<tr class="row-odd"><th class="head"><p><strong>Charakteristika</strong></p></th>
 <th class="head"><p><strong>Popis</strong></p></th>
 </tr>
 </thead>
@@ -457,9 +461,10 @@
 </tbody>
 </table>
 </div>
+<img alt="https://cdn.savemyexams.com/cdn-cgi/image/f=auto,width=1920/https://cdn.savemyexams.com/uploads/2021/05/7.1.2-Gravitational-Attractive-Force.png" src="https://cdn.savemyexams.com/cdn-cgi/image/f=auto,width=1920/https://cdn.savemyexams.com/uploads/2021/05/7.1.2-Gravitational-Attractive-Force.png" />
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Hmotnost není tíha</p>
+<p><strong>Hmotnost není tíha</strong></p>
 <ul class="simple">
 <li><p>Hmotnost je fyzikální veličina, která vyjadřuje množství látky v tělese. Je to <strong>skalární veličina</strong> a její hodnota je <strong>vždy stejná</strong>, nezávisle na tom, kde se těleso nachází (na Zemi, Měsíci nebo ve ve vesmíru).</p></li>
 <li><p>Tíha je <strong>síla</strong>, kterou působí Země (nebo jiné gravitační těleso) na objekt. Na rozdíl od hmotnosti závisí na gravitačním poli, ve kterém se těleso nachází. Je to <strong>vektorová veličina</strong> – má tedy velikost i směr.</p></li>
@@ -496,10 +501,32 @@
 </tbody>
 </table>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+<span class="n">IFrame</span><span class="p">(</span><span class="s1">&#39;https://www.geogebra.org/classic/KDav5HcX&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;border: 1px solid black&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="800"
+            height="600"
+            src="https://www.geogebra.org/classic/KDav5HcX?style=border%3A+1px+solid+black"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
 </section>
 <section id="reakcni-sila-podlozky-ground-reaction-force-grf">
 <h3>Reakční síla podložky (Ground Reaction Force - GRF)<a class="headerlink" href="#reakcni-sila-podlozky-ground-reaction-force-grf" title="Link to this heading">#</a></h3>
 <p><strong>Reakční síla podložky</strong> je síla, kterou podložka působí na těleso stojící nebo pohybující se na jejím povrchu. Tato síla je důsledkem <strong>třetího Newtonova zákona</strong> akce a reakce – každá akce vyvolává stejně velkou, ale opačně orientovanou reakci.</p>
+<div class="{image}https://www.researchgate.net/publication/269631495/figure/fig1/AS:614062702460930&#64;1523415365068/Example-of-ground-reaction-force.png docutils">
+<p>:width:200px</p>
+</div>
 <p>Reakční síla podložky má dvě složky:</p>
 <ol class="arabic simple">
 <li><p><strong>Normálovou složku</strong> <span class="math notranslate nohighlight">\(F_N\)</span> – kolmá k povrchu podložky.</p></li>
@@ -522,7 +549,30 @@
     F_N = F_G = m \cdot g
     \]</div>
 </li>
-<li><p>Pokud je těleso v klidu, je normálová síla rovna tíze tělesa.</p></li>
+<li><p>Pokud je těleso v klidu, je normálová síla rovna tíze tělesa.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Charakteristika</strong></p></th>
+<th class="head"><p><strong>Popis</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Působiště</strong></p></td>
+<td><p>težiště tlaků</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Velikost</strong></p></td>
+<td><p>určuje se výpočtem</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Směr</strong></p></td>
+<td><p>kolmo na podložku proti možnému posuvu</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Nositelka</strong></p></td>
+<td><p>kolmice na podložku</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
 </ul>
 </li>
 <li><p><strong>Tečná složka</strong> (<span class="math notranslate nohighlight">\(F_T\)</span>)</p>
@@ -535,10 +585,33 @@
     F_T \leq \mu \cdot F_N
     \]</div>
 <p>kde <span class="math notranslate nohighlight">\(\mu\)</span> je součinitel tření (statického nebo dynamického).</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Charakteristika</strong></p></th>
+<th class="head"><p><strong>Popis</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Působiště</strong></p></td>
+<td><p>težiště smykových napětí</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Velikost</strong></p></td>
+<td><p>určuje se výpočtem</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Směr</strong></p></td>
+<td><p>rovnoběžně s podložkou</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Nositelka</strong></p></td>
+<td><p>kolmice na podložku</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </li>
 </ul>
 </li>
 </ul>
+<img alt="http://ffden-2.phys.uaf.edu/webproj/212_spring_2017/Meredyth_Richards/Meredyth_Richards/runner_free_body.gif" src="http://ffden-2.phys.uaf.edu/webproj/212_spring_2017/Meredyth_Richards/Meredyth_Richards/runner_free_body.gif" />
 <section id="tlak-p">
 <h4><strong>Tlak <span class="math notranslate nohighlight">\(p\)</span></strong><a class="headerlink" href="#tlak-p" title="Link to this heading">#</a></h4>
 <p>Tlak je fyzikální veličina vyjadřující sílu působící na jednotku plochy. Udává, jak velká síla působí na určitou plochu kolmo k jejímu povrchu.</p>
@@ -671,6 +744,7 @@ y_{COP} = \frac{\sum_{i} y_i F_i}{\sum_{i} F_i}
 <p class="admonition-title">Tip</p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/File:194144main_022_drag.ogv">Vysvětlení odporu podle NASA</a></p>
 </div>
+<img alt="https://www.codybeals.com/wp-content/uploads/2014/02/Gait-cycle-free-body-diagram.png" src="https://www.codybeals.com/wp-content/uploads/2014/02/Gait-cycle-free-body-diagram.png" />
 <section id="interni-sily-vnitrni-sily">
 <h2>Interní síly (vnitřní síly)<a class="headerlink" href="#interni-sily-vnitrni-sily" title="Link to this heading">#</a></h2>
 <p><strong>Interní síly</strong> vznikají uvnitř těla a jsou generovány svalovou kontrakcí, napětím vazů nebo reakcemi mezi kostmi. Tyto síly neovlivňují pohyb těla jako celku, ale jsou klíčové pro udržení stability a vnitřní rovnováhy.</p>
@@ -681,6 +755,7 @@ y_{COP} = \frac{\sum_{i} y_i F_i}{\sum_{i} F_i}
 <li><p><strong>Napětí vazů a šlach</strong> – pasivní síly, které stabilizují klouby a omezují nadměrný pohyb.</p></li>
 <li><p><strong>Intraabdominální tlak</strong> – tlak v dutině břišní, který pomáhá stabilizovat páteř při zátěži.</p></li>
 </ul>
+<img alt="https://www.physio-pedia.com/images/thumb/b/ba/Forces_in_Ballet.png/399px-Forces_in_Ballet.png" src="https://www.physio-pedia.com/images/thumb/b/ba/Forces_in_Ballet.png/399px-Forces_in_Ballet.png" />
 <p><strong>Srovnání externích a interních sil</strong></p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -779,7 +854,7 @@ y_{COP} = \frac{\sum_{i} y_i F_i}{\sum_{i} F_i}
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Síly v biomechanice</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#externi-sily-vnejsi-sily">Externí síly (vnější síly)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gravitacni-sila-f-g">Gravitační síla (<span class="math notranslate nohighlight">\(F_g\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gravitacni-sila-vec-f-g">Gravitační síla (<span class="math notranslate nohighlight">\(\vec{F}_g\)</span>)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reakcni-sila-podlozky-ground-reaction-force-grf">Reakční síla podložky (Ground Reaction Force - GRF)</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tlak-p"><strong>Tlak <span class="math notranslate nohighlight">\(p\)</span></strong></a></li>
 </ul>
