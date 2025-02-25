@@ -1,0 +1,2028 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Těžiště &#8212; Biomechanika a biomateriály</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '10_Těžiště_těla';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Stabilita" href="13_Stabilita.html" />
+    <link rel="prev" title="Rovnováha" href="11_Rovnov%C3%A1ha.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-light" alt="Biomechanika a biomateriály - Home"/>
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-dark pst-js-only" alt="Biomechanika a biomateriály - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Obsah
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_Uvod_historie_definice.html">Úvod do biomechaniky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_MOCAP.html">Popis pohybu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_Rozd%C4%9Blen%C3%AD_pohyb%C5%AF.html">Rozdělení pohybů</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="4%20Ur%C4%8Den%C3%AD%20polohy.html">Určení polohy</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="5_Kinematika_bodu.html">Kinematika bodu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html">Souřadnicový systém</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7_Pohyb_ve_v%C3%ADce_rozm%C4%9Brech.html">Pohyb ve více rozměrech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8_Stupn%C4%9B_volnosti.html">Stupně volnosti</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_S%C3%ADla.html">Síla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_S%C3%ADly_v_biomechanice.html">Síly v biomechanice</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="12_Moment_s%C3%ADly.html">Moment síly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_Rovnov%C3%A1ha.html">Rovnováha</a></li>
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Těžiště</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_Stabilita.html">Stabilita</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika/issues/new?title=Issue%20on%20page%20%2F10_Těžiště_těla.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/10_Těžiště_těla.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Těžiště</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experimentalni-urceni-polohy-teziste">Experimentální určení polohy těžiště</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metoda-balancni-desky">Metoda balanční desky</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metoda-teznic">Metoda těžnic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metoda-silove-desky">Metoda silové desky</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numericke-urceni-polohy-teziste">Numerické určení polohy těžiště</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#segmentalni-model-tela">Segmentální model těla</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinematicky-retezec">Kinematický řetězec?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typy-kinematickych-retezcu">Typy kinematických řetězců</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#odhad-parametru-segmentu-tela">Odhad parametrů segmentů těla</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dempsteruv-model-upraveny-wintersem">Dempsterův model upravený Wintersem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zatsiorskeho-model-upraveny-de-levou">Zatsiorského model upravený de Levou</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rozdily-mezi-antropometrickymi-modely-od-dempstera-a-zatsiorskeho">Rozdíly mezi antropometrickými modely od Dempstera a Zatsiorského</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zmena-teziste-v-prubehu-rustu">Změna těžiště v průběhu růstu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#novorozenci-a-kojenci">Novorozenci a kojenci</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#detstvi">Dětství</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dospivani">Dospívání</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dospelost">Dospělost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#klicove-faktory-ovlivnujici-zmenu-teziste">Klíčové faktory ovlivňující změnu těžiště</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cog-com-log-cop">COG, COM, LOG, COP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teziste-cog-pri-ruznych-aktivitach">Těžiště (COG) při různých aktivitách</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="teziste">
+<h1>Těžiště<a class="headerlink" href="#teziste" title="Link to this heading">#</a></h1>
+<p>Lidské tělo se skládá z buněk, ty se skládají z molekul a ty z
+atomů. Každý z atomů lidského těla má svou hmotnost a součet hmotností
+všech částí lidského těla je celkové hmotnosti.  Představte si, že by
+jste měli psát rovnici rovnováhy, která by obsahovala členy
+odpovídající gravitačním sílám všech atomů v lidském těle. Tato
+rovnice by měla 7,10<span class="math notranslate nohighlight">\(^{27}\)</span> členů, co je podstatně víc než je člověk
+za svého života schopen napsat.</p>
+<p>Proto musíme pro výpočet rovnováhy přijmout zjednodušení, které nám
+umožní řešit dané problémy. Představte si jednoduché těleso o tíze
+10~N na dvou podpěrách. V každé z podpěr budeme mít umístněný silový
+snímač. Tyto podpěry můžeme umístnít tak, že na každou z podpěr bude
+působit stejná síla, t.j. 5~N. Následně uvažujme, že dané podpěry
+budeme posouvat k sobě přičemž pořád na každé z nich měříme stejnou
+sílu. V jeden okamžik se nám podpěry navzájem dotknou a v daném místě
+pozoruje celou tíhu tělesa. To místo je charakteristické tím, že při
+podepření v něm působí celá tíha tělesa a označujeme ho jako
+<strong>těžiště</strong>.</p>
+<p>Stejně tak jako určení těžiště tělesa, můžeme určit těžiště lidského
+těla.  Těžiště těla tedy můžeme označit jako bod, vůči kterému jsou
+momenty gravitačních sil působících na hmotu tělesa rovné nule. Tato
+definice nám tedy určuje to, že momenty jednotlivých segmentů lidského
+těla jsou vůči těžišti v rovnováze. Neznamená to, že hmotnosti
+segmentů těla (nebo tíhy) jsou vůči těžišti rozděleny rovnoměrně.</p>
+<p>Znalost bodu těžiště v biomechanice je důležita, protože těžiště má
+určité speciální vlastnosti:</p>
+<ul class="simple">
+<li><p>Z mechanického hlediska můžeme na těžiště nahlížet jako na bod,
+ve kterém je koncentorvána veškerá hmotnost člověka. Letí-li lidské
+těla jako projektil, opisuje těžiště těla parabolickou trajektorii,
+bez ohledu na to jak se pohybují jednotlivé segmenty těla.</p></li>
+<li><p>Znížení polohy těžiště těla před skokem umožňuje zvýšit délku
+odrazu a tím zvýšit celkovou rychlost odrazu. Skokani do délky
+udržují při sprintu těžiště v přibližně stejné poloze, s výjimkou
+posledního kroku. Při posledném kroku váznamně sníží polohu těžiště
+a následně vystřelí do výšky.</p></li>
+<li><p>Při překonání překážky jako je skok o tyči je důležitá poloha
+těžiště. Proto se skokani vůči tyčce umístní tak, že jejich těžiště
+se nachází pod tyčkou.</p></li>
+</ul>
+<section id="experimentalni-urceni-polohy-teziste">
+<h2>Experimentální určení polohy těžiště<a class="headerlink" href="#experimentalni-urceni-polohy-teziste" title="Link to this heading">#</a></h2>
+<section id="metoda-balancni-desky">
+<h3>Metoda balanční desky<a class="headerlink" href="#metoda-balancni-desky" title="Link to this heading">#</a></h3>
+<p>Pro experimentální určení polohy těžiště můžeme vyjít z definice
+těžiště. Postavíme-li člověka na rovnou podložku podepřenou v jednom
+bodě, můžeme posouvat podporu až do nalezení rovnováhy. Tento postup
+pak můžeme opakovat pro člověka ve stoji, v leže a v leže na boku čím
+získáme polohu těžište v prostoru. Tento postup jako první použil
+<em>otec biomechaniky</em> italský matematiky Giovanni Alfonso Borreli,
+který jako balanční podložku použil dřevenou desku.</p>
+</section>
+<section id="metoda-teznic">
+<h3>Metoda těžnic<a class="headerlink" href="#metoda-teznic" title="Link to this heading">#</a></h3>
+<p>Umístníme-li těleso do závěsu a uvolnímě ho, vznikne kyvadlo. Po
+ustálení zůstane toto kyvadlo viset v rovnováze. Na těžiště můžeme
+nahlížet jako na bod, ve kterém je koncetrována veškerá tíhová
+síla. Závěs tělesa je kloub a působí v něm tedy jedna síla neznámě
+reakce. Na tělěso v závěsu tedy působí dvě síly: síla závěsu a síla
+gravitace. Proto, aby dvě síly byly v rovnováze, musí být stejně
+velké, opačně orientované a ležet na stejné nositelce. Protože ale
+víme, že gravitační síla působí vertikálně, musí pro dosažení
+rovnováhy platit, že těžiště se nachází na vertikální přímce
+procházející závěsem. Tato přímka je tak nositelkou tíhové síly
+působící v těžišti a označujeme jí jako <em>těžnice</em>.</p>
+<p>Ze znalosti jedné těžnice nemůžeme určit polohu těžište jako
+bodu. Zopakujeme-li experiment ještě jednou v jiném bodě závěsu,
+určíme další těžnici. Poloha těžiště je polohou bodu a tak musí ležet
+na průsečnici těžnic.</p>
+<p>Je-li těleso geometricky symetrické, jsou těžnice zároveň osy
+symetrie. Má-li těleso několik os symetrie leží těžisko v jejich
+přůsečníku.</p>
+</section>
+<section id="metoda-silove-desky">
+<h3>Metoda silové desky<a class="headerlink" href="#metoda-silove-desky" title="Link to this heading">#</a></h3>
+<p>Určování těžiště pomocí balanční desky nebo pomocí těžnic je vhodné
+pro tuhé tělesa. Lidské tělo se skládá ze segmentů spojených pomocí
+kloubů a přesnost určení těžiště uvedeným způsobem je
+nedostatečná. Pro určení polohy těžiště je vhodné využít metodu
+reakční desky, t.j. zařízení, které má ve svých podpěrách senzory pro
+měření síly. Pro jednoduchou představu funkčnosti dané desky nám bude
+stačit představa, že desku položíme na dva váhy a na desku si lehne
+vyšetřovaná osoba.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Určete polohu těžiště u pacienta, který má délku 180 cm a při
+měření na silové desce podle obrázku je podpěra A zatížena hmotností 50 kg
+a podpěra B zatížena hmotností 45 kg. Hmotnost desky můžeme zanedbat.</p>
+</div>
+<p>Pro určení polohy těžiště budeme vycházat z rovnic
+rovnováhy. Danou úlohu uvolníme a budeme uvažovat, že celá tíha <span class="math notranslate nohighlight">\(W\)</span>
+působí v bodě těžiště a na desku působí reakce v uložení A (<span class="math notranslate nohighlight">\(R_A\)</span>) a
+reakce v uložení B (<span class="math notranslate nohighlight">\(R_B\)</span>).
+Je-li člověk na desce v rovnováze musí platit rovnice rovnováhy:
+\begin{eqnarray}
+\sum\limits_i F_{ix} = 0&amp;:&amp; 0=0 \nonumber \
+\sum\limits_i F_{iy} = 0&amp;:&amp; R_A + R_B - W=0 \nonumber \
+\sum\limits_i M_{iA} = 0&amp;:&amp; R_B,l + W,x_T=0 \nonumber
+\end{eqnarray}
+Z momentové podmínky rovnováhy můžeme určit
+$<span class="math notranslate nohighlight">\(x_T = \frac{R_B\,l}{W}\)</span><span class="math notranslate nohighlight">\(
+  kde z silové podmínky rovnováhy do směru osi \)</span>y<span class="math notranslate nohighlight">\( platí
+  \)</span><span class="math notranslate nohighlight">\(W = R_A + R_B \)</span><span class="math notranslate nohighlight">\(
+  Pro vzdálenost těžište od podpory \)</span>A<span class="math notranslate nohighlight">\( (\)</span>x_T<span class="math notranslate nohighlight">\() tedy platí
+  \)</span><span class="math notranslate nohighlight">\(x_T = \frac{m_A\, \cancel{g}\,l}{(m_A + m_B) \cancel{g}} = \frac{
+    45\,\cancel{\mathrm{kg}}\,
+  180\,\mathrm{cm}}{(45+55)\,\cancel{\mathrm{kg}}} = 81\,\mathrm{cm}\)</span>$
+}</p>
+</section>
+</section>
+<section id="numericke-urceni-polohy-teziste">
+<h2>Numerické určení polohy těžiště<a class="headerlink" href="#numericke-urceni-polohy-teziste" title="Link to this heading">#</a></h2>
+<p>Experimentální určení těžiště může být využito pro určení těžišť
+jednotlivých segmentů lidského těla. V průběhu pohybu dochází k
+rotacím v kloubech a tím pádem ke změně polohy celkového těžiště. Pro
+určení polohy těžiště pro libovolnou polohu těla je vhodné využít
+výpočet.</p>
+<p>Z důvodu přehlednosti řěšme úlohu jako dvourozměrnou. Těžiště v
+prostoru se určí analogicky. Zvolíme si souřadnicový systém pro určení
+polohy těžiště <span class="math notranslate nohighlight">\((x,y)\)</span>, kde os <span class="math notranslate nohighlight">\(y\)</span> je vertikální a střed není shodný s
+pozicí těžiště. Předpokládejme, že známe polohy těžišť a hmotnosti
+jednotlivých segmentů lidského těla.  Bude-li tělo složeno z
+<span class="math notranslate nohighlight">\(i=1,\dots,n\)</span> segmentů, těžiště <span class="math notranslate nohighlight">\(i\)</span>-tého segmentu má souřadnice
+<span class="math notranslate nohighlight">\(T_{i}[x_i, y_i]\)</span> a hmotnost <span class="math notranslate nohighlight">\(m_i\)</span>. Těžiště celého těla je dáno <span class="math notranslate nohighlight">\(x_T\)</span>
+a <span class="math notranslate nohighlight">\(y_T\)</span>.</p>
+<p>Při odvození budeme vycházet z definice
+těžiště, která říká, že výsledný moment tíhových sil vzhledem k
+těžišti je nulový. Platí tedy
+\begin{equation}
+\label{eq:t2}
+\sum\limits_{i=1}^{n} M_{iT} = 0
+\end{equation}
+Moment <span class="math notranslate nohighlight">\(i\)</span>-tého segmentu vzhledem k celkovému těžíšti těla je roven
+násobku tíhové síly daného segmentu <span class="math notranslate nohighlight">\(W_i\)</span>, která působí vertikálně a
+ramene <span class="math notranslate nohighlight">\(r_i\)</span>. Rameno síly <span class="math notranslate nohighlight">\(W_i\)</span> je rovno <span class="math notranslate nohighlight">\(x\)</span>-sové vzdálenosti těžiště
+daného segmentu od bodu <span class="math notranslate nohighlight">\(x_T\)</span>, t.j. <span class="math notranslate nohighlight">\(x_i-x_T\)</span> (osa <span class="math notranslate nohighlight">\(y\)</span> je rovnoběžná s
+nositelkou síly <span class="math notranslate nohighlight">\(W_i\)</span> a nezpůsobuje rotaci).
+\begin{equation}
+\label{eq:t1}
+M_{iT} = r_i , W_i = (x_i - x_T),W_i
+\end{equation}
+Kombinací výše uvedených vztahů dostaneme získáme
+\begin{eqnarray}
+\label{eq:1}
+\sum\limits_{i=1}^{n} (x_i - x_T),W_i &amp;=&amp; 0\
+\sum\limits_{i=1}^{n} x_i,W_i &amp;=&amp; \sum\limits_{i=1}^{n}
+x_T,W_i\
+\sum\limits_{i=1}^{n} x_i,W_i &amp;=&amp; x_T,\sum\limits_{i=1}^{n} W_i\
+\end{eqnarray}
+Uvážíme-li, že tíhová síla <span class="math notranslate nohighlight">\(W_i\)</span> je určena hmotností <span class="math notranslate nohighlight">\(m_i\)</span> segmentu
+(<span class="math notranslate nohighlight">\(W_i=m_i\,g\)</span>, kde <span class="math notranslate nohighlight">\(g\)</span> je gravitační zrychlení) můžeme napsat.
+\begin{equation}
+x_T = \frac{\sum\limits_{i=1}^{n} x_i,m_i}{\sum\limits_{i=1}^{n} m_i}\
+\end{equation}
+Předstame si, že tělo v rovině včetně souřadnicového systému otočíme
+od 90<span class="math notranslate nohighlight">\(^\circ\)</span>. V tom případě se vymění osy <span class="math notranslate nohighlight">\(x\)</span> a <span class="math notranslate nohighlight">\(y\)</span> a nositleky
+tíhových sil budou rovnoběžné s osou <span class="math notranslate nohighlight">\(x\)</span>. Výpočet těžiště vzhledem k
+ose <span class="math notranslate nohighlight">\(y\)</span> bude probíhat identicky
+\begin{equation}
+y_T = \frac{\sum\limits_{i=1}^{n} y_i,m_i}{\sum\limits_{i=1}^{n} m_i}\
+\end{equation}</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Těžiště těla jenž se skládá z <span class="math notranslate nohighlight">\(i=1,\dots,n\)</span> segmentů s
+hmotnostmi <span class="math notranslate nohighlight">\(m_i \)</span> a polohou těžišť jednotlivých segmentů <span class="math notranslate nohighlight">\((x_i,y_i)\)</span>
+je možné určit pomocí vztahů
+\begin{eqnarray}
+x_T &amp;=&amp; \frac{\sum\limits_{i=1}^{n}
+x_i,m_i}{\sum\limits_{i=1}^{n} m_i}\
+y_T &amp;=&amp; \frac{\sum\limits_{i=1}^{n}
+y_i,m_i}{\sum\limits_{i=1}^{n} m_i}\
+z_T &amp;=&amp; \frac{\sum\limits_{i=1}^{n} z_i,m_i}{\sum\limits_{i=1}^{n} m_i}
+\end{eqnarray}</p>
+</div>
+</section>
+<section id="segmentalni-model-tela">
+<h2>Segmentální model těla<a class="headerlink" href="#segmentalni-model-tela" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>Segmentální model těla</strong> je zjednodušený biomechanický model, který popisuje lidské tělo jako soustavu pevných těles (segmentů) spojených klouby. Tento model se používá k analýze pohybu, rovnováhy a dynamiky těla.</p>
+</div></blockquote>
+<p>V biomechanice se tělo rozděluje na několik <strong>segmentů</strong> – například nohy, paže, trup nebo hlava – které jsou považovány za tuhá tělesa. Tento model usnadňuje výpočty pohybu, síly a momentů, které na jednotlivé části těla působí.</p>
+<p><strong>Segment</strong> je část těla, kterou považujeme za tuhé těleso s definovanými vlastnostmi, jako jsou:</p>
+<ul class="simple">
+<li><p><strong>Délka</strong> – vzdálenost mezi dvěma klouby nebo body spojení.</p></li>
+<li><p><strong>Hmotnost</strong> – často se uvádí jako procento z celkové tělesné hmotnosti.</p></li>
+<li><p><strong>Těžiště</strong> – bod, ve kterém je soustředěna hmotnost segmentu.</p></li>
+<li><p><strong>Moment setrvačnosti</strong> – odpor segmentu proti rotaci.</p></li>
+</ul>
+<p>Příklady tělesných segmentů:</p>
+<ul class="simple">
+<li><p><strong>Horní končetina:</strong> paže, předloktí, ruka</p></li>
+<li><p><strong>Dolní končetina:</strong> stehno, bérec, chodidlo</p></li>
+<li><p><strong>Trup:</strong> hrudník, bederní oblast, pánev</p></li>
+<li><p><strong>Hlava</strong></p></li>
+</ul>
+</section>
+<section id="kinematicky-retezec">
+<h2>Kinematický řetězec?<a class="headerlink" href="#kinematicky-retezec" title="Link to this heading">#</a></h2>
+<p><strong>Kinematický řetězec</strong> je systém propojených segmentů, které jsou spojeny klouby a umožňují vzájemný pohyb. V těle je takovým řetězcem například ruka, kde je paže spojena s předloktím a rukou prostřednictvím kloubů (ramenní, loketní a zápěstní kloub).</p>
+<p>V biomechanice se kinematické řetězce využívají k analýze pohybu a přenosu síly mezi segmenty.</p>
+<section id="typy-kinematickych-retezcu">
+<h3>Typy kinematických řetězců<a class="headerlink" href="#typy-kinematickych-retezcu" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Typ kinematického řetězce</strong></p></th>
+<th class="head"><p><strong>Popis</strong></p></th>
+<th class="head"><p><strong>Příklad v těle</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Otevřený řetězec</strong></p></td>
+<td><p>Pohyb začíná u pevného bodu a končí volným koncem.</p></td>
+<td><p>Pohyb paže při zvedání činky.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Uzavřený řetězec</strong></p></td>
+<td><p>Oba konce řetězce jsou fixovány nebo mají kontakt s okolím.</p></td>
+<td><p>Dřep – nohy jsou pevně na zemi.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Sériový řetězec</strong></p></td>
+<td><p>Segmenty jsou uspořádány lineárně za sebou.</p></td>
+<td><p>Horní končetina (paže → předloktí → ruka).</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Paralelní řetězec</strong></p></td>
+<td><p>Segmenty jsou uspořádány paralelně a působí současně.</p></td>
+<td><p>Svaly, které současně stabilizují kloub.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="odhad-parametru-segmentu-tela">
+<h2>Odhad parametrů segmentů těla<a class="headerlink" href="#odhad-parametru-segmentu-tela" title="Link to this heading">#</a></h2>
+<p>Parametry segmentů těla (BSP) lidského těla, jako je délka, plocha, objem, hmotnost, hustota, těžiště, moment setrvačnosti a střed objemu, jsou zásadní pro aplikaci mechaniky k pochopení lidského pohybu. Antropometrie je obor zabývající se studiem takových měření lidského těla. Většinu těchto parametrů každého segmentu jedince často nelze změřit a tyto veličiny se odhadují nepřímými metodami. Hlavní nepřímé metody jsou založeny na datech mrtvol (např. Dempsterův model), skenování tělesného obrazu živých subjektů (např. Zatsiorského-Seluyanovův model) a geometrických měřeních (např. Hanavanův model).</p>
+<p>Online dostupné přehledy různých metod používaných při odhadu BSP naleznete na <a class="reference external" href="http://www.oandplibrary.org/al/1964_01_044.asp">Drills et al. (1964)</a> a [Drills et al. (1964)](<a class="reference external" href="http://citeseerx.ist.psu.edu/viewdo52=10.2.">http://citeseerx.ist.psu.edu/viewdo52=10.2.</a>?</p>
+<p>Podívejme se, jak odhadnout některé z BSP pomocí antropometrického modelu Dempstera (1955) s některými parametry upravenými Winterem (2009) a modelu Zatsiorského a Selujanova (Zatsiorsky, 2002), od nynějška Zatsiorského, s parametry upravenými de Levou (1996). Existuje alespoň jedna Python knihovna pro výpočet parametrů segmentů lidského těla, viz Dembia et al. (2014), implementuje geometrický model lidské setrvačnosti Yeadon, ale zde jej nepoužijeme.</p>
+<p>Pro tabulku s hodnotami BSP, označovanou také jako antropometrická tabulka, obvykle:</p>
+<ul class="simple">
+<li><p>Hmotnost každého segmentu je uvedena jako zlomek celkové tělesné hmotnosti.</p></li>
+<li><p>Poloha těžiště (CM) v sagitální rovině každého segmentu je dána jako zlomek délky segmentu vzhledem k poloze proximálního nebo distálního kloubu.</p></li>
+<li><p>Poloměr otáčení (Rg) kolem příčné osy (rotace v sagitální rovině) a kolem ostatních os každého segmentu je dán jako zlomek délky segmentu vzhledem k (w.r.t.) těžišti nebo w.r.t. proximální nebo w.r.t. pozici distálního kloubu.</p></li>
+</ul>
+<p>Formální popis těchto parametrů naleznete v poznámkovém bloku <a class="reference external" href="https://nbviewer.jupyter.org/github/BMClab/bmc/blob/master/notebooks/CenterOfMassAndMomentOfInertia.ipynb">Center of Mass and Moment of Inertia</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importujte potřebné knihovny</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Math</span><span class="p">,</span> <span class="n">Latex</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;max_colwidth&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="dempsteruv-model-upraveny-wintersem">
+<h3>Dempsterův model upravený Wintersem<a class="headerlink" href="#dempsteruv-model-upraveny-wintersem" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BSP_Dmarks</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/BMClab/BMC/master/data/BSPlandmarks_Dempster.txt&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">BSP_Dmarks</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Segment</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Hand</td>
+      <td>Wrist axis/knuckle II middle finger</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Forearm</td>
+      <td>Elbow axis/ulnar styloid</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Upper arm</td>
+      <td>Glenohumeral axis/elbow axis</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Forearm and hand</td>
+      <td>Elbow axis/ulnar styloid</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Total arm</td>
+      <td>Glenohumeral joint/ulnar styloid</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Foot</td>
+      <td>Lateral malleolus/head metatarsalII</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Leg</td>
+      <td>Femoral condyles/medial malleolus</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Thigh</td>
+      <td>Greater trochanter/femoral condyles</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Foot and leg</td>
+      <td>Femoral condyles/medial malleolus</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Total leg</td>
+      <td>Greater trochanter/medial malleolus</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Head and neck</td>
+      <td>C7-T1 and 1st rib/ear canal</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Shoulder mass</td>
+      <td>Sternoclavicular joint/glenohumeral</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Thorax</td>
+      <td>C7-T1/T12-L1 and diaphragm</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Abdomen</td>
+      <td>T12-L1/L4-L5</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Pelvis</td>
+      <td>L4-L5/greater trochanter</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Thorax and abdomen</td>
+      <td>C7-T1/L4-L5</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Abdomen and pelvis</td>
+      <td>T12-L1/greater trochanter</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Trunk</td>
+      <td>Greater trochanter/glenohumeral joint</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Trunk head neck</td>
+      <td>Greater trochanter/glenohumeral joint</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Head, arms, and trunk (HAT)</td>
+      <td>Greater trochanter/glenohumeral joint</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>HAT</td>
+      <td>Greater trochanter/mid rib</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BSP_Dmarks</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/BMClab/BMC/master/data/BSP_DempsterWinter.txt&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">BSP_Dmarks</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Segment</th>
+      <th>Definition</th>
+      <th>Mass</th>
+      <th>CM prox</th>
+      <th>CM dist</th>
+      <th>Rg CM</th>
+      <th>Rg prox</th>
+      <th>Rg dist</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Hand</td>
+      <td>WJC-KNU2</td>
+      <td>0.0060</td>
+      <td>0.506</td>
+      <td>0.494</td>
+      <td>0.297</td>
+      <td>0.587</td>
+      <td>0.577</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Forearm</td>
+      <td>EJC-STYL</td>
+      <td>0.0160</td>
+      <td>0.430</td>
+      <td>0.570</td>
+      <td>0.303</td>
+      <td>0.526</td>
+      <td>0.647</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Upper arm</td>
+      <td>SJC-EJC</td>
+      <td>0.0280</td>
+      <td>0.436</td>
+      <td>0.564</td>
+      <td>0.322</td>
+      <td>0.542</td>
+      <td>0.645</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Forearm hand</td>
+      <td>EJC-STYL</td>
+      <td>0.0220</td>
+      <td>0.682</td>
+      <td>0.318</td>
+      <td>0.468</td>
+      <td>0.827</td>
+      <td>0.565</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Total arm</td>
+      <td>SJC-STYL</td>
+      <td>0.0500</td>
+      <td>0.530</td>
+      <td>0.470</td>
+      <td>0.368</td>
+      <td>0.645</td>
+      <td>0.596</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Foot</td>
+      <td>LMAL-MT2</td>
+      <td>0.0145</td>
+      <td>0.500</td>
+      <td>0.500</td>
+      <td>0.475</td>
+      <td>0.690</td>
+      <td>0.690</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Leg</td>
+      <td>KJC-MMAL</td>
+      <td>0.0465</td>
+      <td>0.433</td>
+      <td>0.567</td>
+      <td>0.302</td>
+      <td>0.528</td>
+      <td>0.643</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Thigh</td>
+      <td>GTR-KJC</td>
+      <td>0.1000</td>
+      <td>0.433</td>
+      <td>0.567</td>
+      <td>0.323</td>
+      <td>0.540</td>
+      <td>0.653</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Head neck</td>
+      <td>C7T1-RIB1EAR</td>
+      <td>0.0810</td>
+      <td>1.000</td>
+      <td>0.000</td>
+      <td>0.495</td>
+      <td>0.116</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Thorax</td>
+      <td>C7T1-T12L1-DIAP</td>
+      <td>0.2160</td>
+      <td>0.820</td>
+      <td>0.180</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Abdomen</td>
+      <td>T12L1-GTR</td>
+      <td>0.1390</td>
+      <td>0.440</td>
+      <td>0.560</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Pelvis</td>
+      <td>L4L5-GTR</td>
+      <td>0.1420</td>
+      <td>0.105</td>
+      <td>0.895</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Trunk</td>
+      <td>GTR-SJC</td>
+      <td>0.4970</td>
+      <td>0.500</td>
+      <td>0.500</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Trunk head neck</td>
+      <td>GTR-SJC</td>
+      <td>0.5780</td>
+      <td>0.660</td>
+      <td>0.340</td>
+      <td>0.503</td>
+      <td>0.830</td>
+      <td>0.607</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>HAT</td>
+      <td>GTR-SJC</td>
+      <td>0.6780</td>
+      <td>0.626</td>
+      <td>0.374</td>
+      <td>0.496</td>
+      <td>0.798</td>
+      <td>0.621</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Foot leg</td>
+      <td>KJC-MMAL</td>
+      <td>0.0610</td>
+      <td>0.606</td>
+      <td>0.394</td>
+      <td>0.416</td>
+      <td>0.735</td>
+      <td>0.572</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Total leg</td>
+      <td>GTR-MMAL</td>
+      <td>0.1610</td>
+      <td>0.447</td>
+      <td>0.553</td>
+      <td>0.326</td>
+      <td>0.560</td>
+      <td>0.650</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Thorax abdomen</td>
+      <td>C7T1-L4L5</td>
+      <td>0.3550</td>
+      <td>0.630</td>
+      <td>0.370</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Abdomen pelvis</td>
+      <td>T12L1-GTR</td>
+      <td>0.2810</td>
+      <td>0.270</td>
+      <td>0.730</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="zatsiorskeho-model-upraveny-de-levou">
+<h3>Zatsiorského model upravený de Levou<a class="headerlink" href="#zatsiorskeho-model-upraveny-de-levou" title="Link to this heading">#</a></h3>
+<p>Segmenty definované v Zatsiorského modelu (Zatsiorsky, 2002) upravené de Levou (1996) jsou znázorněny na následujícím obrázku.</p>
+<figure><center><img src='https://github.com/BMClab/BMC/blob/master/images/BSP_ZdeLeva.png?raw=1' alt='Zatsiorského antropometrický model'/></center><figcaption><center><i>Obrázek. Definice segmentu použitá v antropometrickém modelu Zatsiorského a Selujanova (Zatsiorsky, 2002) upravená de Levou (1996).<br>Obrázek z manuálu <a href="http://motionanalysis.com/" target="_blank">Motion Analysis Corporation</a>.</i></center></figcaption></figure><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BSP_Zmarks</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/BMClab/BMC/master/data/BSPlandmarks_ZdeLeva.txt&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">BSP_Zmarks</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Landmark Name</th>
+      <th>Abbreviation</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Acromion</td>
+      <td>ACRO</td>
+      <td>Most lateral point on the lateral edge of the acromial process of the scapula</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Acropodion</td>
+      <td>TTIP</td>
+      <td>Tip of longest toe</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Bispinous breadth</td>
+      <td>BB</td>
+      <td>Distance between two ASIS</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Cervicale</td>
+      <td>CERV</td>
+      <td>Superior tip of the spine of the 7th certical vertebra</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Dactylion (3rd)</td>
+      <td>DAC3</td>
+      <td>Tip of 3 rd digit</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Gonion</td>
+      <td>GONI</td>
+      <td>Most lateral point on the posterior angle of mandible</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Iliospinale</td>
+      <td>ASIS</td>
+      <td>Inferior point of one of the anterior superior iliac spines</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Malleoli</td>
+      <td>MMAL, LMAL</td>
+      <td>Medial and lateral bony projections of the malleolus</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Metacarpale (3rd)</td>
+      <td>MET3</td>
+      <td>Distal palpable point on the metacarpal of the 3rd digit on the dorsal hand</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Mid-gonion</td>
+      <td>MIDG</td>
+      <td>Point midway between 2 gonion</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Mid-hip</td>
+      <td>MIDH</td>
+      <td>Point midway between 2 hip joint centers</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Mid-shoulder</td>
+      <td>MIDS</td>
+      <td>Point midway between 2 shoulder joint centers</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Omphalion</td>
+      <td>OMPH</td>
+      <td>Center of navel</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Pternion</td>
+      <td>HEEL</td>
+      <td>Posterior point of the heel</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Radiale</td>
+      <td>RADI</td>
+      <td>Lateral tip on the proximal head of the radius</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Sphyrion (tibia)</td>
+      <td>TSPH</td>
+      <td>Distal tip of the tibia – distal to medial malleolus</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Sphyrion fibulare</td>
+      <td>FSPH</td>
+      <td>Distal tip of the fibula – distal to lateral malleolus</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Stylion</td>
+      <td>RSTY</td>
+      <td>Distal dip of the styloid process of the radius</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Suprasternale</td>
+      <td>SUPR</td>
+      <td>Most caudal point on the jugular notch on the sternum</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Tibiale (medial)</td>
+      <td>MTIB</td>
+      <td>Most proximal point on the medial superior border of the head of the tibia</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Tibiale laterale</td>
+      <td>LTIB</td>
+      <td>Most proximal point on the lateral superior border of the head of the fibula</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Trochanterion</td>
+      <td>TROC</td>
+      <td>Superior border on the greater trochanter of the femur</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Vertex</td>
+      <td>VERT</td>
+      <td>Uppermost part of the head</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Xiphion</td>
+      <td>XYPH</td>
+      <td>Lowermost end of the sternum</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bsp_Zf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/BMClab/BMC/master/data//BSPfemale_ZdeLeva.txt&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s1">&#39;Parametry těla - žena, from Zatsiorsky</span><span class="se">\&#39;</span><span class="s1">s model upravený de Leva (1996):&#39;</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">bsp_Zf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Parametry těla - žena, from Zatsiorsky's model upravený de Leva (1996):\]</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Endpoints</th>
+      <th>Mass</th>
+      <th>CM Long</th>
+      <th>Rg Sag</th>
+      <th>Rg Trans</th>
+      <th>Rg Long</th>
+    </tr>
+    <tr>
+      <th>Segment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Head</th>
+      <td>VERT-MIDG</td>
+      <td>0.0668</td>
+      <td>0.5894</td>
+      <td>0.330</td>
+      <td>0.359</td>
+      <td>0.318</td>
+    </tr>
+    <tr>
+      <th>Trunk</th>
+      <td>SUPR-MIDH</td>
+      <td>0.4257</td>
+      <td>0.4151</td>
+      <td>0.357</td>
+      <td>0.339</td>
+      <td>0.171</td>
+    </tr>
+    <tr>
+      <th>Upper trunk</th>
+      <td>SUPR-XYPH</td>
+      <td>0.1545</td>
+      <td>0.2077</td>
+      <td>0.746</td>
+      <td>0.502</td>
+      <td>0.718</td>
+    </tr>
+    <tr>
+      <th>Middle trunk</th>
+      <td>XYPH-OMPH</td>
+      <td>0.1465</td>
+      <td>0.4512</td>
+      <td>0.433</td>
+      <td>0.354</td>
+      <td>0.415</td>
+    </tr>
+    <tr>
+      <th>Lower trunk</th>
+      <td>OMPH-MIDH</td>
+      <td>0.1247</td>
+      <td>0.4920</td>
+      <td>0.433</td>
+      <td>0.402</td>
+      <td>0.444</td>
+    </tr>
+    <tr>
+      <th>Upper arm</th>
+      <td>SJC-EJC</td>
+      <td>0.0255</td>
+      <td>0.5754</td>
+      <td>0.278</td>
+      <td>0.260</td>
+      <td>0.148</td>
+    </tr>
+    <tr>
+      <th>Forearm</th>
+      <td>EJC-WJC</td>
+      <td>0.0138</td>
+      <td>0.4559</td>
+      <td>0.261</td>
+      <td>0.257</td>
+      <td>0.094</td>
+    </tr>
+    <tr>
+      <th>Hand</th>
+      <td>WJC-MET3</td>
+      <td>0.0056</td>
+      <td>0.7474</td>
+      <td>0.531</td>
+      <td>0.454</td>
+      <td>0.335</td>
+    </tr>
+    <tr>
+      <th>Thigh</th>
+      <td>HJC-KJC</td>
+      <td>0.1478</td>
+      <td>0.3612</td>
+      <td>0.369</td>
+      <td>0.364</td>
+      <td>0.162</td>
+    </tr>
+    <tr>
+      <th>Shank</th>
+      <td>KJC-AJC</td>
+      <td>0.0481</td>
+      <td>0.4352</td>
+      <td>0.267</td>
+      <td>0.263</td>
+      <td>0.092</td>
+    </tr>
+    <tr>
+      <th>Foot</th>
+      <td>HEEL-TTIP</td>
+      <td>0.0129</td>
+      <td>0.4014</td>
+      <td>0.299</td>
+      <td>0.279</td>
+      <td>0.139</td>
+    </tr>
+    <tr>
+      <th>Head 2</th>
+      <td>VERT-CERV</td>
+      <td>0.0668</td>
+      <td>0.4841</td>
+      <td>0.271</td>
+      <td>0.295</td>
+      <td>0.261</td>
+    </tr>
+    <tr>
+      <th>Trunk 2</th>
+      <td>CERV-MIDH</td>
+      <td>0.4257</td>
+      <td>0.4964</td>
+      <td>0.307</td>
+      <td>0.292</td>
+      <td>0.147</td>
+    </tr>
+    <tr>
+      <th>Trunk 3</th>
+      <td>MIDS-MIDH</td>
+      <td>0.4257</td>
+      <td>0.3782</td>
+      <td>0.379</td>
+      <td>0.361</td>
+      <td>0.182</td>
+    </tr>
+    <tr>
+      <th>Upper trunk 2</th>
+      <td>CERV-XYPH</td>
+      <td>0.1545</td>
+      <td>0.5050</td>
+      <td>0.466</td>
+      <td>0.314</td>
+      <td>0.449</td>
+    </tr>
+    <tr>
+      <th>Forearm 2</th>
+      <td>EJC-STYL</td>
+      <td>0.0138</td>
+      <td>0.4592</td>
+      <td>0.263</td>
+      <td>0.259</td>
+      <td>0.095</td>
+    </tr>
+    <tr>
+      <th>Hand 2</th>
+      <td>WJC-DAC3</td>
+      <td>0.0056</td>
+      <td>0.3427</td>
+      <td>0.244</td>
+      <td>0.208</td>
+      <td>0.154</td>
+    </tr>
+    <tr>
+      <th>Hand 3</th>
+      <td>STYL-DAC3</td>
+      <td>0.0056</td>
+      <td>0.3502</td>
+      <td>0.241</td>
+      <td>0.206</td>
+      <td>0.152</td>
+    </tr>
+    <tr>
+      <th>Hand 4</th>
+      <td>STYL-MET3</td>
+      <td>0.0056</td>
+      <td>0.7534</td>
+      <td>0.519</td>
+      <td>0.443</td>
+      <td>0.327</td>
+    </tr>
+    <tr>
+      <th>Shank 2</th>
+      <td>KJC-LMAL</td>
+      <td>0.0481</td>
+      <td>0.4416</td>
+      <td>0.271</td>
+      <td>0.267</td>
+      <td>0.093</td>
+    </tr>
+    <tr>
+      <th>Shank 3</th>
+      <td>KJC-SPHY</td>
+      <td>0.0481</td>
+      <td>0.4481</td>
+      <td>0.275</td>
+      <td>0.271</td>
+      <td>0.094</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bsp_Zm</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/BMClab/BMC/master/data/BSPmale_ZdeLeva.txt&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s1">&#39;Parametry těla - muž, from Zatsiorsky</span><span class="se">\&#39;</span><span class="s1">s model upravený de Leva (1996):&#39;</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">bsp_Zm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Parametry těla - muž, from Zatsiorsky's model upravený de Leva (1996):\]</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Endpoints</th>
+      <th>Mass</th>
+      <th>CM Long</th>
+      <th>Rg Sag</th>
+      <th>Rg Trans</th>
+      <th>Rg Long</th>
+    </tr>
+    <tr>
+      <th>Segment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Head</th>
+      <td>VERT-MIDG</td>
+      <td>0.0694</td>
+      <td>0.5976</td>
+      <td>0.362</td>
+      <td>0.376</td>
+      <td>0.312</td>
+    </tr>
+    <tr>
+      <th>Trunk</th>
+      <td>SUPR-MIDH</td>
+      <td>0.4346</td>
+      <td>0.4486</td>
+      <td>0.372</td>
+      <td>0.347</td>
+      <td>0.191</td>
+    </tr>
+    <tr>
+      <th>Upper trunk</th>
+      <td>SUPR-XYPH</td>
+      <td>0.1596</td>
+      <td>0.2999</td>
+      <td>0.716</td>
+      <td>0.454</td>
+      <td>0.659</td>
+    </tr>
+    <tr>
+      <th>Middle trunk</th>
+      <td>XYPH-OMPH</td>
+      <td>0.1633</td>
+      <td>0.4502</td>
+      <td>0.482</td>
+      <td>0.383</td>
+      <td>0.468</td>
+    </tr>
+    <tr>
+      <th>Lower trunk</th>
+      <td>OMPH-MIDH</td>
+      <td>0.1117</td>
+      <td>0.6115</td>
+      <td>0.615</td>
+      <td>0.551</td>
+      <td>0.587</td>
+    </tr>
+    <tr>
+      <th>Upper arm</th>
+      <td>SJC-EJC</td>
+      <td>0.0271</td>
+      <td>0.5772</td>
+      <td>0.285</td>
+      <td>0.269</td>
+      <td>0.158</td>
+    </tr>
+    <tr>
+      <th>Forearm</th>
+      <td>EJC-WJC</td>
+      <td>0.0162</td>
+      <td>0.4574</td>
+      <td>0.276</td>
+      <td>0.265</td>
+      <td>0.121</td>
+    </tr>
+    <tr>
+      <th>Hand</th>
+      <td>WJC-MET3</td>
+      <td>0.0061</td>
+      <td>0.7900</td>
+      <td>0.628</td>
+      <td>0.513</td>
+      <td>0.401</td>
+    </tr>
+    <tr>
+      <th>Thigh</th>
+      <td>HJC-KJC</td>
+      <td>0.1416</td>
+      <td>0.4095</td>
+      <td>0.329</td>
+      <td>0.329</td>
+      <td>0.149</td>
+    </tr>
+    <tr>
+      <th>Shank</th>
+      <td>KJC-AJC</td>
+      <td>0.0433</td>
+      <td>0.4395</td>
+      <td>0.251</td>
+      <td>0.246</td>
+      <td>0.102</td>
+    </tr>
+    <tr>
+      <th>Foot</th>
+      <td>HEEL-TTIP</td>
+      <td>0.0137</td>
+      <td>0.4415</td>
+      <td>0.257</td>
+      <td>0.245</td>
+      <td>0.124</td>
+    </tr>
+    <tr>
+      <th>Head 2</th>
+      <td>VERT-CERV</td>
+      <td>0.0694</td>
+      <td>0.5002</td>
+      <td>0.303</td>
+      <td>0.315</td>
+      <td>0.261</td>
+    </tr>
+    <tr>
+      <th>Trunk 2</th>
+      <td>CERV-MIDH</td>
+      <td>0.4346</td>
+      <td>0.5138</td>
+      <td>0.328</td>
+      <td>0.306</td>
+      <td>0.169</td>
+    </tr>
+    <tr>
+      <th>Trunk 3</th>
+      <td>MIDS-MIDH</td>
+      <td>0.4346</td>
+      <td>0.4310</td>
+      <td>0.384</td>
+      <td>0.358</td>
+      <td>0.197</td>
+    </tr>
+    <tr>
+      <th>Upper trunk 2</th>
+      <td>CERV-XYPH</td>
+      <td>0.1596</td>
+      <td>0.5066</td>
+      <td>0.505</td>
+      <td>0.320</td>
+      <td>0.465</td>
+    </tr>
+    <tr>
+      <th>Forearm 2</th>
+      <td>EJC-STYL</td>
+      <td>0.0162</td>
+      <td>0.4608</td>
+      <td>0.278</td>
+      <td>0.267</td>
+      <td>0.122</td>
+    </tr>
+    <tr>
+      <th>Hand 2</th>
+      <td>WJC-DAC3</td>
+      <td>0.0061</td>
+      <td>0.3624</td>
+      <td>0.288</td>
+      <td>0.235</td>
+      <td>0.184</td>
+    </tr>
+    <tr>
+      <th>Hand 3</th>
+      <td>STYL-DAC3</td>
+      <td>0.0061</td>
+      <td>0.3691</td>
+      <td>0.285</td>
+      <td>0.233</td>
+      <td>0.182</td>
+    </tr>
+    <tr>
+      <th>Hand 4</th>
+      <td>STYL-MET3</td>
+      <td>0.0061</td>
+      <td>0.7948</td>
+      <td>0.614</td>
+      <td>0.502</td>
+      <td>0.392</td>
+    </tr>
+    <tr>
+      <th>Shank 2</th>
+      <td>KJC-LMAL</td>
+      <td>0.0433</td>
+      <td>0.4459</td>
+      <td>0.255</td>
+      <td>0.249</td>
+      <td>0.103</td>
+    </tr>
+    <tr>
+      <th>Shank 3</th>
+      <td>KJC-SPHY</td>
+      <td>0.0433</td>
+      <td>0.4524</td>
+      <td>0.258</td>
+      <td>0.253</td>
+      <td>0.105</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="rozdily-mezi-antropometrickymi-modely-od-dempstera-a-zatsiorskeho">
+<h3>Rozdíly mezi antropometrickými modely od Dempstera a Zatsiorského<a class="headerlink" href="#rozdily-mezi-antropometrickymi-modely-od-dempstera-a-zatsiorskeho" title="Link to this heading">#</a></h3>
+<p>Antropometrické modely od Dempstera a Zatsiorského se v mnoha aspektech liší; pokud jde o předměty zkoumané ve studiích, Dempsterův model je založen na datech 8 mrtvol starších mužů (ale dva z nich byli neznámého věku) analyzovaných ve Spojených státech. Zatsiorského model je založen na skenování obrazu 100 mladých mužů a 15 mladých žen, v té době všichni studenti vojenské školy v bývalém Sovětském svazu.</p>
+<p>Rozdíl mezi modely pro některé segmenty je velký (viz tabulka níže): hmotnostní podíl stehenního segmentu u modelu Zatsiorského je o více než 40 % větší než u modelu Dempster, naopak, segment trupu má u modelu Zatisorského asi o 15 % nižší hmotnostní podíl. Všimněte si také, že některé segmenty nemají v obou modelech stejnou definici.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m_D</span> <span class="o">=</span> <span class="n">bsp_D</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;Foot&#39;</span><span class="p">,</span> <span class="s1">&#39;Leg&#39;</span><span class="p">,</span> <span class="s1">&#39;Thigh&#39;</span><span class="p">,</span> <span class="s1">&#39;Pelvis&#39;</span><span class="p">,</span> <span class="s1">&#39;Abdomen&#39;</span><span class="p">,</span> <span class="s1">&#39;Thorax&#39;</span><span class="p">,</span> <span class="s1">&#39;Trunk&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;Upper arm&#39;</span><span class="p">,</span> <span class="s1">&#39;Forearm&#39;</span><span class="p">,</span> <span class="s1">&#39;Hand&#39;</span><span class="p">,</span> <span class="s1">&#39;Head neck&#39;</span><span class="p">],</span> <span class="s1">&#39;Mass&#39;</span><span class="p">]</span>
+<span class="n">m_Zf</span> <span class="o">=</span> <span class="n">bsp_Zf</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;Foot&#39;</span><span class="p">,</span> <span class="s1">&#39;Shank&#39;</span><span class="p">,</span> <span class="s1">&#39;Thigh&#39;</span><span class="p">,</span> <span class="s1">&#39;Lower trunk&#39;</span><span class="p">,</span> <span class="s1">&#39;Middle trunk&#39;</span><span class="p">,</span> <span class="s1">&#39;Upper trunk&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;Trunk&#39;</span><span class="p">,</span> <span class="s1">&#39;Upper arm&#39;</span><span class="p">,</span> <span class="s1">&#39;Forearm&#39;</span><span class="p">,</span> <span class="s1">&#39;Hand&#39;</span><span class="p">,</span> <span class="s1">&#39;Head&#39;</span><span class="p">],</span> <span class="s1">&#39;Mass&#39;</span><span class="p">]</span>
+<span class="n">m_Zm</span> <span class="o">=</span> <span class="n">bsp_Zm</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;Foot&#39;</span><span class="p">,</span> <span class="s1">&#39;Shank&#39;</span><span class="p">,</span> <span class="s1">&#39;Thigh&#39;</span><span class="p">,</span> <span class="s1">&#39;Lower trunk&#39;</span><span class="p">,</span> <span class="s1">&#39;Middle trunk&#39;</span><span class="p">,</span> <span class="s1">&#39;Upper trunk&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;Trunk&#39;</span><span class="p">,</span> <span class="s1">&#39;Upper arm&#39;</span><span class="p">,</span> <span class="s1">&#39;Forearm&#39;</span><span class="p">,</span> <span class="s1">&#39;Hand&#39;</span><span class="p">,</span> <span class="s1">&#39;Head&#39;</span><span class="p">],</span> <span class="s1">&#39;Mass&#39;</span><span class="p">]</span>
+<span class="n">m_D</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">m_Zf</span><span class="o">.</span><span class="n">index</span>  <span class="c1"># kvůli různým názvům některých segmentů</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s2">&quot;Relativní rozdíl hmotností (v %) modelu Zatsiorského vůči modelu podle Dempstera&quot;</span><span class="p">))</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Females&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">around</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="p">(</span><span class="n">m_Zf</span> <span class="o">-</span> <span class="n">m_D</span><span class="p">)</span> <span class="o">/</span> <span class="n">m_D</span><span class="p">),</span> \
+                  <span class="s1">&#39;Males&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">around</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="p">(</span><span class="n">m_Zm</span> <span class="o">-</span> <span class="n">m_D</span><span class="p">)</span> <span class="o">/</span> <span class="n">m_D</span><span class="p">)})</span>
+<span class="n">display</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_95512</span><span class="o">/</span><span class="mf">1518022555.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">m_D</span> <span class="o">=</span> <span class="n">bsp_D</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;Foot&#39;</span><span class="p">,</span> <span class="s1">&#39;Leg&#39;</span><span class="p">,</span> <span class="s1">&#39;Thigh&#39;</span><span class="p">,</span> <span class="s1">&#39;Pelvis&#39;</span><span class="p">,</span> <span class="s1">&#39;Abdomen&#39;</span><span class="p">,</span> <span class="s1">&#39;Thorax&#39;</span><span class="p">,</span> <span class="s1">&#39;Trunk&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>                    <span class="s1">&#39;Upper arm&#39;</span><span class="p">,</span> <span class="s1">&#39;Forearm&#39;</span><span class="p">,</span> <span class="s1">&#39;Hand&#39;</span><span class="p">,</span> <span class="s1">&#39;Head neck&#39;</span><span class="p">],</span> <span class="s1">&#39;Mass&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">m_Zf</span> <span class="o">=</span> <span class="n">bsp_Zf</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;Foot&#39;</span><span class="p">,</span> <span class="s1">&#39;Shank&#39;</span><span class="p">,</span> <span class="s1">&#39;Thigh&#39;</span><span class="p">,</span> <span class="s1">&#39;Lower trunk&#39;</span><span class="p">,</span> <span class="s1">&#39;Middle trunk&#39;</span><span class="p">,</span> <span class="s1">&#39;Upper trunk&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>                    <span class="s1">&#39;Trunk&#39;</span><span class="p">,</span> <span class="s1">&#39;Upper arm&#39;</span><span class="p">,</span> <span class="s1">&#39;Forearm&#39;</span><span class="p">,</span> <span class="s1">&#39;Hand&#39;</span><span class="p">,</span> <span class="s1">&#39;Head&#39;</span><span class="p">],</span> <span class="s1">&#39;Mass&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">m_Zm</span> <span class="o">=</span> <span class="n">bsp_Zm</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;Foot&#39;</span><span class="p">,</span> <span class="s1">&#39;Shank&#39;</span><span class="p">,</span> <span class="s1">&#39;Thigh&#39;</span><span class="p">,</span> <span class="s1">&#39;Lower trunk&#39;</span><span class="p">,</span> <span class="s1">&#39;Middle trunk&#39;</span><span class="p">,</span> <span class="s1">&#39;Upper trunk&#39;</span><span class="p">,</span>
+
+<span class="ne">NameError</span>: name &#39;bsp_D&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="zmena-teziste-v-prubehu-rustu">
+<h2>Změna těžiště v průběhu růstu<a class="headerlink" href="#zmena-teziste-v-prubehu-rustu" title="Link to this heading">#</a></h2>
+<p>Poloha těžiště lidského těla se mění v průběhu růstu od dětství až do dospělosti. Tato změna je dána především změnami proporcí těla a rozložením hmotnosti.</p>
+<section id="novorozenci-a-kojenci">
+<h3>Novorozenci a kojenci<a class="headerlink" href="#novorozenci-a-kojenci" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Těžiště je poměrně vysoko, v oblasti hrudníku.</p></li>
+<li><p>Hlava tvoří velkou část celkové hmotnosti.</p></li>
+<li><p>Nestabilita, potřeba opory.</p></li>
+</ul>
+</section>
+<section id="detstvi">
+<h3>Dětství<a class="headerlink" href="#detstvi" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Těžiště se posouvá níže, k pánvi.</p></li>
+<li><p>Dolní končetiny a trup se vyvíjejí rychleji než hlava.</p></li>
+<li><p>Zlepšení stability a rovnováhy.</p></li>
+</ul>
+</section>
+<section id="dospivani">
+<h3>Dospívání<a class="headerlink" href="#dospivani" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Další změny v proporcích těla.</p></li>
+<li><p>U dívek se těžiště posouvá o něco níže než u chlapců (rozdíly v rozložení svalové hmoty a tukové tkáně).</p></li>
+<li><p>U dospělých se těžiště nachází v oblasti bederní páteře.</p></li>
+</ul>
+</section>
+<section id="dospelost">
+<h3>Dospělost<a class="headerlink" href="#dospelost" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Těžiště se ustálí.</p></li>
+<li><p>Poloha těžiště se může měnit s ohledem na pohlaví a změny hmotnosti.</p></li>
+</ul>
+</section>
+<section id="klicove-faktory-ovlivnujici-zmenu-teziste">
+<h3>Klíčové faktory ovlivňující změnu těžiště<a class="headerlink" href="#klicove-faktory-ovlivnujici-zmenu-teziste" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Proporce těla (relativní velikost hlavy, trupu a končetin).</p></li>
+<li><p>Rozložení hmotnosti (svalová hmota a tuková tkáň).</p></li>
+<li><p>Pohlaví.</p></li>
+</ul>
+</section>
+</section>
+<section id="cog-com-log-cop">
+<h2>COG, COM, LOG, COP<a class="headerlink" href="#cog-com-log-cop" title="Link to this heading">#</a></h2>
+<ul>
+<li><p><strong>1. COG (Center of Gravity) – Těžiště</strong></p>
+<ul class="simple">
+<li><p><strong>Definice:</strong> Bod, ve kterém je soustředěna celková váha tělesa a kde působí gravitační síla.</p></li>
+<li><p><strong>V biomechanice:</strong> U člověka se těžiště obvykle nachází kolem druhého sakrálního obratle (S2), ale jeho poloha se mění v závislosti na držení těla a pohybu (např. při zvedání rukou se těžiště posouvá nahoru).</p></li>
+<li><p><strong>Praktický význam:</strong> Stabilita těla závisí na poloze těžiště vzhledem k opěrné ploše. Pokud těžiště zůstává nad opěrnou plochou, člověk zůstává stabilní.</p></li>
+</ul>
+<img alt="https://pdhpe.net/wp-content/uploads/2017/05/Line-of-Gravity-photo.png" src="https://pdhpe.net/wp-content/uploads/2017/05/Line-of-Gravity-photo.png" />
+</li>
+<li><p><strong>3. LOG (Line of Gravity) – Těžnice</strong></p>
+<ul class="simple">
+<li><p><strong>Definice:</strong> Svislá čára, která prochází skrz <strong>COG</strong> (nebo <strong>COM</strong>) směrem k zemi, v souladu s gravitační silou.</p></li>
+<li><p><strong>V biomechanice:</strong> U stojící osoby by měla tíhová čára procházet blízko uprostřed základny opory (např. mezi chodidly).</p></li>
+<li><p><strong>Praktický význam:</strong> Stabilita závisí na tom, zda tíhová čára zůstává uvnitř základny opory. Pokud se dostane mimo tuto základnu (např. při předklonu), tělo ztrácí stabilitu a musí zapojit svaly k udržení rovnováhy.</p></li>
+</ul>
+</li>
+<li><p><strong>2. COM (Center of Mass) – Těžiště hmotnosti</strong></p>
+<ul>
+<li><p><strong>Definice:</strong> Bod, kde je rovnoměrně rozložena celková hmota tělesa ve všech směrech. Z pohledu člověka jsou  <strong>COM</strong> a <strong>COG</strong> na stejném místě.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>V biomechanice se někdy pojmem COG označuje průmět COG na podložku.</p>
+</div>
+</li>
+</ul>
+<img alt="https://www.researchgate.net/publication/371564125/figure/fig1/AS:11431281186182084&#64;1693825407421/A-P-human-balance-in-standing-posture-A-P-anteroposterior_W640.jpg" src="https://www.researchgate.net/publication/371564125/figure/fig1/AS:11431281186182084&#64;1693825407421/A-P-human-balance-in-standing-posture-A-P-anteroposterior_W640.jpg" />
+<img alt="https://www.researchgate.net/publication/371564125/figure/fig2/AS:11431281186182086&#64;1693825407622/COP-and-COG-trajectories-during-locomotion-COG-centre-of-gravity-COP-centre-of_W640.jpg" src="https://www.researchgate.net/publication/371564125/figure/fig2/AS:11431281186182086&#64;1693825407622/COP-and-COG-trajectories-during-locomotion-COG-centre-of-gravity-COP-centre-of_W640.jpg" />
+</li>
+<li><p><strong>4. COP (Center of Pressure) – Těžiště tlaku</strong></p>
+<ul>
+<li><p><strong>Definice:</strong> Bod na povrchu podložky, kde je výslednice tlakových sil působících na tělo.</p></li>
+<li><p><strong>V biomechanice:</strong> <strong>COP</strong> je dynamický bod, který se neustále mění v závislosti na pohybu a rovnovážné reakci těla. Nejčastěji se měří pomocí silové desky při analýze rovnováhy a stability.</p></li>
+<li><p><strong>Praktický význam:</strong> Sleduje se při diagnostice poruch rovnováhy a analýze chůze. Při stojícím postoji ukazuje, jak tělo aktivně upravuje svalovou aktivitu k udržení rovnováhy. Pokud je <strong>COP</strong> mimo základnu opory, hrozí pád.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Trajektorie COP je je zcela nezávislá na poloze COM a je to poloha vektoru reakční síly ze silové plošiny. Tyto síly závisí na umístění chodidla a motorickém řízení svalů. COP je tedy neuromuskulární odezva na  nevyváženost tělesné rovnováhy.</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<img alt="https://images.ctfassets.net/98s79sqwuajy/3S7UVzwCshyNd0szADDwkh/7491b54b7ccfa0f3eb1bf015a0eaa947/211201_RS_CoP-CoM_BlogFigure_RGB.webp" src="https://images.ctfassets.net/98s79sqwuajy/3S7UVzwCshyNd0szADDwkh/7491b54b7ccfa0f3eb1bf015a0eaa947/211201_RS_CoP-CoM_BlogFigure_RGB.webp" />
+</section>
+<section id="teziste-cog-pri-ruznych-aktivitach">
+<h2>Těžiště (COG) při různých aktivitách<a class="headerlink" href="#teziste-cog-pri-ruznych-aktivitach" title="Link to this heading">#</a></h2>
+<p>Poloha těžiště se liší u každého jedince, zejména u sportovců. Sportovec s delšími a/nebo většími nohami bude mít pravděpodobně nižší těžiště, pokud jeho horní část těla není také relativně velká a nevyrovnává hmotnost dolní části těla.</p>
+<p>U běžců se těžiště nachází v dolní (inferiorní) oblasti pánve a před (anteriorně) tělem, protože běžec se obvykle naklání dopředu, což pomáhá při akceleraci.</p>
+<p>Snížení polohy těžiště pomáhá zvýšit rovnováhu a stabilitu, protože je nutné jej zvednout výše, než se přesune mimo opěrnou plochu (BOS - Base of Support). To lze vidět u některých jógových a balančních pozic, gymnastiky, atletických disciplín a dokonce i při stojce na rukou.</p>
+<p>Při nošení předmětů, jako je kufr, nákupní taška nebo batoh, se těžiště mění, protože se hmotnost přidává do příslušných oblastí těla. Toto těžiště se mění s hmotností a polohou neseného předmětu a také s polohou a pohybem těla.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="11_Rovnov%C3%A1ha.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Rovnováha</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="13_Stabilita.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Stabilita</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experimentalni-urceni-polohy-teziste">Experimentální určení polohy těžiště</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metoda-balancni-desky">Metoda balanční desky</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metoda-teznic">Metoda těžnic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metoda-silove-desky">Metoda silové desky</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numericke-urceni-polohy-teziste">Numerické určení polohy těžiště</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#segmentalni-model-tela">Segmentální model těla</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinematicky-retezec">Kinematický řetězec?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typy-kinematickych-retezcu">Typy kinematických řetězců</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#odhad-parametru-segmentu-tela">Odhad parametrů segmentů těla</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dempsteruv-model-upraveny-wintersem">Dempsterův model upravený Wintersem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zatsiorskeho-model-upraveny-de-levou">Zatsiorského model upravený de Levou</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rozdily-mezi-antropometrickymi-modely-od-dempstera-a-zatsiorskeho">Rozdíly mezi antropometrickými modely od Dempstera a Zatsiorského</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zmena-teziste-v-prubehu-rustu">Změna těžiště v průběhu růstu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#novorozenci-a-kojenci">Novorozenci a kojenci</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#detstvi">Dětství</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dospivani">Dospívání</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dospelost">Dospělost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#klicove-faktory-ovlivnujici-zmenu-teziste">Klíčové faktory ovlivňující změnu těžiště</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cog-com-log-cop">COG, COM, LOG, COP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teziste-cog-pri-ruznych-aktivitach">Těžiště (COG) při různých aktivitách</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

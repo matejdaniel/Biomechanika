@@ -1,0 +1,725 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Úvod do biomechaniky &#8212; Biomechanika a biomateriály</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '1_Uvod_historie_definice';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Popis pohybu" href="2_MOCAP.html" />
+    <link rel="prev" title="Obsah" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-light" alt="Biomechanika a biomateriály - Home"/>
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-dark pst-js-only" alt="Biomechanika a biomateriály - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Obsah
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Úvod do biomechaniky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_MOCAP.html">Popis pohybu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_Rozd%C4%9Blen%C3%AD_pohyb%C5%AF.html">Rozdělení pohybů</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="4%20Ur%C4%8Den%C3%AD%20polohy.html">Určení polohy</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="5_Kinematika_bodu.html">Kinematika bodu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html">Souřadnicový systém</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7_Pohyb_ve_v%C3%ADce_rozm%C4%9Brech.html">Pohyb ve více rozměrech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8_Stupn%C4%9B_volnosti.html">Stupně volnosti</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_S%C3%ADla.html">Síla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_S%C3%ADly_v_biomechanice.html">Síly v biomechanice</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="12_Moment_s%C3%ADly.html">Moment síly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_Rovnov%C3%A1ha.html">Rovnováha</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="10_T%C4%9B%C5%BEi%C5%A1t%C4%9B_t%C4%9Bla.html">Těžiště</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_Stabilita.html">Stabilita</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika/issues/new?title=Issue%20on%20page%20%2F1_Uvod_historie_definice.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/1_Uvod_historie_definice.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Úvod do biomechaniky</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uvod">Úvod</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biomechanika-v-kazdodennim-zivote">Biomechanika v každodenním životě</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historie-biomechaniky">Historie biomechaniky</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sokrates-a-pocatky-filozofie">Sokrates a počátky filozofie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#platon-a-rise-ideji">Platón a říše idejí</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aristoteles-prvni-biomechanik">Aristoteles – první biomechanik?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rimske-imperium-a-galenova-dominance">Římské impérium a Galénova dominance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#leonardo-da-vinci-prukopnik-biomechaniky">Leonardo da Vinci – průkopník biomechaniky</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#andreas-vesalius-a-revoluce-v-anatomii">Andreas Vesalius a revoluce v anatomii</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kopernik-a-matematicke-uvazovani">Koperník a matematické uvažování</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galileo-galilei-zakladatel-vedecke-metody">Galileo Galilei – zakladatel vědecké metody</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#giovanni-alfonso-borelli-otec-biomechaniky">Giovanni Alfonso Borelli – otec biomechaniky</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stoleti-stoleti-chuze">19. století – “století chůze”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanika-materialu-a-wolffuv-zakon">Mechanika materiálů a Wolffův zákon</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dalsi-rozvoj-biomechaniky">Další rozvoj biomechaniky</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klicove-osobnosti-biomechaniky">Klíčové osobnosti biomechaniky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#giovanni-alfonso-borelli-16081679">Giovanni Alfonso Borelli (1608–1679)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leonardo-da-vinci-14521519">Leonardo da Vinci (1452–1519)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#galileo-galilei-15641642">Galileo Galilei (1564–1642)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etienne-jules-marey-18301904">Étienne-Jules Marey (1830–1904)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wilhelm-braune-18311892-a-otto-fischer-18611917">Wilhelm Braune (1831–1892) a Otto Fischer (1861–1917)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nikolaj-alexandrovic-bernstein-18961966">Nikolaj Alexandrovič Bernstein (1896–1966)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="uvod-do-biomechaniky">
+<h1>Úvod do biomechaniky<a class="headerlink" href="#uvod-do-biomechaniky" title="Link to this heading">#</a></h1>
+<section id="uvod">
+<h2>Úvod<a class="headerlink" href="#uvod" title="Link to this heading">#</a></h2>
+<p>Jedinečnost života a složitost biologických funkcí zajímali lidi už od dávná. Lidi se také snažili popsat a porozumět funkci lidského těla.
+Jedna z disciplin, která se vznikla z těchto snah je věda, kterou označujeme jako <em>biomechanika</em>.</p>
+<p>Biomechanika je najstarší disciplínou ze skupiny věd bioinženýřství, které se definuje jako aplikace inženýřských principů na biologické
+systémy. Základním objektem zkoumání v bioinženýřství je člověk <em>Homo sapiens</em>.  Bioinženýři se snaží pochopit základní fyziologické procesy pro následné zlepšení kvality života člověka. Jedná se o mimořádně těžkou úlohu protože funkce lidského těla jsou mimořádně složité.</p>
+<p>Biomechanika je velmi široký obor, který se zabývá zkoumáním systémů na rùzných úrovních: : od mechanických vlastností jednotlivých molekul
+přes mechanické vlastnosti tkání až po mechanické vlastnosti celého organizmu. Proto není jednoduché ji definovat. Pro naše účely postačí
+jednodušší Hayova (1973) definice:</p>
+<blockquote>
+<div><p><strong>Biomechanika je věda o působení mechanických sil v živém organizmu.</strong></p>
+</div></blockquote>
+<section id="biomechanika-v-kazdodennim-zivote">
+<h3>Biomechanika v každodenním životě<a class="headerlink" href="#biomechanika-v-kazdodennim-zivote" title="Link to this heading">#</a></h3>
+<p>Biomechanika je vědou, která studuje jakým způsobem interagují fyzikální síly s živým organismem. Pro někoho, kdo neví čím se biomechanika zabývá je tato definice mimořádně obecná a budí dojem, že biomechanika je věda bez praktického uplatnění. Biomechanika je na rozdíl od toho vědou, která je mimořádně praktická a s tuduje procesy, které působí v oblasti růstu, remodelace, remodelace a homeostáze.  Biomechanika také hraje svoji roli v patogenéze některých onemocnění a při léčbe těchto nemocí. Pro lepší pochopení, uveďme nyní
+několik příkladů:</p>
+<ul class="simple">
+<li><p><strong>Pohyb a lokomoce:</strong></p>
+<ul>
+<li><p><strong>Celý organismus:</strong> Každý krok, skok nebo běh je složitým souhrou svalů, kostí a kloubů, které studuje biomechanika.</p></li>
+<li><p><strong>Úroveň orgánů:</strong> Srdce pracuje jako mechanická pumpa, která je také regulována mechanickými faktory.</p></li>
+<li><p><strong>Úroveň tkání:</strong>   Jakým způsobem vědí naše kosti jak mají být silné tak aby unesli naši váhu a dodatečnou zátěž? Existují důkazy, že růst kosti je ovlyvněn na základě mechanických stimulů. Přesněji řečeno, mechanická napjatost a deformance aktivuje kostní buňky (osteoblasty  a osteoklasty) pro to aby přidali nebo odstránili potřebnou kost. Protože primární funkce kostry je mechanická, je logické, že mechanické stimuly se využijí ja spětněvazební signál popisující růst a remodelaci kosti.</p></li>
+<li><p><strong>Buněčná úroveň:</strong> I na úrovni buněk probíhají mechanické procesy, jako je pohyb buněk, dělení buněk a reakce na vnější podněty.</p></li>
+</ul>
+</li>
+<li><p><strong>Vnímání sil:</strong></p>
+<ul>
+<li><p>Buňky nejen vytvářejí síly, ale také je vnímají. Například kosti reagují na zátěž zesílením, zatímco buňky vnitřního ucha přeměňují mechanické vibrace na elektrické signály, které vnímáme jako zvuk.</p></li>
+</ul>
+</li>
+<li><p><strong>Homeostáza a nemoci:</strong></p>
+<ul>
+<li><p>Biomechanika hraje klíčovou roli v udržování rovnováhy organismu. Poruchy mechanických vlastností tkání mohou vést k různým onemocněním, jako je glaukom nebo ateroskleróza.</p>
+<ul>
+<li><p><strong>Glaukom:</strong> Zvýšený tlak v oku poškozuje zrakový nerv.</p></li>
+<li><p><strong>Ateroskleróza:</strong> Nepřirozené mechanické namáhání cév podporuje vznik aterosklerotických plátů.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Léčba a regenerace:</strong></p>
+<ul>
+<li><p>Biomechanika má velký význam v medicíně. Pomáhá při návrhu implantátů a při vývoji nových léčebných metod.</p>
+<ul>
+<li><p><strong>Tkáňové inženýrství:</strong> Mechanické namáhání je klíčové pro růst a vývoj tkání. Například chrupavka pěstovaná v bioreaktoru s mechanickou stimulací má lepší vlastnosti než chrupavka pěstovaná bez ní.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Proč je biomechanika důležitá?</strong></p>
+<ul class="simple">
+<li><p><strong>Pochopení lidského těla:</strong> Biomechanika nám pomáhá lépe porozumět tomu, jak naše tělo funguje.</p></li>
+<li><p><strong>Vývoj nových technologií:</strong> Výsledky biomechanického výzkumu se využívají při vývoji nových léčebných metod, protéz a dalších zdravotnických prostředků.</p></li>
+<li><p><strong>Optimalizace pohybu:</strong> Biomechanika pomáhá sportovcům zlepšit jejich výkon a předcházet zraněním.</p></li>
+<li><p><strong>Bezpečnost:</strong> Při návrhu strojů a zařízení se zohledňují biomechanické vlastnosti lidského těla, aby se minimalizovalo riziko úrazů.</p></li>
+</ul>
+<p><strong>Závěr</strong></p>
+<p>Biomechanika je multidisciplinární obor, který má široké uplatnění v medicíně, sportu, průmyslu a dalších oblastech. Díky pochopení mechanických principů, které řídí pohyb a funkci živých organismů, můžeme zlepšit kvalitu života a vyvíjet nové technologie.</p>
+</section>
+</section>
+<section id="historie-biomechaniky">
+<h2>Historie biomechaniky<a class="headerlink" href="#historie-biomechaniky" title="Link to this heading">#</a></h2>
+<section id="sokrates-a-pocatky-filozofie">
+<h3>Sokrates a počátky filozofie<a class="headerlink" href="#sokrates-a-pocatky-filozofie" title="Link to this heading">#</a></h3>
+<p>Sokrates se narodil před 2400 lety a učil, že nemůžeme chápat svět kolem nás, dokud nepochopíme naši vlastní přirozenost. Jako vědci, kteří zkoumají mechaniku živých organismů, sdílíme něco z jeho vnitřního hledání pravdy. Naštěstí nejsme pronásledováni za naše poznání tak jako Sokrates, který byl ve věku 70 let odsouzen a popraven za “bezbožnost a kažení mládeže v Aténách”.</p>
+</section>
+<section id="platon-a-rise-ideji">
+<h3>Platón a říše idejí<a class="headerlink" href="#platon-a-rise-ideji" title="Link to this heading">#</a></h3>
+<p>Poprava Sokrata měla hluboký vliv na jeho žáka Platóna, člena aténské aristokracie. Jeho filozofické otázky položily základy západní filozofie, psychologie a logiky. Platón postuloval existenci říše idejí, nezávislé na smyslovém světě, a považoval pozorování a experimenty za bezcenné. Přesto věřil, že matematika je nejlepším nástrojem pro získávání znalostí. Jeho pojetí matematiky jako základního vědeckého principu se stalo klíčovým pro rozvoj mechaniky.</p>
+</section>
+<section id="aristoteles-prvni-biomechanik">
+<h3>Aristoteles – první biomechanik?<a class="headerlink" href="#aristoteles-prvni-biomechanik" title="Link to this heading">#</a></h3>
+<p>Ve věku 17 let šel Aristoteles, syn lékaře, do Atén studovat na Platónově Akademii. Měl výjimečný talent pro pozorování a fascinovala ho anatomie a struktura živých organismů. Lze ho považovat za prvního biomechanika, protože napsal knihu De Motu Animalium (O pohybu zvířat), ve které zkoumal nejen mechanické aspekty těl, ale i fyziologické rozdíly mezi představou a vykonáním pohybu. Aristoteles sice odmítal matematické uvažování, ale jeho deduktivní metoda položila základy vědecké metody.</p>
+</section>
+<section id="rimske-imperium-a-galenova-dominance">
+<h3>Římské impérium a Galénova dominance<a class="headerlink" href="#rimske-imperium-a-galenova-dominance" title="Link to this heading">#</a></h3>
+<p>S pádem Řecka a vzestupem Říma ustoupila přírodní filozofie do pozadí ve prospěch technologie. Ve druhém století vytvořil římský lékař Galén monumentální dílo O funkci částí lidského těla, které se stalo standardním lékařským textem na dalších 1400 let.</p>
+</section>
+<section id="leonardo-da-vinci-prukopnik-biomechaniky">
+<h3>Leonardo da Vinci – průkopník biomechaniky<a class="headerlink" href="#leonardo-da-vinci-prukopnik-biomechaniky" title="Link to this heading">#</a></h3>
+<p>Pokrok západní vědy se zastavil až do renesance, kdy se objevil Leonardo da Vinci. Narodil se v roce 1452 a proslul nejen jako umělec, ale i jako inženýr. Přispěl k mechanice svými vynálezy a analýzou pohybu. Rozuměl sílám, tření, zrychlení a měl dokonce náznaky Newtonových zákonů. Jeho anatomické studie svalů a kloubů představovaly hluboký vhled do biomechaniky, i když jeho poznámky zůstaly po staletí nepublikovány.</p>
+</section>
+<section id="andreas-vesalius-a-revoluce-v-anatomii">
+<h3>Andreas Vesalius a revoluce v anatomii<a class="headerlink" href="#andreas-vesalius-a-revoluce-v-anatomii" title="Link to this heading">#</a></h3>
+<p>V roce 1543 publikoval vlámský lékař Andreas Vesalius své ilustrované dílo O struktuře těla člověka, čímž vyvrátil Galénovy omyly. Přesto trvalo dlouhá staletí, než byla Vesaliova práce plně akceptována.</p>
+</section>
+<section id="kopernik-a-matematicke-uvazovani">
+<h3>Koperník a matematické uvažování<a class="headerlink" href="#kopernik-a-matematicke-uvazovani" title="Link to this heading">#</a></h3>
+<p>Ve stejném roce, kdy Vesalius publikoval své dílo, zemřel Mikuláš Koperník. Jeho heliocentrická teorie sluneční soustavy znamenala návrat k matematickému uvažování, které mělo vliv i na biomechaniku. Touha vysvětlit pohyb nebeských těles vedla k rozvoji mechaniky.</p>
+</section>
+<section id="galileo-galilei-zakladatel-vedecke-metody">
+<h3>Galileo Galilei – zakladatel vědecké metody<a class="headerlink" href="#galileo-galilei-zakladatel-vedecke-metody" title="Link to this heading">#</a></h3>
+<p>Galileo, narozený 21 let po Koperníkově smrti, byl původně poslán na univerzitu studovat medicínu. Odklonil se však k matematice, protože odmítal nepodložená tvrzení. Vyvinul experimentální metodu a prosazoval důkaz místo autoritativních tvrzení. Pozoroval vztah mezi velikostí zvířat a pevností jejich kostí a položil základy vědecké biomechaniky.</p>
+</section>
+<section id="giovanni-alfonso-borelli-otec-biomechaniky">
+<h3>Giovanni Alfonso Borelli – otec biomechaniky<a class="headerlink" href="#giovanni-alfonso-borelli-otec-biomechaniky" title="Link to this heading">#</a></h3>
+<p>Borelli, narozený v roce 1608, byl studentem Galileova žáka Castelliho. Spolupracoval s Malpighim a Descartem na mechanickém přístupu k medicíně. V knize De Motu Animalium popsal svalové a kosterní páky a odvodil síly působící v lidském těle. Jeho práce předznamenala Newtonovy pohybové zákony a položila základy moderní biomechaniky.</p>
+</section>
+<section id="stoleti-stoleti-chuze">
+<h3>19. století – “století chůze”<a class="headerlink" href="#stoleti-stoleti-chuze" title="Link to this heading">#</a></h3>
+<p>Biomechanika se významně nerozvíjela až do 19. století, které Benno Nigg nazval “stoletím chůze”. Étienne Marey poprvé využil kinematografii k analýze pohybu. V Německu se bratři Weberové věnovali studiu chůze, ale nejvýznamnější byli Braune a Fischer, kteří vědecky popsali lidskou lokomoci.</p>
+</section>
+<section id="mechanika-materialu-a-wolffuv-zakon">
+<h3>Mechanika materiálů a Wolffův zákon<a class="headerlink" href="#mechanika-materialu-a-wolffuv-zakon" title="Link to this heading">#</a></h3>
+<p>Během průmyslové revoluce se rozvíjela mechanika materiálů. Augustin Cauchy položil základy teorie napětí, což vedlo k biomechanice kostí. Inženýr Karl Culmann a anatom Hermann von Meyer porovnávali vzory napětí v lidské stehenní kosti a jeřábu. Julius Wolff následně formuloval zákon remodelace kostí, který se stal klíčovým principem ortopedie 20. století.</p>
+</section>
+<section id="dalsi-rozvoj-biomechaniky">
+<h3>Další rozvoj biomechaniky<a class="headerlink" href="#dalsi-rozvoj-biomechaniky" title="Link to this heading">#</a></h3>
+<p>Biomechanika se od té doby neustále rozvíjí díky pokroku v medicíně, implantátech, vesmírných studiích a bezpečnosti v automobilismu. Každý z těchto oborů přispěl k tomu, aby biomechanika dnes byla klíčovým nástrojem vědeckého poznání lidského pohybu a mechaniky živých organismů.</p>
+</section>
+</section>
+<section id="klicove-osobnosti-biomechaniky">
+<h2>Klíčové osobnosti biomechaniky<a class="headerlink" href="#klicove-osobnosti-biomechaniky" title="Link to this heading">#</a></h2>
+</section>
+<section id="giovanni-alfonso-borelli-16081679">
+<h2>Giovanni Alfonso Borelli (1608–1679)<a class="headerlink" href="#giovanni-alfonso-borelli-16081679" title="Link to this heading">#</a></h2>
+<p>Borelli byl italský vědec a matematik, který je považován za jednoho z otců biomechaniky. Ve svém díle <em>De Motu Animalium</em> analyzoval pohyb lidského těla a aplikoval na něj principy mechaniky.</p>
+<p><img alt="Giovanni Alfonso Borelli" src="https://upload.wikimedia.org/wikipedia/commons/archive/8/8d/20110724053837%21Giovanni_Alfonso_Borelli.jpg" /></p>
+</section>
+<section id="leonardo-da-vinci-14521519">
+<h2>Leonardo da Vinci (1452–1519)<a class="headerlink" href="#leonardo-da-vinci-14521519" title="Link to this heading">#</a></h2>
+<p>Leonardo da Vinci byl renesanční umělec, inženýr a vědec, který se zabýval anatomií lidského těla a mechanikou pohybu. Jeho anatomické studie a náčrty využívají principy biomechaniky.</p>
+<p><img alt="Leonardo da Vinci" src="https://upload.wikimedia.org/wikipedia/commons/archive/c/cb/20190508010627%21Francesco_Melzi_-_Portrait_of_Leonardo.png" /></p>
+</section>
+<section id="galileo-galilei-15641642">
+<h2>Galileo Galilei (1564–1642)<a class="headerlink" href="#galileo-galilei-15641642" title="Link to this heading">#</a></h2>
+<p>Galileo byl italský fyzik a astronom, který zkoumal mechanické zákonitosti pohybu a gravitace. Jeho práce inspirovala biomechanické studie, zejména v oblasti chůze a pohybu těla.</p>
+<p><img alt="Galileo Galilei" src="https://upload.wikimedia.org/wikipedia/commons/8/85/Galileo_by_leoni.jpg" /></p>
+</section>
+<section id="etienne-jules-marey-18301904">
+<h2>Étienne-Jules Marey (1830–1904)<a class="headerlink" href="#etienne-jules-marey-18301904" title="Link to this heading">#</a></h2>
+<p>Marey byl francouzský fyziolog a průkopník chronofotografie. Vyvinul metody pro studium lidského a zvířecího pohybu, které přispěly k rozvoji biomechanické analýzy.</p>
+<p><img alt="Étienne-Jules Marey" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/%C3%89tienne_Jules_Marey_by_Nadar.jpg" /></p>
+</section>
+<section id="wilhelm-braune-18311892-a-otto-fischer-18611917">
+<h2>Wilhelm Braune (1831–1892) a Otto Fischer (1861–1917)<a class="headerlink" href="#wilhelm-braune-18311892-a-otto-fischer-18611917" title="Link to this heading">#</a></h2>
+<p>Tato dvojice německých vědců provedla první kvantitativní analýzy lidského pohybu. Pomocí experimentálních měření a mechanických modelů přispěli k porozumění biomechaniky chůze.</p>
+</section>
+<section id="nikolaj-alexandrovic-bernstein-18961966">
+<h2>Nikolaj Alexandrovič Bernstein (1896–1966)<a class="headerlink" href="#nikolaj-alexandrovic-bernstein-18961966" title="Link to this heading">#</a></h2>
+<p>Bernstein byl sovětský neurofyziolog a biomechanik, který rozvinul teorii motorické kontroly a variability pohybu. Jeho práce měla zásadní vliv na moderní biomechaniku a neurovědy.</p>
+</section>
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Obsah</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="2_MOCAP.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Popis pohybu</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uvod">Úvod</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biomechanika-v-kazdodennim-zivote">Biomechanika v každodenním životě</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historie-biomechaniky">Historie biomechaniky</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sokrates-a-pocatky-filozofie">Sokrates a počátky filozofie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#platon-a-rise-ideji">Platón a říše idejí</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aristoteles-prvni-biomechanik">Aristoteles – první biomechanik?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rimske-imperium-a-galenova-dominance">Římské impérium a Galénova dominance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#leonardo-da-vinci-prukopnik-biomechaniky">Leonardo da Vinci – průkopník biomechaniky</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#andreas-vesalius-a-revoluce-v-anatomii">Andreas Vesalius a revoluce v anatomii</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kopernik-a-matematicke-uvazovani">Koperník a matematické uvažování</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galileo-galilei-zakladatel-vedecke-metody">Galileo Galilei – zakladatel vědecké metody</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#giovanni-alfonso-borelli-otec-biomechaniky">Giovanni Alfonso Borelli – otec biomechaniky</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stoleti-stoleti-chuze">19. století – “století chůze”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanika-materialu-a-wolffuv-zakon">Mechanika materiálů a Wolffův zákon</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dalsi-rozvoj-biomechaniky">Další rozvoj biomechaniky</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klicove-osobnosti-biomechaniky">Klíčové osobnosti biomechaniky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#giovanni-alfonso-borelli-16081679">Giovanni Alfonso Borelli (1608–1679)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leonardo-da-vinci-14521519">Leonardo da Vinci (1452–1519)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#galileo-galilei-15641642">Galileo Galilei (1564–1642)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etienne-jules-marey-18301904">Étienne-Jules Marey (1830–1904)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wilhelm-braune-18311892-a-otto-fischer-18611917">Wilhelm Braune (1831–1892) a Otto Fischer (1861–1917)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nikolaj-alexandrovic-bernstein-18961966">Nikolaj Alexandrovič Bernstein (1896–1966)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
