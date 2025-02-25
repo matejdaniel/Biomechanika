@@ -1,0 +1,719 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Popis pohybu &#8212; Biomechanika a biomateriály</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2_MOCAP';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Rozdělení pohybů" href="3_Rozd%C4%9Blen%C3%AD_pohyb%C5%AF.html" />
+    <link rel="prev" title="Úvod do biomechaniky" href="1_Uvod_historie_definice.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-light" alt="Biomechanika a biomateriály - Home"/>
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-dark pst-js-only" alt="Biomechanika a biomateriály - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Obsah
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_Uvod_historie_definice.html">Úvod do biomechaniky</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Popis pohybu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_Rozd%C4%9Blen%C3%AD_pohyb%C5%AF.html">Rozdělení pohybů</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4%20Ur%C4%8Den%C3%AD%20polohy.html">Určení polohy</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="5_Kinematika_bodu.html">Kinematika bodu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html">Souřadnicový systém</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7_Pohyb_ve_v%C3%ADce_rozm%C4%9Brech.html">Pohyb ve více rozměrech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8_Stupn%C4%9B_volnosti.html">Stupně volnosti</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika/issues/new?title=Issue%20on%20page%20%2F2_MOCAP.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/2_MOCAP.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Popis pohybu</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#co-je-pohyb-a-proc-ho-zkoumame">Co je pohyb a proč ho zkoumáme</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyza-pohybu-v-biomechanice">Analýza pohybu v biomechanice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rane-zacatky">Rané začátky</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stoleti-fotografie-a-chronofotografie">19. století: Fotografie a chronofotografie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stoleti-rozvoj-filmove-technologie-a-biomechaniky">20. století: Rozvoj filmové technologie a biomechaniky</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metody-zaznamu-pohybu-ve-filmu">Metody záznamu pohybu ve filmu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metody-zaznamu-pohybu">Metody záznamu pohybu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stroboskopie">Stroboskopie</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opticke-systemy">Optické systémy</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#magneticke-systemy">Magnetické systémy</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#inercialni-merici-jednotky-imu"><strong>Inerciální měřicí jednotky (IMU)</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#snimani-pomoci-kamery-a-pocitacoveho-videni"><strong>Snímání pomocí kamery a počítačového vidění</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#srovnani-metod">Srovnání metod</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="popis-pohybu">
+<h1>Popis pohybu<a class="headerlink" href="#popis-pohybu" title="Link to this heading">#</a></h1>
+<section id="co-je-pohyb-a-proc-ho-zkoumame">
+<h2>Co je pohyb a proč ho zkoumáme<a class="headerlink" href="#co-je-pohyb-a-proc-ho-zkoumame" title="Link to this heading">#</a></h2>
+<p>Pohyb můžeme definovat velice jednoduše jako změnu polohy (pozice) v čase. Tato jednotlivá definice v sobě různorodé jevy: padající jablko ze stromu, Měsíc na obloze, tekoucí voda z kohoutku, vrzající dveře - všechny se pohybují. I dýchání je spojeno s pohybem vzduchu a dokonce i když vzduch neproudí jeho jednotlivé molekuly se rychle pohybují. Můžeme tedy říct, že jsme součástí vesmíru v pohybu. Krása mechaniky je v tom, že všechny tyto pohyby můžeme ve své podstatě popsat pomoci stejných principů.</p>
+<p>V biomechanice se samotné studium pohybu označuje jako <strong>analýza pohybu</strong>.</p>
+<p>Protože je biomechanika vědou kvantitativní, snažíme se nejen popsat pohyb pomocí čísel a grafu ale predevším porozumět co pohyb způsobuje. Analýza pohybu našla uplatnění v mnoha disciplinách.</p>
+<ul class="simple">
+<li><p><strong>Medicína:</strong></p>
+<ul>
+<li><p><strong>Diagnostika:</strong> Pomáhá při diagnostice pohybových poruch, neurologických onemocnění a ortopedických problémů.</p></li>
+<li><p><strong>Rehabilitace:</strong> Umožňuje sledovat průběh rehabilitace a vyhodnocovat její účinnost.</p></li>
+<li><p><strong>Protetika:</strong> Používá se při návrhu a optimalizaci protéz a ortéz.</p></li>
+</ul>
+</li>
+<li><p><strong>Sport:</strong></p>
+<ul>
+<li><p><strong>Zlepšení výkonu:</strong> Analýza pohybu umožňuje identifikovat nedostatky ve sportovní technice a navrhnout zlepšení.</p></li>
+<li><p><strong>Prevence zranění:</strong> Pomáhá odhalit pohybové vzorce, které mohou vést ke zranění.</p></li>
+<li><p><strong>Vývoj vybavení:</strong> Výsledky analýzy se využívají při vývoji sportovního vybavení a oděvů.</p></li>
+</ul>
+</li>
+<li><p><strong>Ergonomie:</strong></p>
+<ul>
+<li><p><strong>Návrh pracovních míst:</strong> Pomáhá optimalizovat pracovní prostředí a nástroje, aby se snížilo riziko úrazů a zvýšila efektivita práce.</p></li>
+<li><p><strong>Návrh produktů:</strong> Používá se při návrhu produktů, jako jsou nábytek nebo automobilové sedačky, aby co nejlépe vyhovovaly potřebám uživatelů.</p></li>
+</ul>
+</li>
+<li><p><strong>Biomechanika:</strong></p>
+<ul>
+<li><p><strong>Základní výzkum:</strong> Pro pochopení principů lidského pohybu a interakce s okolním prostředím.</p></li>
+<li><p><strong>Vývoj modelů:</strong> Vytváření matematických modelů lidského pohybu pro simulační účely.</p></li>
+</ul>
+</li>
+<li><p><strong>Animace a virtuální realita:</strong></p>
+<ul>
+<li><p>Vytváření realistických pohybů postav v počítačových hrách, filmech a simulacích.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="analyza-pohybu-v-biomechanice">
+<h2>Analýza pohybu v biomechanice<a class="headerlink" href="#analyza-pohybu-v-biomechanice" title="Link to this heading">#</a></h2>
+<section id="rane-zacatky">
+<h3>Rané začátky<a class="headerlink" href="#rane-zacatky" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Pravěk:</strong> První pokusy o analýzu pohybu můžeme najít již v pravěku, kdy lidé pozorovali pohyb zvířat a snažili se napodobit jejich dovednosti při lovu.
+<img alt="Jeskynná malba" src="https://images.squarespace-cdn.com/content/v1/5535373ee4b097f3080ff3c3/1485318147277-P4W6DCK365AIGH68AZXE/08rhinosdesc.jpg" /></p></li>
+<li><p><strong>Starověk a středověk:</strong> Aristoteles se ve svém díle “O pohybu zvířat” zabýval studiem pohybu a jeho příčinami. Leonardo da Vinci zase prováděl podrobná anatomická studia a vytvořil mnoho kreseb zobrazujících lidské tělo v pohybu.</p></li>
+</ul>
+<p><img alt="Image of Leonardo da Vinci's sketches of human anatomy in motion" src="https://davincisdrawings.voices.wooster.edu/wp-content/uploads/sites/399/2022/05/skeleton.jpg" /></p>
+</section>
+<section id="stoleti-fotografie-a-chronofotografie">
+<h3>19. století: Fotografie a chronofotografie<a class="headerlink" href="#stoleti-fotografie-a-chronofotografie" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Eadweard Muybridge:</strong> Tento anglický fotograf je považován za průkopníka analýzy pohybu. Jeho sériové fotografie koně v pohybu, pořízené v roce 1878, byly průlomové a ukázaly, že kůň ve fázi cvalu zvedá všechna čtyři kopyta od země současně.</p></li>
+</ul>
+<p><img alt="Image of Eadweard Muybridge's horse in motion photographs" src="https://smarthistory.org/wp-content/uploads/2021/06/mubridge-scaled-2-1536x958.jpg" /></p>
+<ul class="simple">
+<li><p><strong>Étienne-Jules Marey:</strong> Francouzský fyziolog a fotograf, který se zaměřil na studium pohybu zvířat a lidí pomocí chronofotografie. Vytvořil speciální kamery, které umožňovaly zaznamenat rychlé pohyby.</p></li>
+</ul>
+<p><img alt="Záznam chůze" src="https://www.researchgate.net/profile/Wolf-Ka/publication/221571982/figure/fig2/AS:305600635392002&#64;1449872277224/O-Schlemmer-Staebetanz-1928-and-Figur-und-Raumlineatur-1926_W640.jpg" /></p>
+</section>
+<section id="stoleti-rozvoj-filmove-technologie-a-biomechaniky">
+<h3>20. století: Rozvoj filmové technologie a biomechaniky<a class="headerlink" href="#stoleti-rozvoj-filmove-technologie-a-biomechaniky" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Vynález filmu:</strong> S příchodem filmu se otevřely nové možnosti pro studium pohybu. Filmové záběry umožnily detailnější analýzu pohybových vzorců.</p></li>
+<li><p><strong>Rotoskopie:</strong> Technika, při které se animátoři inspirovali živými záběry, aby vytvořili realistické pohyby animovaných postav. Zároveň bylo možné analyzovat pohyb v jednotlivých políčkách filmu.</p></li>
+</ul>
+<p><img alt="Rotoskopie" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/US_patent_1242674_figure_3.png/440px-US_patent_1242674_figure_3.png" /></p>
+<ul class="simple">
+<li><p><strong>Vývoj vysokorychlostních kamer:</strong> Umožnily zaznamenat velmi rychlé pohyby, jako například pohyb sportovců.</p></li>
+</ul>
+</section>
+</section>
+<section id="metody-zaznamu-pohybu-ve-filmu">
+<h2>Metody záznamu pohybu ve filmu<a class="headerlink" href="#metody-zaznamu-pohybu-ve-filmu" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>1878:</strong> Anglický fotograf Eadweard Muybridge vytvořil sérii fotografií známých jako “Kůň v pohybu”. Tyto snímky pohybu koně v rychlém sledu byly prvními příklady chronofotografie, která se ukázala jako důležitá součást vývoje filmu.</p></li>
+<li><p><strong>1915:</strong> Americký animátor Max Fleischer, který později vytvořil kreslené filmy s Betty Boop, vynalezl rotoskopii. Tato animační technika byla použita k přidání realismu pohybu postav pomocí živých záběrů, které se překreslovaly.</p></li>
+<li><p><strong>1939:</strong> Ve filmu “Sněhurka a sedm trpaslíků” od studia Walt Disneyho byla poprvé použita rotoskopie.</p></li>
+<li><p><strong>1959:</strong> Americký animátor Lee Harrison III vytvořil tělový oblek vybavený nastavitelnými rezistory (potenciometry), které mu umožnily zaznamenávat a animovat pohyby herců. První příklad snímání pohybu v reálném čase.</p></li>
+<li><p><strong>80. léta 20. století:</strong> Animátoři používali velké kamery k natáčení herců v tělových oblecích opatřených aktivními markery.</p></li>
+<li><p><strong>1999:</strong> Ve filmu “Star Wars: Epizoda I - Skrytá hrozba” se objevila první plně počítačem generovaná vedlejší postava ve filmu - Jar Jar Binks, hraný Ahmedem Bestem.</p></li>
+<li><p><strong>2002:</strong> Ve filmu “Pán prstenů: Dvě věže” byla použita technologie snímání pohybu v podobě, jak ji známe dnes. Andy Serkis jako Glum nosil na sobě oblek pro snímání pohybu, přičemž speciální kamery zaznamenávaly jeho pohyby a mimiku.</p></li>
+<li><p><strong>2004:</strong> Film “Polar Express” režiséra Roberta Zemeckise se stal jedním z prvních významných filmů, který byl natočen výhradně pomocí technologie snímání pohybu.</p></li>
+<li><p><strong>2009:</strong> Kanadský filmař James Cameronův “Avatar” využívá nový systém virtuální kamery, který posouvá snímání pohybu ve filmu na novou úroveň.</p></li>
+</ul>
+</section>
+<section id="metody-zaznamu-pohybu">
+<h2>Metody záznamu pohybu<a class="headerlink" href="#metody-zaznamu-pohybu" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>Záznam pohybu se označuje jako <strong>MOCAP</strong> (motion capture)</p>
+</div></blockquote>
+<section id="stroboskopie">
+<h3>Stroboskopie<a class="headerlink" href="#stroboskopie" title="Link to this heading">#</a></h3>
+<p>Jedna z prvních metod měření pohybu je využitím stroboskopu (např. blesku s touto funkcí) a fotoaparátu. Na fotografii zachytíme
+polohu v několika okamžicích a při známé frekvenci záblesků po kalibraci délky (např. vyfotografováním pravítka) měříme vzdálenosti,
+které člověk urazil mezi záblesky. Výhodou je, že můžeme zaznamenávat komplexní pohyb a polohu určovat jen z vhodné části pohybu. Nevýhodou naopak je to, že musíme pracovat ve tmě a před tmavým pozadím. Alternativou k použití blesku je použití rotujícího disku. Po otevření závěrky rotuje před objektivem disk se štěrbinami. Filmové políčko je tak přerušovaně osvětlováno jednotlivými záblesky, čímž jsou
+zaznamenávány jednotlivé mikrofáze pohybu.</p>
+<p><img alt="Stroboskopie" src="https://static01.nyt.com/images/2020/12/01/obituaries/23KAMSLER/merlin_180397809_98a11644-afc3-4ac0-8d74-dcadf132f3e9-jumbo.jpg?quality=75&amp;auto=webp" /></p>
+<section id="opticke-systemy">
+<h4>Optické systémy<a class="headerlink" href="#opticke-systemy" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Princip:</strong> Používají kamery pro snímání viditelného nebo infračerveného světla od markerů umístěných na těle.</p></li>
+<li><p><strong>Typy:</strong></p>
+<ul>
+<li><p><strong>Pasivní markery:</strong> Markery odrážejí světlo z infračervených světelných zdrojů.</p></li>
+<li><p><strong>Aktivní markery:</strong> Markery emitují vlastní světlo.</p></li>
+</ul>
+</li>
+<li><p><strong>Výhody:</strong> Vysoká přesnost, možnost snímání celého těla, široké využití.</p></li>
+<li><p><strong>Nevýhody:</strong> Vyžaduje kalibraci, může být ovlivněno okolním světlem.</p></li>
+</ul>
+<p><img alt="Optické systémy" src="https://www.mdpi.com/sensors/sensors-21-06115/article_deploy/html/images/sensors-21-06115-g001.png" />
+<img alt="Princip MOCAP" src="https://physbam.stanford.edu/cs448x/old/attachments/Optical_Motion_Capture_Guide/threeDReconstruction.jpg" /></p>
+</section>
+<section id="magneticke-systemy">
+<h4>Magnetické systémy<a class="headerlink" href="#magneticke-systemy" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Princip:</strong> Používají magnetické senzory k detekci polohy markerů ve vytvořeném magnetické poli.</p></li>
+<li><p><strong>Výhody:</strong> Nezávislé na okolním světle, vysoká přesnost.</p></li>
+<li><p><strong>Nevýhody:</strong> Omezený dosah, mohou být ovlivněny kovovými předměty.</p></li>
+</ul>
+<p><img alt="Magnetický systém" src="https://www.researchgate.net/publication/2359279/figure/fig4/AS:669524957331457&#64;1536638597171/A-performer-wearing-a-motion-capture-apparatus-The-device-shown-is-a-full-body-magnetic.ppm" /></p>
+</section>
+<section id="inercialni-merici-jednotky-imu">
+<h4><strong>Inerciální měřicí jednotky (IMU)</strong><a class="headerlink" href="#inercialni-merici-jednotky-imu" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Princip:</strong> Používají akcelerometry a gyroskopy pro měření zrychlení a úhlové rychlosti segmentů těla.</p></li>
+<li><p><strong>Výhody:</strong> Kompaktní, mobilní, mohou být integrovány do oblečení.</p></li>
+<li><p><strong>Nevýhody:</strong> Hromadění chyb při delším měření, citlivost na šum.</p></li>
+</ul>
+<p><img alt="IMU" src="https://hackaday.com/wp-content/uploads/2016/01/motion_control_suit-shot0004_featured.png" /></p>
+</section>
+<section id="snimani-pomoci-kamery-a-pocitacoveho-videni">
+<h4><strong>Snímání pomocí kamery a počítačového vidění</strong><a class="headerlink" href="#snimani-pomoci-kamery-a-pocitacoveho-videni" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Princip:</strong> Používá se kamera pro snímání pohybu bez markerů, například pomocí rozpoznávání klíčových bodů na těle (např. klouby, ramena).</p></li>
+<li><p><strong>Výhody:</strong> Není potřeba speciální vybavení, snadné použití.</p></li>
+<li><p><strong>Nevýhody:</strong> Méně přesné než systémy s markery, závisí na kvalitě obrazu a osvětlení.</p></li>
+</ul>
+<p><img alt="Počítačové vidění" src="https://developer-blogs.nvidia.com/wp-content/uploads/2018/10/Berkeley.png" /></p>
+</section>
+</section>
+<section id="srovnani-metod">
+<h3>Srovnání metod<a class="headerlink" href="#srovnani-metod" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Metoda</p></th>
+<th class="head"><p>Výhody</p></th>
+<th class="head"><p>Nevýhody</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Optické systémy</p></td>
+<td><p>Vysoká přesnost, široké využití</p></td>
+<td><p>Vyžaduje kalibraci, ovlivněno okolním světlem</p></td>
+</tr>
+<tr class="row-odd"><td><p>Magnetické systémy</p></td>
+<td><p>Nezávislé na světle, vysoká přesnost</p></td>
+<td><p>Omezený dosah, ovlivněno kovovými předměty</p></td>
+</tr>
+<tr class="row-even"><td><p>IMU</p></td>
+<td><p>Kompaktní, mobilní</p></td>
+<td><p>Hromadění chyb, citlivost na šum</p></td>
+</tr>
+<tr class="row-odd"><td><p>Kamera a počítačové vidění</p></td>
+<td><p>Snadné použití, žádné markery</p></td>
+<td><p>Méně přesné, závisí na kvalitě obrazu</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="1_Uvod_historie_definice.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Úvod do biomechaniky</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="3_Rozd%C4%9Blen%C3%AD_pohyb%C5%AF.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Rozdělení pohybů</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#co-je-pohyb-a-proc-ho-zkoumame">Co je pohyb a proč ho zkoumáme</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyza-pohybu-v-biomechanice">Analýza pohybu v biomechanice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rane-zacatky">Rané začátky</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stoleti-fotografie-a-chronofotografie">19. století: Fotografie a chronofotografie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stoleti-rozvoj-filmove-technologie-a-biomechaniky">20. století: Rozvoj filmové technologie a biomechaniky</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metody-zaznamu-pohybu-ve-filmu">Metody záznamu pohybu ve filmu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metody-zaznamu-pohybu">Metody záznamu pohybu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stroboskopie">Stroboskopie</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opticke-systemy">Optické systémy</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#magneticke-systemy">Magnetické systémy</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#inercialni-merici-jednotky-imu"><strong>Inerciální měřicí jednotky (IMU)</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#snimani-pomoci-kamery-a-pocitacoveho-videni"><strong>Snímání pomocí kamery a počítačového vidění</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#srovnani-metod">Srovnání metod</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

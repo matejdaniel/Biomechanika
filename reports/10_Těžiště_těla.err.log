@@ -1,0 +1,43 @@
+Traceback (most recent call last):
+  File "/home/madan/.local/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/madan/.local/lib/python3.10/site-packages/nbclient/client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/madan/.local/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/madan/.local/lib/python3.10/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/home/madan/.local/lib/python3.10/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/madan/.local/lib/python3.10/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+m_D = bsp_D.loc[['Foot', 'Leg', 'Thigh', 'Pelvis', 'Abdomen', 'Thorax', 'Trunk',
+                   'Upper arm', 'Forearm', 'Hand', 'Head neck'], 'Mass']
+m_Zf = bsp_Zf.loc[['Foot', 'Shank', 'Thigh', 'Lower trunk', 'Middle trunk', 'Upper trunk',
+                   'Trunk', 'Upper arm', 'Forearm', 'Hand', 'Head'], 'Mass']
+m_Zm = bsp_Zm.loc[['Foot', 'Shank', 'Thigh', 'Lower trunk', 'Middle trunk', 'Upper trunk',
+                   'Trunk', 'Upper arm', 'Forearm', 'Hand', 'Head'], 'Mass']
+m_D.index = m_Zf.index  # kvůli různým názvům některých segmentů
+
+display(Latex("Relativní rozdíl hmotností (v %) modelu Zatsiorského vůči modelu podle Dempstera"))
+d = pd.DataFrame({'Females': np.around(100 * (m_Zf - m_D) / m_D), \
+                  'Males': np.around(100 * (m_Zm - m_D) / m_D)})
+display(d)
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+[0;32m/tmp/ipykernel_95512/1518022555.py[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m m_D = bsp_D.loc[['Foot', 'Leg', 'Thigh', 'Pelvis', 'Abdomen', 'Thorax', 'Trunk',
+[0m[1;32m      2[0m                    'Upper arm', 'Forearm', 'Hand', 'Head neck'], 'Mass']
+[1;32m      3[0m m_Zf = bsp_Zf.loc[['Foot', 'Shank', 'Thigh', 'Lower trunk', 'Middle trunk', 'Upper trunk',
+[1;32m      4[0m                    'Trunk', 'Upper arm', 'Forearm', 'Hand', 'Head'], 'Mass']
+[1;32m      5[0m m_Zm = bsp_Zm.loc[['Foot', 'Shank', 'Thigh', 'Lower trunk', 'Middle trunk', 'Upper trunk',
+
+[0;31mNameError[0m: name 'bsp_D' is not defined
+

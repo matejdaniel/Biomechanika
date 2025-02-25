@@ -1,0 +1,922 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Stupně volnosti &#8212; Biomechanika a biomateriály</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '8_Stupně_volnosti';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Pohyb ve více rozměrech" href="7_Pohyb_ve_v%C3%ADce_rozm%C4%9Brech.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-light" alt="Biomechanika a biomateriály - Home"/>
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-dark pst-js-only" alt="Biomechanika a biomateriály - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="2_MOCAP.html">Popis pohybu</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="3_Rozd%C4%9Blen%C3%AD_pohyb%C5%AF.html">Rozdělení pohybů</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4%20Ur%C4%8Den%C3%AD%20polohy.html">Určení polohy</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="5_Kinematika_bodu.html">Kinematika bodu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html">Souřadnicový systém</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7_Pohyb_ve_v%C3%ADce_rozm%C4%9Brech.html">Pohyb ve více rozměrech</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Stupně volnosti</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika/issues/new?title=Issue%20on%20page%20%2F8_Stupně_volnosti.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/8_Stupně_volnosti.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Stupně volnosti</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klouby">Klouby</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kloub-kulovy-articulatio-spheroidea">1. Kloub kulový (articulatio spheroidea)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kloub-cepovy-articulatio-trochoidea">2. Kloub čepový (articulatio trochoidea)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kloub-sarnyrovy-articulatio-ginglymus">3. Kloub šarnýrový  (articulatio ginglymus)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kloub-plochy-articulatio-plana">4. Kloub plochý (articulatio plana)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kloub-vejcity-articulatio-ellipsoidea">5. Kloub vejčitý (articulatio ellipsoidea)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kloub-sedlovity-articulatio-sellaris">6. Kloub sedlovitý (articulatio sellaris)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohyby-v-kloubech">Pohyby v kloubech</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#druhy-kloubu-dle-poctu-os-a-tvaru-stycnych-ploch">Druhy kloubů dle počtu os a tvaru styčných ploch</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#osteokinematika-a-artrokinematika">Osteokinematika a artrokinematika</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rozsah-pohybu">Rozsah pohybů</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="stupne-volnosti">
+<h1>Stupně volnosti<a class="headerlink" href="#stupne-volnosti" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><p><strong>Stupeň volnosti</strong> (DOF, degrees of freedom) je v mechanice počet nezávislých parametrů, které definují konfiguraci mechanického systému. Jinými slovy, je to počet nezávislých pohybů, které může těleso vykonávat.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>V ploše má bod dva stupně volnosti</p>
+<ul>
+<li><p>posun podél osy x a podél osy y</p></li>
+</ul>
+</li>
+<li><p>V ploše má těleso pak tři stupně volnosti</p>
+<ul>
+<li><p>posun podél osy x, osy y</p></li>
+<li><p>otočení kolem bodu.</p></li>
+</ul>
+</li>
+<li><p>V prostoru má bod tři stupně volnosti</p>
+<ul>
+<li><p>posuny podél os x, y, z</p></li>
+</ul>
+</li>
+<li><p>V trojrozměrném prostoru má tuhé těleso 6 stupňů volnosti:</p>
+<ul>
+<li><p>3 posuvné (pohyb podél os x, y, z)</p></li>
+<li><p>3 rotační (rotace kolem os x, y, z)</p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p><strong>Vazba</strong> je omezení, které omezuje nebo zakazuje některé stupně volnosti tělesa. Vazby jsou realizovány různými strukturami, jako jsou klouby, vazy, svaly a další tkáně.</p>
+</div></blockquote>
+<p>Každá vazba <strong>odebírá</strong> tělesu jeden nebo více stupňů volnosti. Například loketní kloub odebírá 5 stupňů volnosti a umožňuje pouze flexi a extenzi v jedné rovině.</p>
+<section id="klouby">
+<h2>Klouby<a class="headerlink" href="#klouby" title="Link to this heading">#</a></h2>
+<p><img alt="klouby" src="https://assets.puzzlefactory.com/puzzle/275/058/original.webp" /></p>
+<section id="kloub-kulovy-articulatio-spheroidea">
+<h3>1. Kloub kulový (articulatio spheroidea)<a class="headerlink" href="#kloub-kulovy-articulatio-spheroidea" title="Link to this heading">#</a></h3>
+<p>Vyznačuje se tím, že kulovitá hlavice jedné kosti zapadá do kulovité jamky na druhé kosti. Jedná se o nejpohyblivější tvar kloubu, který umožňuje pohyby ve všech směrech</p>
+<ul class="simple">
+<li><p><strong>Stupně volnosti:</strong> 3 (pohyb ve všech třech rovinách)</p>
+<ul>
+<li><p>Flexe/extenze (ohýbání/natahování)</p></li>
+<li><p>Abdukce/addukce (odtahování/přitahování)</p></li>
+<li><p>Rotace (vnitřní/zevní)</p></li>
+</ul>
+</li>
+<li><p><strong>Příklady:</strong></p>
+<ul>
+<li><p><strong>Ramenní kloub:</strong> Umožňuje širokou škálu pohybů paže, jako je zvedání, kroužení a otáčení.</p></li>
+<li><p><strong>Kyčelní kloub:</strong> Umožňuje pohyb nohy ve všech směrech, což je důležité pro chůzi, běh a další aktivity.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="kloub-cepovy-articulatio-trochoidea">
+<h3>2. Kloub čepový (articulatio trochoidea)<a class="headerlink" href="#kloub-cepovy-articulatio-trochoidea" title="Link to this heading">#</a></h3>
+<p>Okrouhlý konec jedné kosti zapadá do kroužku, který je tvořen druhou kostí a obklopujícím vazem. Tento typ kloubu umožňuje rotaci v podélné ose kosti.</p>
+<ul class="simple">
+<li><p><strong>Stupně volnosti:</strong> 1 (rotace kolem jedné osy)</p></li>
+<li><p><strong>Příklady:</strong></p>
+<ul>
+<li><p><strong>Spojení mezi prvním a druhým krčním obratlem (atlas a axis):</strong> Umožňuje otáčení hlavy do stran. V biomechanice se zkoumá například při analýze otáčení hlavy při řízení auta.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="kloub-sarnyrovy-articulatio-ginglymus">
+<h3>3. Kloub šarnýrový  (articulatio ginglymus)<a class="headerlink" href="#kloub-sarnyrovy-articulatio-ginglymus" title="Link to this heading">#</a></h3>
+<p>Umožňuje pohyb kloubu pouze ve dvou směrech (např. dopředu a dozadu) a vyznačuje se tím, že válcovitý konec jedné kosti zapadá do žlábku na povrchu druhé kosti.</p>
+<ul class="simple">
+<li><p><strong>Stupně volnosti:</strong> 1 (flexe a extenze v jedné rovině)</p></li>
+<li><p><strong>Příklady:</strong></p>
+<ul>
+<li><p><strong>Loketní kloub:</strong> Umožňuje ohýbání a natahování paže. V biomechanice se zkoumá například při analýze hodu míčem nebo zvedání břemen.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="kloub-plochy-articulatio-plana">
+<h3>4. Kloub plochý (articulatio plana)<a class="headerlink" href="#kloub-plochy-articulatio-plana" title="Link to this heading">#</a></h3>
+<p>Vyznačuje se tím, že jeho kloubní povrchy jsou v podstatě ploché destičky, které umožňují pouze rotaci a krátké klouzavé pohyby.</p>
+<ul class="simple">
+<li><p><strong>Stupně volnosti:</strong> Omezený pohyb v různých směrech (klouzání po sobě)</p></li>
+<li><p><strong>Příklady:</strong></p>
+<ul>
+<li><p><strong>Klouby mezi obratli páteře:</strong> Umožňují drobné pohyby páteře, které se skládají do celkového pohybu. V biomechanice se zkoumá například při analýze držení těla a pohybu páteře při chůzi.</p></li>
+<li><p><strong>Klouby mezi zápěstními a zánártními kostmi:</strong> Umožňují drobné pohyby ruky a nohy, které se podílejí na celkové hybnosti.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="kloub-vejcity-articulatio-ellipsoidea">
+<h3>5. Kloub vejčitý (articulatio ellipsoidea)<a class="headerlink" href="#kloub-vejcity-articulatio-ellipsoidea" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Stupně volnosti:</strong> 2 (flexe/extenze a abdukce/addukce)</p></li>
+<li><p><strong>Příklady:</strong></p>
+<ul>
+<li><p><strong>Zápěstní kloub:</strong> Umožňuje ohýbání a natahování ruky a pohyb do stran. V biomechanice se zkoumá například při analýze úchopu předmětů a psaní.</p></li>
+<li><p><strong>Hlezenní kloub:</strong> Umožňuje ohýbání a natahování nohy a pohyb do stran (everze a inverze). V biomechanice se zkoumá například při analýze chůze, běhu a skoku.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="kloub-sedlovity-articulatio-sellaris">
+<h3>6. Kloub sedlovitý (articulatio sellaris)<a class="headerlink" href="#kloub-sedlovity-articulatio-sellaris" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Stupně volnosti:</strong> 2 (flexe/extenze a abdukce/addukce) + omezená rotace</p></li>
+<li><p><strong>Příklady:</strong></p>
+<ul>
+<li><p><strong>Karpometakarpální kloub palce:</strong> Umožňuje palci pohyb v širokém rozsahu, což je důležité pro uchopování a manipulaci s předměty. V biomechanice se zkoumá například při analýze úchopu a jemné motoriky.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="pohyby-v-kloubech">
+<h2>Pohyby v kloubech<a class="headerlink" href="#pohyby-v-kloubech" title="Link to this heading">#</a></h2>
+<p>Popisujeme tři základní pohyby mezi styčnými plochami kloubu:</p>
+<ul class="simple">
+<li><p>rotace</p></li>
+<li><p>pohyb valivý</p></li>
+<li><p>pohyb smykový</p></li>
+</ul>
+<p>Dále pohyb závisí na počtu os, ve kterých se pohyb děje, a na počtu kostí, které jsou součástí kloubu.</p>
+<ul class="simple">
+<li><p>pohyb okolo osy X (rovina frontální) – <strong>abdukce, addukce</strong></p></li>
+<li><p>rotační pohyb okolo osy Y (rovina sagitální) – <strong>flexe, extenze</strong></p></li>
+<li><p>pohyb okolo osy Z (rovina transverzální) – <strong>vnitřní, zevní rotace</strong></p></li>
+</ul>
+<p>kombinací těchto pohybů vzniká cirkumdukce</p>
+</section>
+<section id="druhy-kloubu-dle-poctu-os-a-tvaru-stycnych-ploch">
+<h2>Druhy kloubů dle počtu os a tvaru styčných ploch<a class="headerlink" href="#druhy-kloubu-dle-poctu-os-a-tvaru-stycnych-ploch" title="Link to this heading">#</a></h2>
+<p>Rotační klouby můžeme dělit na:</p>
+<ul class="simple">
+<li><p><strong>Klouby tříosé</strong> - Pohyb se děje ve všech třech osách. Příkladem takového kloubu je kloub kulovitý.</p></li>
+<li><p><strong>Klouby dvojoosé</strong> - Pohyb se děje podle os flexe-extenze a abdukce-addukce. Kloub elipsovitý a kloub sedlovitý.</p></li>
+<li><p><strong>Klouby jednoosé</strong> - Obecně se oznčuje jako kloub válcový, v anatomiii se využívá označení:</p>
+<ul>
+<li><p>kloub šarnýrový (ginglymus)- osa pohybu kolmá na podélnou osu kosti</p></li>
+<li><p>kloub kolový – osa otáčení shodná s podélnou osou kosti (radioulnární kloub)</p></li>
+</ul>
+</li>
+</ul>
+<p>Mezi rotační klouby nepatří plochý kloub, který umožňuje jenom translaci.</p>
+</section>
+<section id="osteokinematika-a-artrokinematika">
+<h2>Osteokinematika a artrokinematika<a class="headerlink" href="#osteokinematika-a-artrokinematika" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>Osteokinematika</strong> popisuje zřetelné pohyby kostí, které jsou viditelné zvenčí. Jsou to hrubé pohyby, které se dějí mezi dvěma kostmi. Vznikají rotací kolem osy kloubu.</p>
+</div></blockquote>
+<p>Některé příklady jsou:</p>
+<ul class="simple">
+<li><p>Flexe a extenze (ohýbání a natahování)</p></li>
+<li><p>Abdukce a addukce (odtažení a přitažení)</p></li>
+<li><p>Laterální (zevní) rotace a mediální (vnitřní) rotace</p></li>
+</ul>
+<p>Osteokinematika se liší od artrokinematiky.</p>
+<blockquote>
+<div><p><strong>Artrokinematika</strong> popisuje malé pohyby, které se dějí na samotné kloubní ploše. Pohyby jsou valivé, klouzavé/posuvné a rotační.</p>
+</div></blockquote>
+<p><img alt="Artrokinematika" src="https://www.physio-pedia.com/images/thumb/7/7a/Arthrokinematics.png/600px-Arthrokinematics.png" /></p>
+</section>
+<section id="rozsah-pohybu">
+<h2>Rozsah pohybů<a class="headerlink" href="#rozsah-pohybu" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Část těla/kloub</p></th>
+<th class="head"><p>Pohyb</p></th>
+<th class="head"><p>Rozsah pohybu</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Hlava a krk</p></td>
+<td><p>flexe</p></td>
+<td><p>60°</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>extenze</p></td>
+<td><p>75°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>sunutí hlavy horizontálně</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>lateroflexe</p></td>
+<td><p>45°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>rotace</p></td>
+<td><p>80°</p></td>
+</tr>
+<tr class="row-odd"><td><p>Trup</p></td>
+<td><p>ventrální flexe</p></td>
+<td><p>45–50°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>dorzální flexe (extenze)</p></td>
+<td><p>25°</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>lateroflexe</p></td>
+<td><p>25–30°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>rotace</p></td>
+<td><p>30–45°</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lopatka</p></td>
+<td><p>retrakce</p></td>
+<td><p>25°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>protrakce</p></td>
+<td><p>25°</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>elevace</p></td>
+<td><p>55°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>deprese</p></td>
+<td><p>55°</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>zevní rotace (anteverze)</p></td>
+<td><p>60°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>vnitřní rotace (retroverze)</p></td>
+<td><p>60°</p></td>
+</tr>
+<tr class="row-odd"><td><p>Kloub ramenní</p></td>
+<td><p>ventrální flexe</p></td>
+<td><p>90–100°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>dorzální flexe (extenze)</p></td>
+<td><p>40–60°</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>abdukce</p></td>
+<td><p>90–95°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>addukce</p></td>
+<td><p>0°, přes osu těla 75°</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>zevní rotace</p></td>
+<td><p>90°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>vnitřní rotace</p></td>
+<td><p>90°</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>horizontální abdukce</p></td>
+<td><p>45°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>horizontální addukce</p></td>
+<td><p>135°</p></td>
+</tr>
+<tr class="row-odd"><td><p>Kloub loketní</p></td>
+<td><p>flexe</p></td>
+<td><p>135–145°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>extenze</p></td>
+<td><p>0–5°</p></td>
+</tr>
+<tr class="row-odd"><td><p>Předloktí</p></td>
+<td><p>supinace</p></td>
+<td><p>asi 180°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>pronace</p></td>
+<td><p>asi 180°</p></td>
+</tr>
+<tr class="row-odd"><td><p>Zápěstí</p></td>
+<td><p>palmární flexe</p></td>
+<td><p>70–90°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>dorzální flexe</p></td>
+<td><p>65–85°</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>radiální dukce</p></td>
+<td><p>15–20°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>ulnární dukce</p></td>
+<td><p>asi 45°</p></td>
+</tr>
+<tr class="row-odd"><td><p>Prsty ruky</p></td>
+<td><p>flexe</p></td>
+<td><p>15–45°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>extenze</p></td>
+<td><p>0–20°</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>abdukce</p></td>
+<td><p>50–70°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>addukce</p></td>
+<td><p>0°</p></td>
+</tr>
+<tr class="row-odd"><td><p>Kloub kyčelní</p></td>
+<td><p>flexe</p></td>
+<td><p>130°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>extenze</p></td>
+<td><p>30°</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>abdukce</p></td>
+<td><p>45°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>addukce</p></td>
+<td><p>0–45°</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>zevní rotace</p></td>
+<td><p>asi 15°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>vnitřní rotace</p></td>
+<td><p>asi 35°</p></td>
+</tr>
+<tr class="row-odd"><td><p>Kloub kolenní</p></td>
+<td><p>flexe</p></td>
+<td><p>asi 160°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>extenze</p></td>
+<td><p>0°</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>zevní rotace (jen ve flexi)</p></td>
+<td><p>asi 40°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>vnitřní rotace (jen ve flexi)</p></td>
+<td><p>5–10°</p></td>
+</tr>
+<tr class="row-odd"><td><p>Kloub hlezenní</p></td>
+<td><p>plantární flexe</p></td>
+<td><p>asi 30°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>dorzální flexe</p></td>
+<td><p>asi 20°</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>supinace</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>pronace</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Dolní kloub zánártní</p></td>
+<td><p>inverze nohy</p></td>
+<td><p>20°–30°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>everze nohy</p></td>
+<td><p>5°–15°</p></td>
+</tr>
+<tr class="row-odd"><td><p>Prsty nohy</p></td>
+<td><p>flexe</p></td>
+<td><p>45°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>extenze</p></td>
+<td><p>70°</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>abdukce</p></td>
+<td><p>5°–25°</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>addukce</p></td>
+<td><p>5°–25°</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="7_Pohyb_ve_v%C3%ADce_rozm%C4%9Brech.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Pohyb ve více rozměrech</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klouby">Klouby</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kloub-kulovy-articulatio-spheroidea">1. Kloub kulový (articulatio spheroidea)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kloub-cepovy-articulatio-trochoidea">2. Kloub čepový (articulatio trochoidea)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kloub-sarnyrovy-articulatio-ginglymus">3. Kloub šarnýrový  (articulatio ginglymus)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kloub-plochy-articulatio-plana">4. Kloub plochý (articulatio plana)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kloub-vejcity-articulatio-ellipsoidea">5. Kloub vejčitý (articulatio ellipsoidea)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kloub-sedlovity-articulatio-sellaris">6. Kloub sedlovitý (articulatio sellaris)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohyby-v-kloubech">Pohyby v kloubech</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#druhy-kloubu-dle-poctu-os-a-tvaru-stycnych-ploch">Druhy kloubů dle počtu os a tvaru styčných ploch</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#osteokinematika-a-artrokinematika">Osteokinematika a artrokinematika</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rozsah-pohybu">Rozsah pohybů</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

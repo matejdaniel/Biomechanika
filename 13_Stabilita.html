@@ -1,0 +1,844 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Stabilita &#8212; Biomechanika a biomateriály</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '13_Stabilita';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Těžiště" href="10_T%C4%9B%C5%BEi%C5%A1t%C4%9B_t%C4%9Bla.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-light" alt="Biomechanika a biomateriály - Home"/>
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-dark pst-js-only" alt="Biomechanika a biomateriály - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Obsah
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_Uvod_historie_definice.html">Úvod do biomechaniky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_MOCAP.html">Popis pohybu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_Rozd%C4%9Blen%C3%AD_pohyb%C5%AF.html">Rozdělení pohybů</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="4%20Ur%C4%8Den%C3%AD%20polohy.html">Určení polohy</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="5_Kinematika_bodu.html">Kinematika bodu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html">Souřadnicový systém</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7_Pohyb_ve_v%C3%ADce_rozm%C4%9Brech.html">Pohyb ve více rozměrech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8_Stupn%C4%9B_volnosti.html">Stupně volnosti</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_S%C3%ADla.html">Síla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_S%C3%ADly_v_biomechanice.html">Síly v biomechanice</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="12_Moment_s%C3%ADly.html">Moment síly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_Rovnov%C3%A1ha.html">Rovnováha</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="10_T%C4%9B%C5%BEi%C5%A1t%C4%9B_t%C4%9Bla.html">Těžiště</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Stabilita</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika/issues/new?title=Issue%20on%20page%20%2F13_Stabilita.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/13_Stabilita.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Stabilita</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Stabilita</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#stabilita-v-biomechanice">Stabilita v biomechanice</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#stabilni-poloha">Stabilní poloha</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#podminka-staticke-stability">Podmínka statické stability</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kdy-je-clovek-v-staticke-rovnovaze">Kdy je člověk v statické rovnováze?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnovaha-sil-reakcni-sila-a-tihova-sila"><strong>1. Rovnováha sil (reakční síla a tíhová síla)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnovaha-momentu-otacive-ucinky-sil"><strong>2. Rovnováha momentů (otáčivé účinky sil)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prakticky-priklad"><strong>Praktický příklad:</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#zakladna-opory">Základna opory</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#faktory-ovlivnujici-zakladnu-opory"><strong>Faktory ovlivňující základnu opory</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prakticky-vyznam"><strong>Praktický význam</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#stabilita-a-teziste">Stabilita a těžiště</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#posturalni-kyv-postural-sway"><strong>Posturální kyv (Postural Sway)</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#faktory-ovlivnujici-posturalni-vykyv"><strong>Faktory ovlivňující posturální výkyv</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mereni-posturalniho-vykyvu"><strong>Měření posturálního výkyvu</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vyznam-v-praxi"><strong>Význam v praxi</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti">Shrnutí</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dalsi-materialy">Další materiály</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="stabilita">
+<h1>Stabilita<a class="headerlink" href="#stabilita" title="Link to this heading">#</a></h1>
+</section>
+<section id="stabilita-v-biomechanice">
+<h1>Stabilita v biomechanice<a class="headerlink" href="#stabilita-v-biomechanice" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p><strong>Definice:</strong> Stabilita je schopnost tělesa udržet rovnovážnou polohu nebo se do ní vrátit po vychýlení. V biomechanice se týká schopnosti lidského těla udržet nebo obnovit rovnováhu při statických (stání) nebo dynamických (chůze, běh) podmínkách.</p></li>
+<li><p><strong>Typy stability:</strong></p>
+<ul>
+<li><p><strong>Statická stabilita:</strong> Schopnost udržet stabilní polohu bez pohybu (např. rovnovážný postoj).</p></li>
+<li><p><strong>Dynamická stabilita:</strong> Schopnost udržet rovnováhu během pohybu (např. při běhu nebo skoku).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="stabilni-poloha">
+<h1>Stabilní poloha<a class="headerlink" href="#stabilni-poloha" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p><strong>Stabilní rovnovážná poloha</strong>: při vychýlení se těžiště tělesa zdvíhá. Jakmile přestane působit vychylující síla, těžiště se vrátí do původní polohy. Při vychýlení tělesa ze stálé rovnovážné polohy se zvyšuje výška těžiště tělesa vzhledem k povrchu Země a roste také jeho potenciální tíhová energie. Těleso má ve stálé rovnovážné poloze těžiště v nejnižší možné poloze a jeho potenciální energie je nejmenší.</p></li>
+</ul>
+<a class="reference internal image-reference" href="https://edu.techmania.cz/sites/default/files/encyklopedie/insert/88.gif"><img alt="https://edu.techmania.cz/sites/default/files/encyklopedie/insert/88.gif" class="align-center" src="https://edu.techmania.cz/sites/default/files/encyklopedie/insert/88.gif" style="width: 300px;" /></a>
+<ul class="simple">
+<li><p><strong>Labilní (vratká) rovnovážná poloha:</strong> těleso se po vychýlení z této polohy ještě více vychýlí a těleso se samovolně do rovnovážné polohy nevrátí. Z labilní polohy přechází těleso do stabilní nebo volné rovnovážné polohy (krátkou dobu ještě kolem volné rovnovážné polohy kmitá). Při vychýlení z vratké rovnovážné polohy se výška těžiště snižuje a jeho potenciální tíhová energie tělesa klesá. Ve vratké rovnovážné poloze je těžiště v nejvyšší možné poloze a tíhová potenciální energie tělesa je nejvyšší.</p></li>
+</ul>
+<a class="reference internal image-reference" href="https://edu.techmania.cz/sites/default/files/encyklopedie/insert/90.gif"><img alt="https://edu.techmania.cz/sites/default/files/encyklopedie/insert/90.gif" class="align-center" src="https://edu.techmania.cz/sites/default/files/encyklopedie/insert/90.gif" style="width: 300px;" /></a>
+<ul class="simple">
+<li><p><strong>Volná rovnovážná poloha:</strong> výška těžiště je nad podložkou a při vychýlení se nezmění. Např. kulička na vodorovné podložce.</p></li>
+</ul>
+<a class="reference internal image-reference" href="https://edu.techmania.cz/sites/default/files/encyklopedie/insert/89.gif"><img alt="https://edu.techmania.cz/sites/default/files/encyklopedie/insert/89.gif" class="align-center" src="https://edu.techmania.cz/sites/default/files/encyklopedie/insert/89.gif" style="width: 300px;" /></a>
+</section>
+<section id="podminka-staticke-stability">
+<h1>Podmínka statické stability<a class="headerlink" href="#podminka-staticke-stability" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><p>Stojící těleso je ve stabilní poloze jen tehdy, probíhá–li svislá přímka spuštěná z těžiště základnou tělesa.</p>
+</div></blockquote>
+<a class="reference internal image-reference" href="https://edu.techmania.cz/sites/default/files/encyklopedie/insert/91.gif"><img alt="https://edu.techmania.cz/sites/default/files/encyklopedie/insert/91.gif" src="https://edu.techmania.cz/sites/default/files/encyklopedie/insert/91.gif" style="width: 300px;" /></a>
+</section>
+<section id="kdy-je-clovek-v-staticke-rovnovaze">
+<h1>Kdy je člověk v statické rovnováze?<a class="headerlink" href="#kdy-je-clovek-v-staticke-rovnovaze" title="Link to this heading">#</a></h1>
+<p>Pro dosažení rovnováhy musí být splněny dvě hlavní podmínky:</p>
+<ol class="arabic simple">
+<li><p><strong>Translační rovnováha</strong> – Součet všech sil působících na tělo musí být roven nule.</p></li>
+<li><p><strong>Rotační rovnováha</strong> – Součet všech momentů sil působících na tělo vzhledem k jakémukoli bodu musí být roven nule.</p></li>
+</ol>
+<section id="rovnovaha-sil-reakcni-sila-a-tihova-sila">
+<h2><strong>1. Rovnováha sil (reakční síla a tíhová síla)</strong><a class="headerlink" href="#rovnovaha-sil-reakcni-sila-a-tihova-sila" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Na stojícího člověka působí dvě hlavní síly:</p>
+<ul>
+<li><p><strong>Tíhová síla</strong> (( F_g )) – Směřuje dolů a působí v těžišti (<strong>COG</strong>), její velikost je dána vztahem:<br />
+$<span class="math notranslate nohighlight">\(
+F_g = m \cdot g
+\)</span>$<br />
+kde ( m ) je hmotnost těla a ( g ) je gravitační zrychlení.</p></li>
+<li><p><strong>Reakční síla podložky</strong> (( R )) – Směřuje vzhůru a působí v místě kontaktu s podložkou (v bodě <strong>COP</strong> – těžiště tlaku). Tato síla je reakcí na tíhovou sílu podle <strong>třetího Newtonova zákona</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Podmínka pro rovnováhu sil:</strong><br />
+$<span class="math notranslate nohighlight">\(
+\sum F = 0
+\)</span><span class="math notranslate nohighlight">\(  
+což znamená:  
+\)</span><span class="math notranslate nohighlight">\(
+R = F_g
+\)</span>$</p></li>
+</ul>
+<img alt="https://pressbooks.bccampus.ca/humanbiomechanics/wp-content/uploads/sites/972/2020/04/Figure_10_01_01a-1-1.jpg" src="https://pressbooks.bccampus.ca/humanbiomechanics/wp-content/uploads/sites/972/2020/04/Figure_10_01_01a-1-1.jpg" />
+</section>
+<section id="rovnovaha-momentu-otacive-ucinky-sil">
+<h2><strong>2. Rovnováha momentů (otáčivé účinky sil)</strong><a class="headerlink" href="#rovnovaha-momentu-otacive-ucinky-sil" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Aby člověk zůstal v rovnováze, musí být vyrovnány také všechny momenty působící na tělo.</p></li>
+<li><p><strong>Moment síly</strong> (( M )) je dán vztahem:<br />
+$<span class="math notranslate nohighlight">\(
+M = F \cdot d
+\)</span>$<br />
+kde ( F ) je síla a ( d ) je kolmá vzdálenost od osy otáčení (např. kotníkového kloubu).</p></li>
+<li><p><strong>Podmínka pro rotační rovnováhu:</strong><br />
+$<span class="math notranslate nohighlight">\(
+\sum M = 0
+\)</span>$</p>
+<ul>
+<li><p>Pokud se těžiště nachází přímo nad bodem kontaktu s podložkou (<strong>COP</strong>), nevzniká žádný moment, který by tělo vychyloval.</p></li>
+<li><p>Pokud se těžiště vychýlí mimo základnu opory, vzniká moment:<br />
+$<span class="math notranslate nohighlight">\(
+M = F_g \cdot d
+\)</span>$<br />
+Tělo musí aktivovat svaly a vytvořit kompenzační moment, aby zabránilo pádu.</p></li>
+</ul>
+</li>
+</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Podmínka</strong></p></th>
+<th class="head"><p><strong>Popis</strong></p></th>
+<th class="head"><p><strong>Rovnice</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Translační rovnováha</strong></p></td>
+<td><p>Součet všech sil působících na tělo musí být roven nule.</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sum F = 0 \)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Vyrovnání tíhové síly</strong></p></td>
+<td><p>Reakční síla podložky musí být rovna tíhové síle, ale opačného směru.</p></td>
+<td><p><span class="math notranslate nohighlight">\(R = F_g \)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Rotační rovnováha</strong></p></td>
+<td><p>Součet všech momentů sil vzhledem k jakémukoli bodu musí být roven nule.</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sum M = 0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Stabilní poloha těžiště</strong></p></td>
+<td><p>Těžnice (<strong>LOG</strong>) musí procházet uvnitř základny opory (<strong>BOS</strong>).</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Kompenzace otáčivého momentu</strong></p></td>
+<td><p>Svaly musí vyvinout dostatečný moment k vyrovnání případného narušení rovnováhy.</p></td>
+<td><p><span class="math notranslate nohighlight">\(M = F_g \cdot d \)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="prakticky-priklad">
+<h3><strong>Praktický příklad:</strong><a class="headerlink" href="#prakticky-priklad" title="Link to this heading">#</a></h3>
+<p>Při <strong>stoji na jedné noze</strong> se těžiště posouvá a tíhová čára se blíží k hranici základny opory. Tělo aktivuje svaly dolních končetin a trupu, aby vytvořilo kompenzační moment a udrželo rovnováhu. Pokud kompenzační moment nestačí, dochází k pádu.</p>
+</section>
+</section>
+</section>
+<section id="zakladna-opory">
+<h1>Základna opory<a class="headerlink" href="#zakladna-opory" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><p>Základna opory (<strong>Base of Support - BOS</strong>) označuje plochu pod objektem nebo osobou, která zahrnuje všechny body kontaktu s podpůrnou plochou. Tyto body kontaktu mohou být části těla, jako jsou <strong>chodidla</strong> nebo <strong>ruce</strong>, nebo také pomůcky, například <strong>berle</strong>, <strong>hůl</strong>, nebo dokonce <strong>židle</strong>, na které osoba sedí.</p>
+</div></blockquote>
+<p>Základna opory je klíčovým faktorem ovlivňujícím stabilitu těla. Čím větší a širší je základna opory, tím větší je schopnost těla udržet rovnováhu. Stabilita je dosažena tehdy, když se <strong>těžnice (LOG)</strong> nachází uvnitř této základny. Pokud tíhová čára přesáhne hranice základny opory, dochází k narušení rovnováhy a riziku pádu.</p>
+<a class="reference internal image-reference" href="https://images.squarespace-cdn.com/content/v1/6001cf75ae8fe92a02b30315/1633490452319-NTZVUIUJQO66OVFUB9TH/Screen+Shot+2021-10-05+at+8.20.34+PM.png?format=1500w"><img alt="https://images.squarespace-cdn.com/content/v1/6001cf75ae8fe92a02b30315/1633490452319-NTZVUIUJQO66OVFUB9TH/Screen+Shot+2021-10-05+at+8.20.34+PM.png?format=1500w" src="https://images.squarespace-cdn.com/content/v1/6001cf75ae8fe92a02b30315/1633490452319-NTZVUIUJQO66OVFUB9TH/Screen+Shot+2021-10-05+at+8.20.34+PM.png?format=1500w" style="width: 400px;" /></a>
+<p>BOS se dynamicky mění v závislosti na poloze těla a použití externích opěrných pomůcek. Například:</p>
+<ul class="simple">
+<li><p>Při <strong>stání s nohama u sebe</strong> je základna opory malá, což snižuje stabilitu.</p></li>
+<li><p>Při <strong>rozkročeném postoji</strong> se základna rozšiřuje, což zvyšuje stabilitu.</p></li>
+<li><p>Při <strong>sedu na židli</strong> zahrnuje základna opory kontaktní plochu mezi tělem a židlí, stejně jako nohy dotýkající se podlahy.</p></li>
+<li><p>Pokud člověk používá <strong>berle</strong>, základna opory zahrnuje i body kontaktu mezi berlemi a zemí.</p></li>
+</ul>
+<a class="reference internal image-reference" href="https://images.squarespace-cdn.com/content/v1/6001cf75ae8fe92a02b30315/1633490803966-92MNR57VEV9CFWMMKASI/Screen+Shot+2021-10-05+at+8.25.03+PM.png?format=1500w"><img alt="https://images.squarespace-cdn.com/content/v1/6001cf75ae8fe92a02b30315/1633490803966-92MNR57VEV9CFWMMKASI/Screen+Shot+2021-10-05+at+8.25.03+PM.png?format=1500w" src="https://images.squarespace-cdn.com/content/v1/6001cf75ae8fe92a02b30315/1633490803966-92MNR57VEV9CFWMMKASI/Screen+Shot+2021-10-05+at+8.25.03+PM.png?format=1500w" style="width: 400px;" /></a>
+<section id="faktory-ovlivnujici-zakladnu-opory">
+<h2><strong>Faktory ovlivňující základnu opory</strong><a class="headerlink" href="#faktory-ovlivnujici-zakladnu-opory" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Faktor</strong></p></th>
+<th class="head"><p><strong>Popis</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Velikost základny</strong></p></td>
+<td><p>Větší základna poskytuje větší stabilitu.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Tvar základny</strong></p></td>
+<td><p>Rozložení bodů kontaktu ovlivňuje schopnost udržet rovnováhu při různých směrech pohybu.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Opěrné pomůcky</strong></p></td>
+<td><p>Berle, hůl nebo jiné pomůcky mohou zvětšit základnu a tím zlepšit stabilitu.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="prakticky-vyznam">
+<h2><strong>Praktický význam</strong><a class="headerlink" href="#prakticky-vyznam" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>V <strong>rehabilitaci</strong> se práce se základnou opory využívá k tréninku rovnováhy, například pomocí cvičení s různými polohami nohou nebo použitím balančních pomůcek.</p></li>
+<li><p>V <strong>klinické praxi</strong> se hodnotí schopnost pacienta rozšířit svou základnu opory v reakci</p></li>
+</ul>
+</section>
+</section>
+<section id="stabilita-a-teziste">
+<h1>Stabilita a těžiště<a class="headerlink" href="#stabilita-a-teziste" title="Link to this heading">#</a></h1>
+<p>Směr gravitační síly působící na tělo směřuje dolů, k centru Země a skrz těžiště. Tato linie gravitace je důležitá pro pochopení a vizualizaci při určování schopnosti člověka udržet rovnováhu. Když linie gravitace spadne mimo opěrnou plochu (BOS), je nutná posturální reakce k udržení rovnováhy.</p>
+<p>Když linie gravitace spadá do opěrné plochy (BOS), objekt nebo osoba je stabilní. Když linie gravitace spadne mimo opěrnou plochu (BOS), objekt nebo osoba je nestabilní.</p>
+<p>Vzhledem k tomu, že linie gravitace musí spadat do opěrné plochy (BOS), aby byly splněny kritéria stability, je třeba zvážit následující faktory:</p>
+<ul class="simple">
+<li><p><strong>Větší opěrná plocha (BOS) zvyšuje stabilitu</strong> (linie gravitace se musí posunout na větší vzdálenost, aby spadla mimo opěrnou plochu).</p></li>
+<li><p><strong>Nižší těžiště (COG) zvyšuje stabilitu</strong> (je méně pravděpodobné, že linie gravitace spadne mimo opěrnou plochu).</p></li>
+</ul>
+</section>
+<section id="posturalni-kyv-postural-sway">
+<h1><strong>Posturální kyv (Postural Sway)</strong><a class="headerlink" href="#posturalni-kyv-postural-sway" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><p><strong>Posturální kyv</strong> označuje malé, neustálé pohyby těla, které se objevují při pokusu udržet stabilní vzpřímenou polohu, například při stání nebo sezení. Tyto výkyvy jsou přirozenou součástí kontroly rovnováhy a jsou výsledkem jemných úprav polohy těla v reakci na vnitřní i vnější podněty.</p>
+</div></blockquote>
+<a class="reference internal image-reference" href="attachment:a5dd7aca-9290-4a9d-a95e-ae50269e8ab3.png"><img alt="attachment:a5dd7aca-9290-4a9d-a95e-ae50269e8ab3.png" src="attachment:a5dd7aca-9290-4a9d-a95e-ae50269e8ab3.png" style="width: 400px;" /></a>
+<p>Lidské tělo se při pokusu o udržení rovnováhy nikdy nepohybuje zcela staticky. I při stání na místě dochází k neustálým drobným pohybům, které jsou řízeny:</p>
+<ul class="simple">
+<li><p><strong>Senzorickým systémem</strong></p></li>
+<li><p>Vstupy z <strong>zrakového systému</strong>, <strong>vestibulárního aparátu</strong> (rovnovážné orgány ve vnitřním uchu) a <strong>propriocepce</strong> (vnímání polohy těla a napětí ve svalech).</p></li>
+<li><p><strong>Centrálním nervovým systémem</strong> – Vyhodnocuje smyslové informace a koordinuje odpověď.</p></li>
+<li><p><strong>Svalovou aktivitou</strong> – Aktivace svalů (např. lýtkových a břišních) upravuje polohu těla a zajišťuje stabilitu.</p></li>
+</ul>
+<section id="faktory-ovlivnujici-posturalni-vykyv">
+<h2><strong>Faktory ovlivňující posturální výkyv</strong><a class="headerlink" href="#faktory-ovlivnujici-posturalni-vykyv" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Faktor</strong></p></th>
+<th class="head"><p><strong>Popis</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Zrak</strong></p></td>
+<td><p>Zavřené oči zvyšují rozsah posturálního výkyvu.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Pevnost základny opory</strong></p></td>
+<td><p>Užší základna opory zvyšuje výkyvy.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Věk</strong></p></td>
+<td><p>S věkem se obvykle zvyšuje rozsah posturálního výkyvu.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Únava</strong></p></td>
+<td><p>Snižuje efektivitu svalové reakce, čímž zvyšuje výkyv.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Nemoci</strong></p></td>
+<td><p>Neurologická onemocnění (např. Parkinsonova choroba) mohou zvyšovat nestabilitu.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="mereni-posturalniho-vykyvu">
+<h2><strong>Měření posturálního výkyvu</strong><a class="headerlink" href="#mereni-posturalniho-vykyvu" title="Link to this heading">#</a></h2>
+<p>Posturální výkyv se často měří pomocí <strong>stabilometrie</strong> – zařízení sleduje pohyby bodu těžiště tlaku (<strong>COP</strong>). Výsledky se obvykle zobrazují jako trajektorie pohybu na dvou osách:</p>
+<ul class="simple">
+<li><p><strong>Anteroposteriorní směr</strong> (předozadní)    5-7 mm</p></li>
+<li><p><strong>Mediolaterální směr</strong> (stranový)  3-4 mm</p></li>
+</ul>
+</section>
+<section id="vyznam-v-praxi">
+<h2><strong>Význam v praxi</strong><a class="headerlink" href="#vyznam-v-praxi" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>V <strong>klinické praxi</strong> se posturální výkyv využívá k diagnostice poruch rovnováhy.</p></li>
+<li><p>V <strong>rehabilitaci</strong> pomáhá při hodnocení pokroku u pacientů po úrazech nebo s neurologickými poruchami.</p></li>
+<li><p>Ve <strong>sportovní vědě</strong> se používá k optimalizaci rovnováhy a prevence zranění u sportovců.</p></li>
+</ul>
+</section>
+</section>
+<section id="shrnuti">
+<h1>Shrnutí<a class="headerlink" href="#shrnuti" title="Link to this heading">#</a></h1>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Faktor</strong></p></th>
+<th class="head"><p><strong>Popis</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Poloha těžiště (COG)</strong></p></td>
+<td><p>Čím je těžiště nižší, tím je stabilita větší.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Základna opory</strong></p></td>
+<td><p>Širší základna (např. rozkročený postoj) zvyšuje stabilitu.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Tíhová čára (LOG)</strong></p></td>
+<td><p>Pro udržení stability musí tíhová čára zůstat uvnitř základny opory.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Hmotnost těla</strong></p></td>
+<td><p>Vyšší hmotnost zvyšuje stabilitu, protože k vychýlení je potřeba větší síla.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Senzorické vjemy</strong></p></td>
+<td><p>Vjemy z vestibulárního aparátu, zrakového systému a proprioreceptorů pomáhají udržet rovnováhu.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img alt="image.png" src="attachment:1a9e4841-988d-45a7-9bf2-654cf377003a.png" /></p>
+</section>
+<section id="dalsi-materialy">
+<h1>Další materiály<a class="headerlink" href="#dalsi-materialy" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Poloha těžiště na ČT Edu <a class="reference external" href="https://edu.ceskatelevize.cz/video/6632-pokusy-teziste">https://edu.ceskatelevize.cz/video/6632-pokusy-teziste</a></p></li>
+</ul>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="10_T%C4%9B%C5%BEi%C5%A1t%C4%9B_t%C4%9Bla.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Těžiště</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Stabilita</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#stabilita-v-biomechanice">Stabilita v biomechanice</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#stabilni-poloha">Stabilní poloha</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#podminka-staticke-stability">Podmínka statické stability</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kdy-je-clovek-v-staticke-rovnovaze">Kdy je člověk v statické rovnováze?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnovaha-sil-reakcni-sila-a-tihova-sila"><strong>1. Rovnováha sil (reakční síla a tíhová síla)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnovaha-momentu-otacive-ucinky-sil"><strong>2. Rovnováha momentů (otáčivé účinky sil)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prakticky-priklad"><strong>Praktický příklad:</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#zakladna-opory">Základna opory</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#faktory-ovlivnujici-zakladnu-opory"><strong>Faktory ovlivňující základnu opory</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prakticky-vyznam"><strong>Praktický význam</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#stabilita-a-teziste">Stabilita a těžiště</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#posturalni-kyv-postural-sway"><strong>Posturální kyv (Postural Sway)</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#faktory-ovlivnujici-posturalni-vykyv"><strong>Faktory ovlivňující posturální výkyv</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mereni-posturalniho-vykyvu"><strong>Měření posturálního výkyvu</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vyznam-v-praxi"><strong>Význam v praxi</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti">Shrnutí</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dalsi-materialy">Další materiály</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
