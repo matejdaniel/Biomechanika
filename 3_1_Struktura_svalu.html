@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Pohyb ve více rozměrech &#8212; Biomechanika a biomateriály</title>
+    <title>Mechanika svalu &#8212; Biomechanika a biomateriály</title>
   
   
   
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -62,11 +62,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '7_Pohyb_ve_více_rozměrech';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '3_1_Struktura_svalu';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Stupně volnosti" href="8_Stupn%C4%9B_volnosti.html" />
-    <link rel="prev" title="Souřadnicový systém" href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html" />
+    <link rel="next" title="Princip svalové kontrakce" href="3_2_Princip_svalov%C3%A9_kontrakce.html" />
+    <link rel="prev" title="Stabilita" href="13_Stabilita.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -172,14 +172,14 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_Uvod_historie_definice.html">Úvod do biomechaniky</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="2_MOCAP.html">Popis pohybu</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_MOCAP.html">Popis pohybu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="3_Rozd%C4%9Blen%C3%AD_pohyb%C5%AF.html">Rozdělení pohybů</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="4%20Ur%C4%8Den%C3%AD%20polohy.html">Určení polohy</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="5_Kinematika_bodu.html">Kinematika bodu</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html">Souřadnicový systém</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Pohyb ve více rozměrech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_Pohyb_ve_v%C3%ADce_rozm%C4%9Brech.html">Pohyb ve více rozměrech</a></li>
 <li class="toctree-l2"><a class="reference internal" href="8_Stupn%C4%9B_volnosti.html">Stupně volnosti</a></li>
 </ul>
 </details></li>
@@ -193,7 +193,7 @@
 <li class="toctree-l2"><a class="reference internal" href="13_Stabilita.html">Stabilita</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="3_1_Struktura_svalu.html">Mechanika svalu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Mechanika svalu</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="3_2_Princip_svalov%C3%A9_kontrakce.html">Princip svalové kontrakce</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="3_3_Svalov%C3%A1_s%C3%ADla.html">Svalová síla</a></li>
@@ -278,7 +278,7 @@
       
       
       
-      <li><a href="https://github.com/matejdaniel/Biomechanika/issues/new?title=Issue%20on%20page%20%2F7_Pohyb_ve_více_rozměrech.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/matejdaniel/Biomechanika/issues/new?title=Issue%20on%20page%20%2F3_1_Struktura_svalu.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -308,7 +308,7 @@
       
       
       
-      <li><a href="_sources/7_Pohyb_ve_více_rozměrech.ipynb" target="_blank"
+      <li><a href="_sources/3_1_Struktura_svalu.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -384,7 +384,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Pohyb ve více rozměrech</h1>
+    <h1>Mechanika svalu</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -394,8 +394,9 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohyb-v-rovine">Pohyb v rovině</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohyb-v-prostoru">Pohyb v prostoru</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#makroskopicka-struktura-svalu">Makroskopická struktura svalu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchicka-struktura-svalu">Hierarchická struktura svalu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#typy-svalu-podle-smeru-svalovych-vlaken">Typy svalů podle směru svalových vláken</a></li>
 </ul>
             </nav>
         </div>
@@ -407,46 +408,176 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="pohyb-ve-vice-rozmerech">
-<h1>Pohyb ve více rozměrech<a class="headerlink" href="#pohyb-ve-vice-rozmerech" title="Link to this heading">#</a></h1>
-<ul class="simple">
-<li><p><strong>Posuvný pohyb</strong>: V případě posuvného pohybu se pohybují všechny body tělesa stejně, t.j. po stejné trajektorii. Pro určení polohy nám tak postačí určit polohu jednoho bodu a to pomocí souřadnic nebo polohového vektoru.</p></li>
-<li><p><strong>Otáčivý pohyb</strong>: V lidském těle dochází především k rotačnímu pohybu v kloubech. Na rozdíl od posuvného pohybu, kde se poloha vyjadřuje pomocí souřadnic, vyjadřujeme polohu segmentu těla při rotaci pomocí úhlů rotace.</p></li>
-</ul>
-<section id="pohyb-v-rovine">
-<h2>Pohyb v rovině<a class="headerlink" href="#pohyb-v-rovine" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="mechanika-svalu">
+<h1>Mechanika svalu<a class="headerlink" href="#mechanika-svalu" title="Link to this heading">#</a></h1>
+<section id="makroskopicka-struktura-svalu">
+<h2>Makroskopická struktura svalu<a class="headerlink" href="#makroskopicka-struktura-svalu" title="Link to this heading">#</a></h2>
+<p>Svaly jsou tvořeny svalovou tkání, pojivovou tkání, krevními cévami a nervy. Každý sval je obalen <strong>epimysiem</strong>, což je vrstva pojivové tkáně, která chrání sval a umožňuje jeho skluz vůči okolním strukturám.</p>
+<a class="reference internal image-reference" href="https://is.muni.cz/do/1451/e-learning/kineziologie/elportal/img/biceps.jpg"><img alt="https://is.muni.cz/do/1451/e-learning/kineziologie/elportal/img/biceps.jpg" src="https://is.muni.cz/do/1451/e-learning/kineziologie/elportal/img/biceps.jpg" style="width: 300px;" /></a>
+<p>Každý sval má tři hlavní části:</p>
 <ol class="arabic simple">
-<li><p><strong>Poloha bodu ve 2D</strong>
-Poloha bodu v rovině se nejčastěji popisuje pomocí souřadnic. Souřadnice nám umožní jednoznačně určit, kde se bod nachází vzhledem k pevně zvolenému počátku souřadnic. Poloha bodu v rovině se nejčastěji popisuje pomocí dvou souřadnic. Kartézské souřadnice jsou nejpoužívanějším způsobem, jak popsat polohu bodu v rovině. Tento systém používá dvě vzájemně kolmé osy, obvykle označované jako osa x (horizontální) a osa y (vertikální). Poloha bodu je pak určena uspořádanou dvojicí čísel (x, y), kde:</p></li>
-</ol>
+<li><p><strong>Odstup (Origo)</strong></p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(x\)</span> je vzdálenost bodu od osy y měřená ve směru osy x.</p></li>
-<li><p><span class="math notranslate nohighlight">\(y\)</span> je vzdálenost bodu od osy x měřená ve směru osy y.</p></li>
+<li><p>Pevnější, méně pohyblivá část svalu, kde se sval upíná na kost nebo jinou strukturu.</p></li>
+<li><p>Obvykle se nachází <strong>blíže k trupu</strong> (u končetin) nebo v méně pohyblivé části těla.</p></li>
 </ul>
-<p><img alt="Poloha bodu v rovině" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Cartesian-coordinate-system.svg/800px-Cartesian-coordinate-system.svg.png" /></p>
-<p>Polohový vektor je určen <span class="math notranslate nohighlight">\(\vec{r} = (x,y)\)</span> a jeho změnou můžeme popsat pohyb
-$<span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{v}}(t) = \frac{\overrightarrow{\mathbf{r}}(t_2)-\overrightarrow{\mathbf{r}}(t_1)}{t_2-t_1} = \frac{\Delta \overrightarrow{\mathbf{r}}}{\Delta t}\)</span>$</p>
-<div class="math notranslate nohighlight">
-\[ \overrightarrow{\mathbf{a}}(t) = \frac{\overrightarrow{\mathbf{v}}(t_2)-\overrightarrow{\mathbf{v}}(t_1)}{t_2-t_1} = \frac{\Delta \overrightarrow{\mathbf{v}}}{\Delta t}\]</div>
-<ol class="arabic simple" start="2">
-<li><p><strong>Poloha tělesa ve 2D</strong></p></li>
-</ol>
-<p>Chceme-li detailně popsat polohu tělesa v rovině, můžeme kombinovat výhody kartézských pro popis polohy a úhlu natočení pro popis rotace.</p>
+</li>
+<li><p><strong>Svalové bříško (Venter)</strong></p>
 <ul class="simple">
-<li><p><strong>Kartézské souřadnice</strong> <span class="math notranslate nohighlight">\((x, y)\)</span>: Určují polohu tělesa vzhledem k počátku souřadného systému a osám x a y.</p></li>
-<li><p><strong>Úhel</strong> (<span class="math notranslate nohighlight">\(\varphi\)</span>): Udává úhel, který udáva natočení tělesa vůči bodu <span class="math notranslate nohighlight">\((x,y,\)</span> a jedné z os souřadnicového systému</p></li>
+<li><p>Střední, objemná část svalu obsahující <strong>svalová vlákna</strong>, která se smršťují a generují sílu.</p></li>
+<li><p>Tvar svalového bříška závisí na typu svalu a směru svalových vláken.</p></li>
 </ul>
-<p><img alt="Poloha tělesa v rovině" src="https://www.researchgate.net/profile/Ri-Yu/publication/356958041/figure/fig3/AS:1131602881060868&#64;1646806559964/A-body-orientation-hint-from-2D-joint-positions_W640.jpg" /></p>
-<p>Pohyb pak popíšeme jako kombinaci rotačního a translačního pohybu.</p>
-</section>
-<section id="pohyb-v-prostoru">
-<h2>Pohyb v prostoru<a class="headerlink" href="#pohyb-v-prostoru" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p><strong>Polohu bodu v prostoru</strong> určíme pomocí tří souřadnic (<span class="math notranslate nohighlight">\(x,y,z\)</span>).</p></li>
-<li><p><strong>Polohu tělesa v prostoru</strong>  určíme pomocí tří souřadnic (<span class="math notranslate nohighlight">\(x,y,z\)</span>) a třech natočení (<span class="math notranslate nohighlight">\(\psi, \varphi, \vartheta, \)</span>).</p></li>
+</li>
+<li><p><strong>Úpon (Insertio)</strong></p>
+<ul class="simple">
+<li><p>Pohyblivější část svalu, kde se sval upíná na kost, kůži nebo jinou strukturu.</p></li>
+<li><p>Při svalové kontrakci se úpon přibližuje k odstupu.</p></li>
+</ul>
+</li>
 </ol>
-<p><img alt="Natočení hlavy" src="https://lh5.googleusercontent.com/proxy/cDjfmhJuq6RxgaYCy7yWldZ8yvS07ZwqjfJzrH7EiJlzn7yPKzLTbpC6qIki9t352p5tS89RUWP0euKQimENbQ" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Musculus
+Staří Římané věřili, že některé svaly, zejména bicepsové svaly, vypadají jako malé myši, které běhají pod kůží člověka. Proto se slovo musculus vyvinulo z existujícího latinského slova “mus”, což znamená “myš”. “Musculus” se překládá také jako “malá myš”. V češtině je slovo sval pravděpodobně spojeno s pojmem svalit.</p>
+</div>
 </section>
+<section id="hierarchicka-struktura-svalu">
+<h2>Hierarchická struktura svalu<a class="headerlink" href="#hierarchicka-struktura-svalu" title="Link to this heading">#</a></h2>
+<p>Svalová tkáň má hierarchickou strukturu, která sahá od celého svalu až po molekulární úroveň. Níže je popis jednotlivých úrovní.</p>
+<img alt="https://www.researchgate.net/publication/343590590/figure/fig1/AS:923518707462146&#64;1597195426607/Hierarchical-structure-of-skeletal-muscle-A-Sarcomere-morphology-and-sliding-mechanism.jpg" src="https://www.researchgate.net/publication/343590590/figure/fig1/AS:923518707462146&#64;1597195426607/Hierarchical-structure-of-skeletal-muscle-A-Sarcomere-morphology-and-sliding-mechanism.jpg" />
+<ol class="arabic">
+<li><p><strong>Makroskopická úroveň (celý sval)</strong></p>
+<p>Sval je orgán složený z:</p>
+<ul class="simple">
+<li><p><strong>svalových vláken</strong></p></li>
+<li><p><strong>pojivové tkáně</strong></p></li>
+<li><p><strong>krevních cév</strong></p></li>
+<li><p><strong>nervů</strong></p></li>
+</ul>
+<p>Každý sval je obalen pojivovou tkání nazývanou <strong>epimysium</strong>, která ho chrání a udržuje jeho tvar.</p>
+</li>
+<li><p><strong>Fascikuly (snopečky svalových vláken)</strong>
+Uvnitř svalu jsou jednotlivé svalové snopce (<strong>fasciculi</strong>), které obsahují skupiny svalových vláken. Každý fascikul je obalen <strong>perimysiem</strong>, což je vrstva pojivové tkáně.</p></li>
+<li><p><strong>Svalové vlákno (svalová buňka)</strong>
+Svalové vlákno (<strong>myocyt</strong>) je:</p>
+<ul class="simple">
+<li><p><strong>dlouhá, cylindrická buňka</strong> s <strong>více jádry</strong></p></li>
+<li><p>obsahuje <strong>sarkolemu</strong> (buněčnou membránu)</p></li>
+<li><p>uvnitř se nachází <strong>sarkoplazma</strong> (cytoplazma) s organelami a specializovanými strukturami</p></li>
+</ul>
+<p>Každé svalové vlákno je obaleno <strong>endomysiem</strong>, což je jemná vrstva pojivové tkáně.</p>
+</li>
+<li><p><strong>Myofibrily</strong>
+V rámci svalových vláken se nachází <strong>myofibrily</strong> – dlouhá, tenká vlákna složená z opakujících se jednotek nazývaných <strong>sarkomery</strong>.</p></li>
+<li><p><strong>Sarkomera (kontraktilní jednotka)</strong>
+Sarkomera je základní kontraktilní jednotkou svalového vlákna a obsahuje:</p>
+<ul class="simple">
+<li><p><strong>A-pásmo</strong> – obsahuje myosinová filamenta (tlustá filamenta) a část aktinových filament.</p></li>
+<li><p><strong>I-pásmo</strong> – obsahuje pouze aktinová filamenta (tenká filamenta).</p></li>
+<li><p><strong>Z-disky</strong> – ohraničují sarkomeru a slouží jako kotvicí bod pro aktinová filamenta.</p></li>
+<li><p><strong>H-zóna</strong> – centrální část sarkomery obsahující pouze myosin.</p></li>
+<li><p><strong>M-linie</strong> – střed sarkomery, kde se myosinová filamenta spojují.</p></li>
+</ul>
+</li>
+<li><p>Myofilamenta (svalové proteiny)
+Sarkomery obsahují dva hlavní typy myofilament:</p>
+<ul class="simple">
+<li><p><strong>Aktinová filamenta</strong> – tenká vlákna tvořená <strong>aktinem, tropomyosinem a troponinem</strong>.</p></li>
+<li><p><strong>Myosinová filamenta</strong> – tlustá vlákna tvořená <strong>myosinem</strong>, který má hlavičky schopné interagovat s aktinem a vytvářet sílu potřebnou pro svalovou kontrakci.</p></li>
+</ul>
+</li>
+</ol>
+<img alt="https://euler.fav.zcu.cz/kmet/bio/image_sv/obr4.png" src="https://euler.fav.zcu.cz/kmet/bio/image_sv/obr4.png" />
+</section>
+<section id="typy-svalu-podle-smeru-svalovych-vlaken">
+<h2>Typy svalů podle směru svalových vláken<a class="headerlink" href="#typy-svalu-podle-smeru-svalovych-vlaken" title="Link to this heading">#</a></h2>
+<p>Směr svalových vláken ovlivňuje <strong>funkci, rozsah pohybu a sílu kontrakce</strong>. Svaly můžeme rozdělit do několika základních typů:</p>
+<a class="reference internal image-reference" href="https://www.teachpe.com/wp-content/uploads/2019/08/shapes-muscle595.jpg"><img alt="https://www.teachpe.com/wp-content/uploads/2019/08/shapes-muscle595.jpg" src="https://www.teachpe.com/wp-content/uploads/2019/08/shapes-muscle595.jpg" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p><strong>Podélné svaly (Parallel)</strong></p>
+<ul>
+<li><p>Vlákna probíhají rovnoběžně s podélnou osou svalu.</p></li>
+<li><p>Výhodou je <strong>velký rozsah pohybu</strong>, nevýhodou <strong>menší síla</strong>.</p></li>
+<li><p>Příklady:</p>
+<ul>
+<li><p><strong>Přímý břišní sval</strong> (<em>musculus rectus abdominis</em>)</p></li>
+<li><p><strong>Kývač hlavy</strong> (<em>musculus sternocleidomastoideus</em>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Vřetenovité svaly (Fusiform)</strong></p>
+<ul>
+<li><p>Mají široké začátky a konce, uprostřed jsou zúžené.</p></li>
+<li><p>Kombinují <strong>sílu</strong> i <strong>rozsah pohybu</strong>.</p></li>
+<li><p>Příklad:</p>
+<ul>
+<li><p><strong>Dvojhlavý sval pažní</strong> (<em>musculus biceps brachii</em>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Kruhové svaly (Circular)</strong></p>
+<ul>
+<li><p>Vlákna probíhají do kruhu, často uzavírají otvory.</p></li>
+<li><p>Příklad:</p>
+<ul>
+<li><p><strong>Kruhový sval ústní</strong> (<em>musculus orbicularis oris</em>)</p></li>
+<li><p><strong>Kruhový sval oční</strong> (<em>musculus orbicularis oculi</em>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Zpeřené svaly (Pennate)</strong></p>
+<ul>
+<li><p>Vlákna jsou uspořádána pod úhlem k šlachám, což umožňuje <strong>větší sílu</strong>, ale omezuje rozsah pohybu.</p></li>
+<li><p>Dělí se na:</p>
+<ul>
+<li><p><strong>Jednozpeřené (Unipennate)</strong> – vlákna vycházejí z jedné strany šlachy</p>
+<ul>
+<li><p><em>Příklad: dlouhý sval stehenní (musculus semimembranosus)</em></p></li>
+</ul>
+</li>
+<li><p><strong>Dvojzpeřené (Bipennate)</strong> – vlákna vycházejí z obou stran šlachy</p>
+<ul>
+<li><p><em>Příklad: přímý sval stehenní (musculus rectus femoris)</em></p></li>
+</ul>
+</li>
+<li><p><strong>Mnohozpeřené (Multipennate)</strong> – vlákna směřují k centrální šlaše z různých směrů</p>
+<ul>
+<li><p><em>Příklad: deltový sval (musculus deltoideus)</em></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Vějířovité svaly (Convergent)</strong></p>
+<ul>
+<li><p>Vlákna se sbíhají z širokého začátku do úzkého úponu.</p></li>
+<li><p>Kombinují <strong>sílu i variabilní směry pohybu</strong>.</p></li>
+<li><p>Příklad:</p>
+<ul>
+<li><p><strong>Velký prsní sval</strong> (<em>musculus pectoralis major</em>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Lichoběžníkové a kosočtvercové svaly</strong></p>
+<ul>
+<li><p>Svalová vlákna mají různý směr a umožňují složité pohyby.</p></li>
+<li><p>Příklad:</p>
+<ul>
+<li><p><strong>Lichoběžníkový sval</strong> (<em>musculus trapezius</em>)</p></li>
+<li><p><strong>Kosočtverečné svaly</strong> (<em>musculi rhomboidei</em>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -480,20 +611,20 @@ $<span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{v}}(t) = \
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html"
+       href="13_Stabilita.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Souřadnicový systém</p>
+        <p class="prev-next-title">Stabilita</p>
       </div>
     </a>
     <a class="right-next"
-       href="8_Stupn%C4%9B_volnosti.html"
+       href="3_2_Princip_svalov%C3%A9_kontrakce.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Stupně volnosti</p>
+        <p class="prev-next-title">Princip svalové kontrakce</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -514,8 +645,9 @@ $<span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{v}}(t) = \
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohyb-v-rovine">Pohyb v rovině</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohyb-v-prostoru">Pohyb v prostoru</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#makroskopicka-struktura-svalu">Makroskopická struktura svalu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchicka-struktura-svalu">Hierarchická struktura svalu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#typy-svalu-podle-smeru-svalovych-vlaken">Typy svalů podle směru svalových vláken</a></li>
 </ul>
   </nav></div>
 

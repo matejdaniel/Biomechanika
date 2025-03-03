@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Pohyb ve více rozměrech &#8212; Biomechanika a biomateriály</title>
+    <title>Účinek svalu &#8212; Biomechanika a biomateriály</title>
   
   
   
@@ -62,11 +62,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '7_Pohyb_ve_více_rozměrech';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '3_4_Účinek_svalu';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Stupně volnosti" href="8_Stupn%C4%9B_volnosti.html" />
-    <link rel="prev" title="Souřadnicový systém" href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html" />
+    <link rel="next" title="Výpočet svalových sil" href="3_5_V%C3%BDpo%C4%8Det_svalov%C3%BDch_sil.html" />
+    <link rel="prev" title="Svalová síla" href="3_3_Svalov%C3%A1_s%C3%ADla.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -172,14 +172,14 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_Uvod_historie_definice.html">Úvod do biomechaniky</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="2_MOCAP.html">Popis pohybu</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_MOCAP.html">Popis pohybu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="3_Rozd%C4%9Blen%C3%AD_pohyb%C5%AF.html">Rozdělení pohybů</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="4%20Ur%C4%8Den%C3%AD%20polohy.html">Určení polohy</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="5_Kinematika_bodu.html">Kinematika bodu</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html">Souřadnicový systém</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Pohyb ve více rozměrech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_Pohyb_ve_v%C3%ADce_rozm%C4%9Brech.html">Pohyb ve více rozměrech</a></li>
 <li class="toctree-l2"><a class="reference internal" href="8_Stupn%C4%9B_volnosti.html">Stupně volnosti</a></li>
 </ul>
 </details></li>
@@ -193,11 +193,11 @@
 <li class="toctree-l2"><a class="reference internal" href="13_Stabilita.html">Stabilita</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="3_1_Struktura_svalu.html">Mechanika svalu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="3_1_Struktura_svalu.html">Mechanika svalu</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="3_2_Princip_svalov%C3%A9_kontrakce.html">Princip svalové kontrakce</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="3_3_Svalov%C3%A1_s%C3%ADla.html">Svalová síla</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3_4_%C3%9A%C4%8Dinek_svalu.html">Účinek svalu</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Účinek svalu</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3_5_V%C3%BDpo%C4%8Det_svalov%C3%BDch_sil.html">Výpočet svalových sil</a></li>
 
 </ul>
@@ -278,7 +278,7 @@
       
       
       
-      <li><a href="https://github.com/matejdaniel/Biomechanika/issues/new?title=Issue%20on%20page%20%2F7_Pohyb_ve_více_rozměrech.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/matejdaniel/Biomechanika/issues/new?title=Issue%20on%20page%20%2F3_4_Účinek_svalu.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -308,7 +308,7 @@
       
       
       
-      <li><a href="_sources/7_Pohyb_ve_více_rozměrech.ipynb" target="_blank"
+      <li><a href="_sources/3_4_Účinek_svalu.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -384,7 +384,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Pohyb ve více rozměrech</h1>
+    <h1>Účinek svalu</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -394,8 +394,21 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohyb-v-rovine">Pohyb v rovině</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohyb-v-prostoru">Pohyb v prostoru</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohyb">Pohyb</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#neutralizace">Neutralizace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stabilizace">Stabilizace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agonista-a-antagonista">Agonista a Antagonista</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#agonista">Agonista</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#antagonista">Antagonista</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vztah-mezi-agonistou-a-antagonistou-ve-vztahu-k-momentu-sily">Vztah mezi agonistou a antagonistou ve vztahu k momentu síly</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paky-prvniho-druheho-a-tretiho-druhu">Páky prvního, druhého a třetího druhu**</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paka-prvniho-druhu">Páka prvního druhu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paka-druheho-druhu">Páka druhého druhu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paka-tretiho-druhu">Páka třetího druhu</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -407,45 +420,120 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="pohyb-ve-vice-rozmerech">
-<h1>Pohyb ve více rozměrech<a class="headerlink" href="#pohyb-ve-vice-rozmerech" title="Link to this heading">#</a></h1>
-<ul class="simple">
-<li><p><strong>Posuvný pohyb</strong>: V případě posuvného pohybu se pohybují všechny body tělesa stejně, t.j. po stejné trajektorii. Pro určení polohy nám tak postačí určit polohu jednoho bodu a to pomocí souřadnic nebo polohového vektoru.</p></li>
-<li><p><strong>Otáčivý pohyb</strong>: V lidském těle dochází především k rotačnímu pohybu v kloubech. Na rozdíl od posuvného pohybu, kde se poloha vyjadřuje pomocí souřadnic, vyjadřujeme polohu segmentu těla při rotaci pomocí úhlů rotace.</p></li>
-</ul>
-<section id="pohyb-v-rovine">
-<h2>Pohyb v rovině<a class="headerlink" href="#pohyb-v-rovine" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="ucinek-svalu">
+<h1>Účinek svalu<a class="headerlink" href="#ucinek-svalu" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><p>Sval při kontrakci působí <em>tahovou sílou</em> na odstup a úpon.</p>
+</div></blockquote>
+<p>Funkce svalu vůči kloubu je:</p>
 <ol class="arabic simple">
-<li><p><strong>Poloha bodu ve 2D</strong>
-Poloha bodu v rovině se nejčastěji popisuje pomocí souřadnic. Souřadnice nám umožní jednoznačně určit, kde se bod nachází vzhledem k pevně zvolenému počátku souřadnic. Poloha bodu v rovině se nejčastěji popisuje pomocí dvou souřadnic. Kartézské souřadnice jsou nejpoužívanějším způsobem, jak popsat polohu bodu v rovině. Tento systém používá dvě vzájemně kolmé osy, obvykle označované jako osa x (horizontální) a osa y (vertikální). Poloha bodu je pak určena uspořádanou dvojicí čísel (x, y), kde:</p></li>
+<li><p>pohyb</p></li>
+<li><p>neutralizace</p></li>
+<li><p>stabilizace</p></li>
 </ol>
+<section id="pohyb">
+<h2>Pohyb<a class="headerlink" href="#pohyb" title="Link to this heading">#</a></h2>
+<p>Svaly v lidském těle mají <strong>rotační účinek</strong>, protože při kontrakci působí sílu na kosti, které se nacházejí ve vzdálenosti od centra rotace (například od kloubu). Tento rotační účinek je základem pro pohyb, který je charakteristický pro většinu lidských aktivit.</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(x\)</span> je vzdálenost bodu od osy y měřená ve směru osy x.</p></li>
-<li><p><span class="math notranslate nohighlight">\(y\)</span> je vzdálenost bodu od osy x měřená ve směru osy y.</p></li>
+<li><p>Když sval kontrahuje a zkracuje se, <strong>působí sílu na kost</strong>, která je připojena k jeho šlaše.</p></li>
+<li><p>Tato síla <strong>generuje moment síly</strong>, který otáčí kost kolem <strong>centrálního bodu rotace</strong> (například kolem kloubu).</p></li>
+<li><p><strong>Pákový systém</strong>: Pákový efekt je výsledkem působení síly svalu na kost ve vzdálenosti od kloubu (centrálního bodu), což vytváří rotační pohyb. Tento pákový systém může být použit ke zvýšení efektivity pohybu.</p></li>
 </ul>
-<p><img alt="Poloha bodu v rovině" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Cartesian-coordinate-system.svg/800px-Cartesian-coordinate-system.svg.png" /></p>
-<p>Polohový vektor je určen <span class="math notranslate nohighlight">\(\vec{r} = (x,y)\)</span> a jeho změnou můžeme popsat pohyb
-$<span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{v}}(t) = \frac{\overrightarrow{\mathbf{r}}(t_2)-\overrightarrow{\mathbf{r}}(t_1)}{t_2-t_1} = \frac{\Delta \overrightarrow{\mathbf{r}}}{\Delta t}\)</span>$</p>
+<p>Mírou otáčivého účinku síly je moment síly</p>
 <div class="math notranslate nohighlight">
-\[ \overrightarrow{\mathbf{a}}(t) = \frac{\overrightarrow{\mathbf{v}}(t_2)-\overrightarrow{\mathbf{v}}(t_1)}{t_2-t_1} = \frac{\Delta \overrightarrow{\mathbf{v}}}{\Delta t}\]</div>
-<ol class="arabic simple" start="2">
-<li><p><strong>Poloha tělesa ve 2D</strong></p></li>
-</ol>
-<p>Chceme-li detailně popsat polohu tělesa v rovině, můžeme kombinovat výhody kartézských pro popis polohy a úhlu natočení pro popis rotace.</p>
+\[M = r F\]</div>
+<p>kde</p>
 <ul class="simple">
-<li><p><strong>Kartézské souřadnice</strong> <span class="math notranslate nohighlight">\((x, y)\)</span>: Určují polohu tělesa vzhledem k počátku souřadného systému a osám x a y.</p></li>
-<li><p><strong>Úhel</strong> (<span class="math notranslate nohighlight">\(\varphi\)</span>): Udává úhel, který udáva natočení tělesa vůči bodu <span class="math notranslate nohighlight">\((x,y,\)</span> a jedné z os souřadnicového systému</p></li>
+<li><p><span class="math notranslate nohighlight">\(M\)</span> je moment síly</p></li>
+<li><p><span class="math notranslate nohighlight">\(F\)</span> je svalová síla</p></li>
+<li><p><span class="math notranslate nohighlight">\(r\)</span> je kolmá vzdálenost od centra rotace k nositelce síly</p></li>
 </ul>
-<p><img alt="Poloha tělesa v rovině" src="https://www.researchgate.net/profile/Ri-Yu/publication/356958041/figure/fig3/AS:1131602881060868&#64;1646806559964/A-body-orientation-hint-from-2D-joint-positions_W640.jpg" /></p>
-<p>Pohyb pak popíšeme jako kombinaci rotačního a translačního pohybu.</p>
+<img alt="https://outlift.com/wp-content/uploads/2020/02/lifting-physics-internal-moment-arm-biceps-elbow-1.jpg" src="https://outlift.com/wp-content/uploads/2020/02/lifting-physics-internal-moment-arm-biceps-elbow-1.jpg" />
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Moment síly je vektorová veličina a v rovině má směr kladný při otáčení proti směru hodinových ručiček.</p>
+</div>
 </section>
-<section id="pohyb-v-prostoru">
-<h2>Pohyb v prostoru<a class="headerlink" href="#pohyb-v-prostoru" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p><strong>Polohu bodu v prostoru</strong> určíme pomocí tří souřadnic (<span class="math notranslate nohighlight">\(x,y,z\)</span>).</p></li>
-<li><p><strong>Polohu tělesa v prostoru</strong>  určíme pomocí tří souřadnic (<span class="math notranslate nohighlight">\(x,y,z\)</span>) a třech natočení (<span class="math notranslate nohighlight">\(\psi, \varphi, \vartheta, \)</span>).</p></li>
-</ol>
-<p><img alt="Natočení hlavy" src="https://lh5.googleusercontent.com/proxy/cDjfmhJuq6RxgaYCy7yWldZ8yvS07ZwqjfJzrH7EiJlzn7yPKzLTbpC6qIki9t352p5tS89RUWP0euKQimENbQ" /></p>
+<section id="neutralizace">
+<h2>Neutralizace<a class="headerlink" href="#neutralizace" title="Link to this heading">#</a></h2>
+<p>Chceme-li provést čistou flexi předloktí, musíme potlačit – neutralizovat supinační účinek šikmého úponu šlachy dvojhlavého svalu. Neutralizačními svaly se v tomto případě stávají pronátory předloktí – svaly, které jsou antagonisty supinátorů.</p>
+</section>
+<section id="stabilizace">
+<h2>Stabilizace<a class="headerlink" href="#stabilizace" title="Link to this heading">#</a></h2>
+<p>V průběhu pohybu je obvykle uvolněn jen pohybující se segment těla. Zbývající části jsou naopak znehybněny, stabilizovány a fixovány. Svalům, které tuto fixaci provádějí, říkáme svaly fixační (stabilizační) – umožňují zpevnění určité části, odkud pohyb vychází. Tyto svaly se přímo nepodílí na pohybu, ale udržují pohybový segment v postavení, které je pro pohyb nejvýhodnější. Například extenzi v kolenním kloubu sice provádí čtyřhlavý stehenní sval, ale při bližší analýze pohybu zjistíme, že vlastně extenzi zajišťuje především přímý stehenní sval a zbývající ploché hlavy svalu čtyřhlavého svalu dosaženou extenzi bérce pouze fixují.</p>
+<p>Během koncentrické akce se sval snaží zkrátit tím, že k sobě přitahuje dvě kostěná místa úponu. Ve většině případů se pohybuje kost s nejmenším odporem vůči pohybu (setrvačností). Pokud je setrvačnost obou kostí podobně velká, mají tendenci se pohybovat oba konce. Pokud je žádoucí pohyb pouze jednoho konce, je třeba druhému konci zabránit v pohybu nebo ho stabilizovat. Tuto stabilizaci zajišťují jiné svaly nebo vnější síla. Jako příklad uveďme ohnutí v kyčli vytvořené předním stehenním svalem. Při pokusu o pohyb stehenní kosti v ohybu ohýbače kyčle také naklánějí pánev dopředu. Pokud je náklon pánve nežádoucí, musí břišní svalstvo působit izometricky, aby pánev stabilizovalo a zabránilo jejímu pohybu.</p>
+</section>
+<section id="agonista-a-antagonista">
+<h2>Agonista a Antagonista<a class="headerlink" href="#agonista-a-antagonista" title="Link to this heading">#</a></h2>
+<img alt="https://kinxlearning.com/cdn/shop/articles/biceps_contraction.png?v=1706188165" src="https://kinxlearning.com/cdn/shop/articles/biceps_contraction.png?v=1706188165" />
+<section id="agonista">
+<h3>Agonista<a class="headerlink" href="#agonista" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Definice</strong>: Agonista je sval, který <strong>působí v rámci požadovaného pohybu</strong> kloubu. Je to sval, který generuje <strong>moment síly</strong>, jenž způsobuje <strong>pohyb</strong> v kloubu. Agonista je tedy primárně odpovědný za vykonání daného pohybu.</p></li>
+<li><p><strong>Příklad</strong>: Při <strong>flexi</strong> (ohýbání) lokte je <strong>biceps brachii</strong> hlavním agonistou, protože se kontrahuje a vytváří moment síly, který ohýbá loketní kloub.</p></li>
+</ul>
+</section>
+<section id="antagonista">
+<h3>Antagonista<a class="headerlink" href="#antagonista" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Definice</strong>: Antagonista je sval, který působí v <strong>opačném směru</strong> než agonista a jeho účinkem je <strong>brzdění nebo kontrolování pohybu</strong>. Tento sval vytváří moment síly, který je <strong>opačný</strong> k momentu vyvolanému agonistou. Antagonista pomáhá udržet stabilitu kloubu a kontroluje rozsah pohybu.</p></li>
+<li><p><strong>Příklad</strong>: Při flexi lokte (ohýbání) je <strong>triceps brachii</strong> antagonista, protože působí ve směru protikladu k flexi, což znamená, že brzdí tento pohyb a udržuje stabilitu v kloubu.</p></li>
+</ul>
+<section id="vztah-mezi-agonistou-a-antagonistou-ve-vztahu-k-momentu-sily">
+<h4>Vztah mezi agonistou a antagonistou ve vztahu k momentu síly<a class="headerlink" href="#vztah-mezi-agonistou-a-antagonistou-ve-vztahu-k-momentu-sily" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Při pohybu</strong> kloubu, když se agonista kontrahuje, vytváří <strong>moment síly</strong>, který působí v určitém směru, což způsobuje pohyb kloubu (například ohýbání nebo natahování). Antagonista ve stejný čas vytváří moment síly v opačném směru, čímž buď brzdí pohyb, nebo zajišťuje kontrolu nad ním, aby se předešlo přetížení nebo poškození kloubu.</p></li>
+<li><p><strong>Příklad</strong>: Při <strong>extenzi lokte</strong> (natahování lokte) je <strong>triceps</strong> agonista, který generuje moment síly, jenž natahuje loketní kloub. Naopak <strong>biceps</strong> je antagonistou, protože brzdí rychlý pohyb a zajišťuje kontrolu nad extencí.</p></li>
+<li><p>V <strong>koordinačních pohybech</strong> je důležitá spolupráce mezi agonistou a antagonistou. Agonista nejen vykonává požadovaný pohyb, ale antagonista ho pomáhá zpomalit, kontrolovat a stabilizovat, což je nezbytné pro hladký a bezpečný pohyb.</p></li>
+<li><p><strong>Koaktivace</strong> je současné působení agonistů i antagonistů se nazývá koaktivace (také ko-kontrakce).</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Agonista zabezpečuje pohyb kontrakcí jedním směrem a antagonista opačným směrem. Tím je možné pomocí tahové síly kontrakce dosáhnout pohyb otáčení v obou směrech, např. flexe a extenze.</p>
+</div>
+</section>
+</section>
+<section id="paky-prvniho-druheho-a-tretiho-druhu">
+<h3>Páky prvního, druhého a třetího druhu**<a class="headerlink" href="#paky-prvniho-druheho-a-tretiho-druhu" title="Link to this heading">#</a></h3>
+<p>Páky jsou mechanické systémy, které umožňují přenášet sílu a otáčet objekty kolem bodu rotace (pily). V závislosti na umístění síly, páky a zátěže se rozlišují tři základní typy pák:</p>
+<img alt="https://www.simply.science/images/content/physics/mechanics/simple_machines/Concept_map/levers.gif" src="https://www.simply.science/images/content/physics/mechanics/simple_machines/Concept_map/levers.gif" />
+</section>
+<section id="paka-prvniho-druhu">
+<h3>Páka prvního druhu<a class="headerlink" href="#paka-prvniho-druhu" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Popis</strong>: U pák prvního druhu je <strong>bod otáčení (pivot)</strong> umístěn mezi <strong>sílu</strong> a <strong>zátěž</strong>.</p></li>
+<li><p><strong>Vlastnosti</strong>: Tento typ páky může mít <strong>mechanickou výhodu</strong> (když je bod otáčení blízko k zátěži) nebo může být <strong>nevýhodný</strong> (když je bod otáčení blízko k síle).</p></li>
+<li><p><strong>Příklad v lidském těle</strong>:</p>
+<ul>
+<li><p><strong>Krční páteř</strong>: Při pohybu hlavy, kde svaly krku (síla) působí na pily (krční kloub) a hlava (zátěž) je na opačné straně.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="paka-druheho-druhu">
+<h3>Páka druhého druhu<a class="headerlink" href="#paka-druheho-druhu" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Popis</strong>: U pák druhého druhu je <strong>zátěž</strong> umístěna mezi <strong>bod otáčení</strong> a <strong>sílu</strong>.</p></li>
+<li><p><strong>Vlastnosti</strong>: Páka druhého druhu vždy poskytuje <strong>mechanickou výhodu</strong>, protože síla má větší páku než zátěž.</p></li>
+<li><p><strong>Příklad v lidském těle</strong>:</p>
+<ul>
+<li><p><strong>Stání na špičkách</strong>: Při stání na špičkách jsou prsty (bod otáčení) místem otáčení, zatímco síla se generuje od lýtkových svalů (síla), a zátěž je umístěna na hlezně.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="paka-tretiho-druhu">
+<h3>Páka třetího druhu<a class="headerlink" href="#paka-tretiho-druhu" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Popis</strong>: U pák třetího druhu je <strong>síla</strong> umístěna mezi <strong>bod otáčení</strong> a <strong>zátěž</strong>.</p></li>
+<li><p><strong>Vlastnosti</strong>: Páka třetího druhu <strong>neposkytuje mechanickou výhodu</strong> (vyžaduje větší sílu k přemístění zátěže), ale umožňuje <strong>rychlejší pohyb</strong> a <strong>větší rozsah pohybu</strong>.</p></li>
+<li><p><strong>Příklad v lidském těle</strong>:</p>
+<ul>
+<li><p><strong>Lidská ruka</strong>: Při zvedání předmětu pomocí bicepsu je <strong>biceps</strong> umístěn mezi ramenem (bod otáčení) a předloktím (zátěž).</p></li>
+</ul>
+</li>
+</ul>
+</section>
 </section>
 </section>
 
@@ -480,20 +568,20 @@ $<span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{v}}(t) = \
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html"
+       href="3_3_Svalov%C3%A1_s%C3%ADla.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Souřadnicový systém</p>
+        <p class="prev-next-title">Svalová síla</p>
       </div>
     </a>
     <a class="right-next"
-       href="8_Stupn%C4%9B_volnosti.html"
+       href="3_5_V%C3%BDpo%C4%8Det_svalov%C3%BDch_sil.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Stupně volnosti</p>
+        <p class="prev-next-title">Výpočet svalových sil</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -514,8 +602,21 @@ $<span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{v}}(t) = \
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohyb-v-rovine">Pohyb v rovině</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohyb-v-prostoru">Pohyb v prostoru</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohyb">Pohyb</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#neutralizace">Neutralizace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stabilizace">Stabilizace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agonista-a-antagonista">Agonista a Antagonista</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#agonista">Agonista</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#antagonista">Antagonista</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vztah-mezi-agonistou-a-antagonistou-ve-vztahu-k-momentu-sily">Vztah mezi agonistou a antagonistou ve vztahu k momentu síly</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paky-prvniho-druheho-a-tretiho-druhu">Páky prvního, druhého a třetího druhu**</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paka-prvniho-druhu">Páka prvního druhu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paka-druheho-druhu">Páka druhého druhu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paka-tretiho-druhu">Páka třetího druhu</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
