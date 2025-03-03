@@ -19,3 +19,9 @@ chapters:
   - file: 11_Rovnováha.ipynb
   - file: 10_Těžiště_těla.ipynb
   - file: 13_Stabilita.ipynb
+- file: 3_1_Struktura_svalu.ipynb
+  sections:
+  - file: 3_2_Princip_svalové_kontrakce.ipynb
+  - file: 3_3_Svalová_síla.ipynb
+  - file: 3_4_Účinek_svalu.ipynb
+  - file: 3_5_Výpočet_svalových_sil.ipynb
