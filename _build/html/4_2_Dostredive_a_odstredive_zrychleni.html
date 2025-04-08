@@ -60,6 +60,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '4_2_Dostredive_a_odstredive_zrychleni';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -399,7 +401,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -415,6 +419,18 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnomerny-pohyb-po-kruznici">Rovnoměrný pohyb po kružnici</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametry-rovnomerneho-kruhoveho-pohybu-1dof-skalarni-popis">Parametry rovnoměrného kruhového pohybu (1DOF - skalární popis)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dostredive-zrychleni">Dostředivé zrychlení</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -426,6 +442,107 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="dostredive-a-odstredive-zrychleni">
 <h1>Dostředivé a odstředivé zrychlení<a class="headerlink" href="#dostredive-a-odstredive-zrychleni" title="Link to this heading">#</a></h1>
+<section id="rovnomerny-pohyb-po-kruznici">
+<h2>Rovnoměrný pohyb po kružnici<a class="headerlink" href="#rovnomerny-pohyb-po-kruznici" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>Rovnoměrný pohyb po kružnici je specifický typ pohybu, při kterém se objekt pohybuje po kružnici konstantní rychlostí.</p>
+</div></blockquote>
+<p>Například jakýkoli bod na vrtuli rotující konstantní rychlostí vykonává rovnoměrný kruhový pohyb. Dalšími příklady jsou sekundová, minutová a hodinová ručička hodinek. Je pozoruhodné, že body na těchto rotujících objektech skutečně zrychlují, i když je rychlost rotace konstantní. Abychom to pochopili, musíme analyzovat pohyb pomocí vektorů.</p>
+<section id="parametry-rovnomerneho-kruhoveho-pohybu-1dof-skalarni-popis">
+<h3>Parametry rovnoměrného kruhového pohybu (1DOF - skalární popis)<a class="headerlink" href="#parametry-rovnomerneho-kruhoveho-pohybu-1dof-skalarni-popis" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Úhlová poloha (<span class="math notranslate nohighlight">\(\varphi\)</span>):</strong></p>
+<ul class="simple">
+<li><p>Udává polohu tělesa na kružnici vzhledem k referenčnímu bodu (obvykle počátek).</p></li>
+<li><p>Měří se v radiánech (rad).</p></li>
+<li><p>Změna úhlové polohy s časem popisuje pohyb tělesa po kružnici.</p></li>
+</ul>
+</li>
+<li><p><strong>Úhlová rychlost (<span class="math notranslate nohighlight">\(\omega\)</span>):</strong></p>
+<ul>
+<li><p>Udává změnu úhlové polohy za jednotku času.</p>
+<div class="math notranslate nohighlight">
+\[\omega = \frac{d\varphi}{dt}\]</div>
+</li>
+<li><p>Měří se v radiánech za sekundu (rad/s).</p></li>
+<li><p>Při rovnoměrném pohybu po kružnici je úhlová rychlost konstantní.</p></li>
+</ul>
+</li>
+<li><p><strong>Frekvence (<span class="math notranslate nohighlight">\(f\)</span>):</strong></p>
+<ul>
+<li><p>Udává počet oběhů za jednotku času.</p>
+<div class="math notranslate nohighlight">
+\[f = \frac{\omega}{2\pi}\]</div>
+</li>
+<li><p>Měří se v hertzích (Hz).</p></li>
+<li><p>Frekvence je převrácená hodnota periody.</p></li>
+</ul>
+</li>
+<li><p><strong>Perioda (<span class="math notranslate nohighlight">\(T\)</span>):</strong></p>
+<ul>
+<li><p>Udává dobu potřebnou k vykonání jednoho oběhu.</p>
+<div class="math notranslate nohighlight">
+\[T = \frac{1}{f} = \frac{2\pi}{\omega}\]</div>
+</li>
+<li><p>Měří se v sekundách (s).</p></li>
+</ul>
+</li>
+<li><p><strong>Obvodová rychlost (<span class="math notranslate nohighlight">\(v\)</span>):</strong></p>
+<div class="math notranslate nohighlight">
+\[v = r\omega\]</div>
+<p>, kde <span class="math notranslate nohighlight">\(r\)</span> je poloměr kružnice.</p>
+<ul class="simple">
+<li><p>Obvodová rychlost je tečná k trajektorii.</p></li>
+</ul>
+</li>
+</ul>
+<p>Pohyb tělesa lze popsat pomocí úhlové polohy jako funkce času:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\varphi(t) = \varphi_0 + \omega t\)</span></p></li>
+</ul>
+<p>Kde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\varphi(t)\)</span> je úhlová poloha v čase <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\varphi_0\)</span> je počáteční úhlová poloha (fáze pohybu)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\omega\)</span> je úhlová rychlost</p></li>
+</ul>
+</section>
+<section id="dostredive-zrychleni">
+<h3>Dostředivé zrychlení<a class="headerlink" href="#dostredive-zrychleni" title="Link to this heading">#</a></h3>
+<img alt="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2952/2018/01/31185650/CNX_UPhysics_04_04_Circle.jpg" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2952/2018/01/31185650/CNX_UPhysics_04_04_Circle.jpg" />
+<p>V jednorozměrné kinematice mají objekty s konstantní rychlostí nulové zrychlení. Nicméně, ve dvou a trojrozměrné kinematice, i když je rychlost konstantní, může mít částice zrychlení, pokud se pohybuje po zakřivené trajektorii, jako je kružnice. V tomto případě se vektor rychlosti mění, nebo</p>
+<div class="math notranslate nohighlight">
+\[ d\vec{v}\text{/}dt\ne 0. \]</div>
+<p>Jak se částice pohybuje proti směru hodinových ručiček v čase <span class="math notranslate nohighlight">\(\Delta t\)</span> po kruhové dráze, její polohový vektor se posouvá z <span class="math notranslate nohighlight">\( \vec{r}(t)\)</span> na <span class="math notranslate nohighlight">\(\vec{r}(t+\Delta t)\)</span>. Vektor rychlosti má konstantní velikost a je tečnou k dráze, když se mění z <span class="math notranslate nohighlight">\(\vec{v}(t)\)</span> na <span class="math notranslate nohighlight">\(\vec{v}(t+\Delta t)\)</span> mění se pouze jeho směr. Protože vektor rychlosti <span class="math notranslate nohighlight">\(\vec{v}(t)\)</span> je kolmý k polohovému vektoru <span class="math notranslate nohighlight">\(\vec{r}(t)\)</span> jsou trojúhelníky tvořené polohovými vektory a <span class="math notranslate nohighlight">\(\Delta\vec{r}\)</span> a vektory rychlosti <span class="math notranslate nohighlight">\(\Delta \vec{v}\)</span> podobné. Navíc, protože <span class="math notranslate nohighlight">\( |\vec {r}(t)|=|\vec{r}(t+\Delta t)|\)</span> a <span class="math notranslate nohighlight">\(|\vec{v}(t)|=|\vec{v}(t+\Delta t)|\)</span> jsou oba trojúhelníky rovnoramenné. Z těchto skutečností můžeme učinit tvrzení</p>
+<div class="math notranslate nohighlight">
+\[\frac{\Delta v}{v}=\frac{\Delta r}{r} \]</div>
+<p>nebo</p>
+<div class="math notranslate nohighlight">
+\[ \Delta v=\frac{v}{r}\Delta r\]</div>
+<p>Velikost zrychlení můžeme najít z:</p>
+<div class="math notranslate nohighlight">
+\[a=\frac{\Delta v}{\Delta t}=\frac{v}{r}\frac{\Delta r}{\Delta t} = \frac{v^2}{r}\]</div>
+<p>Směr zrychlení lze také najít pozorováním, že když se <span class="math notranslate nohighlight">\( \text{Δ}t \)</span> a tedy <span class="math notranslate nohighlight">\( \text{Δ}\theta \)</span> blíží nule, vektor <span class="math notranslate nohighlight">\( \text{Δ}\overset{\to }{v} \)</span> se blíží směru kolmému na <span class="math notranslate nohighlight">\( \overset{\to }{v}. \)</span> V limitě <span class="math notranslate nohighlight">\( \text{Δ}t\to 0,\)</span> <span class="math notranslate nohighlight">\( \text{Δ}\overset{\to }{v} \)</span> je kolmý na <span class="math notranslate nohighlight">\( \overset{\to }{v}. \)</span> Protože <span class="math notranslate nohighlight">\( \overset{\to }{v} \)</span> je tečna ke kružnici, zrychlení <span class="math notranslate nohighlight">\( \frac{d\overset{\to }{v}}{dt} \)</span> směřuje do středu kružnice. Shrnutím, částice pohybující se po kružnici konstantní rychlostí má zrychlení o velikosti</p>
+<div class="math notranslate nohighlight">
+\[{a}_{\text{C}}=\frac{{v}^{2}}{r}.\]</div>
+<p>Směr vektoru zrychlení směřuje do středu kružnice. Toto je radiální zrychlení a nazývá se dostředivé (centropetální) zrychlení, proto mu dáváme dolní index c.</p>
+<img alt="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2952/2018/01/31185654/CNX_UPhysics_04_04_Cenacc.jpg" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2952/2018/01/31185654/CNX_UPhysics_04_04_Cenacc.jpg" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Slovo centripetální pochází z latinských slov <em>centrum</em> (což znamená „střed“) a <em>petere</em> (což znamená „hledat“), a má tedy význam „hledající střed“.</p>
+</div>
+<p>V učebnicích se často tvrdí, že “odstředivá síla neexistuje”. Když satelit obíhá Zemi, není udržován v rovnováze mezi dvěma stejnými a opačnými silami, tedy gravitací směřující k Zemi a odstředivou silou směřující ven. Satelit má tentenci pohybovat se přímočaře a existuje pouze jedna síla, gravitační, která zakřivuje jeho dráhu.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Slovo centrifugální (odstředivý) pochází z latinských slov centrum, “střed,” a fugere, “utíkat,” takže slovo znamená “utíkající od středu.” Odstředivou sílu studovali fyzikové již v roce 1629 a samotný termín používal Sir Isaac Newton ve své latinské podobě vis centrifuga v roce 1687.</p>
+</div>
+<p>Na druhé straně, dostředivou sílu moc necítíme ale když autem projedeme zatáčku příliš rychle a cítíme se odmrštěni od středu zakřivení naší dráhy,  a tedy působí na nás “odstředivá síla” se zdá být velmi reálná. Celý problém, který nastal je v popisu naěho vztažného systému.</p>
+<p>Zatímco centripetální síla je skutečná fyzikální síla, odstředivá síla je zdánlivá (neboli fiktivní) síla. Jinými slovy, když roztočíte kámen uvázaný na provázku, provázek na kámen působí skutečnou sílou směřující dovnitř — centripetální silou. Z pohledu kamene to však vypadá, jako by provázek byl tažen ven — to je zdánlivá odstředivá síla.</p>
+<p>Pokud pozorujete rotující systém zvenčí, vidíte, že na rotující těleso působí dovnitř směřující centripetální síla, která ho nutí pohybovat se po kruhové dráze. Ale pokud se sami točíte například na kolotoči, zažíváte pocit, že vás něco tlačí ven od středu — tedy odstředivou sílu. Ve skutečnosti ale cítíte centripetální sílu, která vás drží na místě a brání vám vyletět po tečně.</p>
+<p>Představte si, že jedete autem po nakloněné zatáčce. Když to sledujete zvenčí, vidíte, jak na auto působí centripetální síla, která ho tlačí dovnitř zatáčky a drží ho na kruhové dráze. Pokud ale sedíte uvnitř auta, cítíte, jako by vás nějaká síla tlačila ven — to je odstředivá síla.</p>
+<img alt="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2952/2018/01/31191057/CNX_UPhysics_06_03_RightTurn.jpg" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2952/2018/01/31191057/CNX_UPhysics_06_03_RightTurn.jpg" />
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -482,6 +599,26 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnomerny-pohyb-po-kruznici">Rovnoměrný pohyb po kružnici</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametry-rovnomerneho-kruhoveho-pohybu-1dof-skalarni-popis">Parametry rovnoměrného kruhového pohybu (1DOF - skalární popis)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dostredive-zrychleni">Dostředivé zrychlení</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
