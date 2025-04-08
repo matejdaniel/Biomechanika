@@ -1,0 +1,740 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Biomechanika skoku z místa &#8212; Biomechanika a biomateriály</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '4_3_Biomechanika_skoku';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Práce v biomechanice" href="5_2_Mechanicka_prace.html" />
+    <link rel="prev" title="Dostředivé a odstředivé zrychlení" href="4_2_Dostredive_a_odstredive_zrychleni.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-light" alt="Biomechanika a biomateriály - Home"/>
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-dark pst-js-only" alt="Biomechanika a biomateriály - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Obsah
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_Uvod_historie_definice.html">Úvod do biomechaniky</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_MOCAP.html">Popis pohybu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_Rozd%C4%9Blen%C3%AD_pohyb%C5%AF.html">Rozdělení pohybů</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="4%20Ur%C4%8Den%C3%AD%20polohy.html">Určení polohy</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_Kinematika_bodu.html">Kinematika bodu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html">Souřadnicový systém</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_Pohyb_ve_v%C3%ADce_rozm%C4%9Brech.html">Pohyb ve více rozměrech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_Stupn%C4%9B_volnosti.html">Stupně volnosti</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="9_S%C3%ADla.html">Síly v biomechanice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="14_S%C3%ADly_v_biomechanice.html">Síly v biomechanice</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="12_Moment_s%C3%ADly.html">Moment síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_Rovnov%C3%A1ha.html">Rovnováha</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="10_T%C4%9B%C5%BEi%C5%A1t%C4%9B_t%C4%9Bla.html">Těžiště</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_Stabilita.html">Stabilita</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_1_Struktura_svalu.html">Mechanika svalu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_2_Princip_svalov%C3%A9_kontrakce.html">Princip svalové kontrakce</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="3_3_Svalov%C3%A1_s%C3%ADla.html">Svalová síla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_4_%C3%9A%C4%8Dinek_svalu.html">Účinek svalu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_5_V%C3%BDpo%C4%8Det_svalov%C3%BDch_sil.html">Výpočet svalových sil</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="4_1_Inerci%C3%A1ln%C3%AD_s%C3%ADly_p%C5%99%C3%ADmo%C4%8Dar%C3%BD_pohyb.html">Inerciální vlastnosti lidského těla</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="4_2_Dostredive_a_odstredive_zrychleni.html">Dostředivé a odstředivé zrychlení</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Biomechanika skoku z místa</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="5_2_Mechanicka_prace.html">Práce v biomechanice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_1_Energie_kineticka_a_potencialni.html">Kinetická a potenciální energie v biomechanice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_3_Pr%C3%A1ce_a_energie.html">Práce a energie</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_4_%C3%9A%C4%8Dinnost_a_v%C3%BDkon.html">Účinnost</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="5_5_Z%C3%A1kon_zachov%C3%A1n%C3%AD_energie.html">Zákon zachování mechanické energie</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_6_Energie_skoku.html">Energie skoku</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_7_Priklady_zachovani_energie.html">Příklady zachování energie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_8_Periodicky_pohyb.html">Periodický pohyb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_9_Periodicky_pohyb_a_zakon_zachovani.html">Zákon zachování při periodickém pohybu</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="5_10_F%C3%A1ze_ch%C5%AFze.html">Fáze chůze</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_11_Parametry_ch%C5%AFze.html">Parametry chůze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_12_Ch%C5%AFze_svalov%C3%A1_aktivita.html">Svalová aktivita při chůzi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_13_Anal%C3%BDza_ch%C5%AFze.html">Analýza chůze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_13_Ch%C5%AFze_zachov%C3%A1n%C3%AD_energie.html">Chůze a zákony zachování</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_14_Inverzn%C3%AD_kyvadlo.html">Inverzní kyvadlo</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika/issues/new?title=Issue%20on%20page%20%2F4_3_Biomechanika_skoku.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/4_3_Biomechanika_skoku.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Biomechanika skoku z místa</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#faze-skoku-z-mista">Fáze skoku z místa</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyza-skoku">Analýza skoku</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prumerna-reakcni-sila">Průměrná reakční síla</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#odrazova-rychlost">Odrazová rychlost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vyska-dosazena-behem-letu">Výška dosažená během letu</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skok-z-drepu-a-skok-s-protipohybem">Skok z dřepu a skok s protipohybem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nejvyssi-skok-christiana-ronalda">Nejvyšší skok Christiana Ronalda</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="biomechanika-skoku-z-mista">
+<h1>Biomechanika skoku z místa<a class="headerlink" href="#biomechanika-skoku-z-mista" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="faze-skoku-z-mista">
+<h2>Fáze skoku z místa<a class="headerlink" href="#faze-skoku-z-mista" title="Link to this heading">#</a></h2>
+<p>Nejjednodušším pohybem k analýze je skok z místa. Předpokládáme, že těžiště skokana se pohybuje po přímce směrem nahoru a dolu. protože to představuje jednoduchý přímočarý pohyb. Skok do výšky můžeme rozdělit do několika částí:</p>
+<ol class="arabic simple">
+<li><p><strong>Podřep</strong>: Před skokem je nutno se přikrčit, protože pak můžeme při narovnání působit na podložku sílou.</p></li>
+<li><p><strong>Odrazová fáze</strong>: Začíná z podřepu, kdy skokan tlačí nohama proti zemi, dokud se chodidla neodlepí od povrchu.</p></li>
+<li><p><strong>Letová fáze</strong>: Od okamžiku, kdy se chodidla odlepí od země, až do dosažení maximální výšky těžiště.</p></li>
+<li><p><strong>Pádová fáze</strong>: Od dosažení maximální výšky až po dotyk ze zemí.</p></li>
+<li><p><strong>Dopadová fáze</strong>: Od dotyku se zemí po dosažení stabilní polohy těžiště.</p></li>
+</ol>
+<section id="analyza-skoku">
+<h3>Analýza skoku<a class="headerlink" href="#analyza-skoku" title="Link to this heading">#</a></h3>
+<p>Pro zjednodušení analýzy se soustředíme se pouze na pohyb těžiště. Jinými slovy předpokládáme, že během skoku se poloha těla a držení těla nemění. Pro odraz je nutno získat určitý impulz síly.</p>
+<p>Během odrazové fáze působí na nohy síla <span class="math notranslate nohighlight">\(R(t)\)</span>, kterou vyvolává odpovídající reakční síla země.
+Použitím druhého Newtonova zákona získáme:</p>
+<div class="math notranslate nohighlight">
+\[
+ F(t) = m a(t)
+\]</div>
+<p>kde <span class="math notranslate nohighlight">\(F(t)\)</span> je výsledná síla působící v čase <span class="math notranslate nohighlight">\(t\)</span>. Pomocí impulzu síly můžeme vyjádřit</p>
+<div class="math notranslate nohighlight">
+\[
+I = \sum\limits_i F_i(t) \Delta t_i =  m v
+\]</div>
+<p>kde v jednotlivých časových úsecích <span class="math notranslate nohighlight">\(\Delta t_i\)</span> působí na tělo výslední síla <span class="math notranslate nohighlight">\(F_i\)</span>. Na tělo působí síla gravitace <span class="math notranslate nohighlight">\(W\)</span> a síla od podložky <span class="math notranslate nohighlight">\(R(t)\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\sum\limits_i (R_i(t)- W) \Delta t_i = m v 
+\]</div>
+<p>kde <span class="math notranslate nohighlight">\(R_i(t)\)</span> je síla v daném časovém okamžiku.</p>
+</section>
+<section id="prumerna-reakcni-sila">
+<h3>Průměrná reakční síla<a class="headerlink" href="#prumerna-reakcni-sila" title="Link to this heading">#</a></h3>
+<p>Síla <span class="math notranslate nohighlight">\(R\)</span> se mění v čase a proto musíme sečíst jednotlivé impulzy působící síly.   Abychom mohli pokračovat v analýze, musíme znát časový průběh síly <span class="math notranslate nohighlight">\(R(t)\)</span>. Experimentální data ukazují, že během podřepu je reakční síla menší než tělesná hmotnost, ale při odrazu se zvětšuje nad tělesnou hmotnost, což odpovídá pozitivní akceleraci směrem nahoru.</p>
+<p>Pro zjednodušení nahradíme skutečný průběh síly ekvivalentní konstantní silou <span class="math notranslate nohighlight">\(F_{\text{equiv}}\)</span>. Ekvivalentní síla je sílou, která ma stejný účinek (impulz síly) jako síla, která probíha. Jinými slovy plocha pod křivkou síly <span class="math notranslate nohighlight">\(F(t)\)</span> je stejna jako velikost obdélníku <span class="math notranslate nohighlight">\(F_\mathrm{equiv}t\)</span>. Její význam je stejný jako význam průměrné síly.</p>
+<img alt="https://www.researchgate.net/publication/350775960/figure/fig5/AS:1021052331233280&#64;1620449254106/Countermovement-jump-technique-step-by-step.ppm" src="https://www.researchgate.net/publication/350775960/figure/fig5/AS:1021052331233280&#64;1620449254106/Countermovement-jump-technique-step-by-step.ppm" />
+<p>Můžeme tedy napsat:
+$<span class="math notranslate nohighlight">\(
+(F_\mathrm{equiv} - W) t = m v 
+\)</span>$</p>
+</section>
+<section id="odrazova-rychlost">
+<h3>Odrazová rychlost<a class="headerlink" href="#odrazova-rychlost" title="Link to this heading">#</a></h3>
+<p>Působí je na tělo konstatní síla, pohybuje se rovnoěmrně zrychleně. Předpokládejme, že před odrazem se těžiště sníží o hodnotu <span class="math notranslate nohighlight">\(c\)</span>. Tato délka je zároveň dráhou rovnoměrně zrychleného pohybu. pro který platí</p>
+<div class="math notranslate nohighlight">
+\[c = \frac{1}{2} v t \]</div>
+<p>a čas nutný k odrazu je</p>
+<div class="math notranslate nohighlight">
+\[t = \frac{2 c}{v} \]</div>
+<p>Pro odrazovou rychlost tedy můžeme odvodit</p>
+<div class="math notranslate nohighlight">
+\[
+(F_\mathrm{equiv} - W) \frac{2 c}{v} = m v 
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+ v = \sqrt{\frac{2 c}{m}(F_\mathrm{equiv} - W)} 
+\]</div>
+</section>
+<section id="vyska-dosazena-behem-letu">
+<h3>Výška dosažená během letu<a class="headerlink" href="#vyska-dosazena-behem-letu" title="Link to this heading">#</a></h3>
+<p>Ve vzdušné fázi je tělo skokana vystaveno pouze gravitaci <span class="math notranslate nohighlight">\(g\)</span>, a tedy pohyb je rovnoměrně spomalený- Výška dosažená těžištěm <span class="math notranslate nohighlight">\(h\)</span> je určena podmínkou dosažení maximálního bodu kdy je rychlost nulová</p>
+<div class="math notranslate nohighlight">
+\[
+v - g t = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+t = \frac{v}{g}
+\]</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Všimněte si, že doba letu po maximální bod a doba následného volného pádu <span class="math notranslate nohighlight">\(v=gt\)</span> pádu jsou stejné. Zároveň platí, že odrazová vertikální rychlost je stejná jako dopadová rychlost.</p>
+</div>
+<p>A pro dráhu rovnoměrně spomaleného pohybu můžeme napsat</p>
+<div class="math notranslate nohighlight">
+\[
+h = v t - \frac{1}{g}t^2
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+h = v \frac{v}{g} - \frac{1}{2}{g}\frac{v^2}{g^2}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+h = \frac{1}{2}{g}{v}
+\]</div>
+<p>Ze znalosti odrazové rychlosti můžeme napsat</p>
+<div class="math notranslate nohighlight">
+\[h = c \frac{F_\mathrm{equiv} - W}{m g} \]</div>
+<p>nebo s uvážením, že <span class="math notranslate nohighlight">\(W = m g\)</span></p>
+<div class="math notranslate nohighlight">
+\[h = c \left(\frac{F_\mathrm{equiv}}{W}-1\right) \]</div>
+<p>což ukazuje, že výška skoku závisí na hloubce podřepu <span class="math notranslate nohighlight">\(c\)</span> a průměrné odrazové síle <span class="math notranslate nohighlight">\(F_\text{equiv}\)</span>.</p>
+<p>Za předpokladu, že <span class="math notranslate nohighlight">\(F_\mathrm{equiv} = 2 W\)</span> vyskočímě přibližně do výšky původního podřepu <span class="math notranslate nohighlight">\(h=c\)</span>.</p>
+</section>
+</section>
+<section id="skok-z-drepu-a-skok-s-protipohybem">
+<h2>Skok z dřepu a skok s protipohybem<a class="headerlink" href="#skok-z-drepu-a-skok-s-protipohybem" title="Link to this heading">#</a></h2>
+<img alt="https://www.researchgate.net/profile/Bas-Hooren/publication/308767675/figure/fig4/AS:878402605162507&#64;1586438909777/Time-course-of-the-vertical-ground-reaction-force-y-axis-during-a-countermovement-jump_W640.jpg" src="https://www.researchgate.net/profile/Bas-Hooren/publication/308767675/figure/fig4/AS:878402605162507&#64;1586438909777/Time-course-of-the-vertical-ground-reaction-force-y-axis-during-a-countermovement-jump_W640.jpg" />
+<p>Časový průběh vertikální reakční síly (osa y) při skoku s protipohybem (CMJ) a skoku z dřepu (SJ). Ačkoli CMJ vede k vyššímu skoku, vyžaduje také více času na provedení (osa x). Podle Van Hooren, B., &amp; Bosch, F. (2016). Influence of muscle slack on high-intensity sport performance: A review. Strength &amp; Conditioning Journal, 38(5), 75–87. <a class="reference external" href="https://doi.org/10.1519/SSC.0000000000000251">https://doi.org/10.1519/SSC.0000000000000251</a></p>
+<img alt="https://www.scienceforsport.com/wp-content/uploads/2016/07/CMJ.png" src="https://www.scienceforsport.com/wp-content/uploads/2016/07/CMJ.png" />
+<p>Skok s protipohybem <em>countermovement jump</em> (CMJ) je vertikální skok, který zahrnuje předchozí pohyb opačným směrem – tedy proti směru následného odrazu. Tento typ skoku je běžně používán k hodnocení vertikální výbušnosti sportovců.</p>
+<p>V nejjednodušší podobě lze protipohyb chápat jako pohyb dolů následovaný opačným pohybem nahoru. V případě CMJ se jedná o prodloužení určitých svalů při poklesu těžiště před odrazem, kde tyto svaly brzdí pohyb a působí <strong>excentrickou kontrakcí</strong>. Jakmile sportovec dosáhne nejnižší polohy (dosednutí do podřepu), krátce se zastaví (izometrická nebo amortizační fáze), než zahájí koncentrickou svalovou činnost (propulzní fázi), která vyústí ve vertikální skok.</p>
+<p>Podřep tak můžeme rozdělit do dvou fází:</p>
+<ol class="arabic simple">
+<li><p><strong>Fáze odlehčení</strong> - kdy stoupá rychlost směrem k podložce</p></li>
+<li><p><strong>Fáze brždění</strong> - kdy zapojením svalů sportovec překonává inerciální sílu (setrvačnost těla) a tím se postupně zastavuje</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Výzkumy ukazují, že CMJ obvykle umožňuje dosáhnout vyššího výskoku než squat jump (SJ), a to přibližně o 20–30 %. Tento rozdíl je dán schopností využít elastickou energii uloženou ve svalech a šlachách během poklesu těžiště, kdy svaly mohou působit větší než izometrickou sílou.</p>
+</div>
+<p>Výška skoku je odhad změny výšky těžiště sportovce a nejpřesněji ji lze určit pomocí dat ze silové plošiny.
+Kromě samotné výšky skoku lze měřit i další parametry, avšak jejich získání vyžaduje specializované vybavení, jako je právě silová plošina. Z tohoto důvodu se tyto veličiny běžně neměří ve většině tréninkových prostředí. Přesto poskytují podrobnější obraz o fyzickém profilu sportovce. Mezi klíčové proměnné patří:</p>
+<ul class="simple">
+<li><p>Maximální síla (N)</p></li>
+<li><p>Relativní maximální síla (N·kg⁻¹)</p></li>
+<li><p>Maximální výkon (W)</p></li>
+<li><p>Maximální rychlost (m·s⁻¹)</p></li>
+<li><p>Rychlost vývoje síly (N·s⁻¹)</p></li>
+<li><p>Impuls síly (N·s)</p></li>
+</ul>
+</section>
+<section id="nejvyssi-skok-christiana-ronalda">
+<h2>Nejvyšší skok Christiana Ronalda<a class="headerlink" href="#nejvyssi-skok-christiana-ronalda" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="s2">&quot;https://www.olympics.com/en/news/cristiano-ronaldo-highest-jumps-football-vertical-leap&quot;</span><span class="p">,</span> <span class="mi">900</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="900"
+            height="500"
+            src="https://www.olympics.com/en/news/cristiano-ronaldo-highest-jumps-football-vertical-leap"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+<p>V historii fotbalu je nejvyšší zaznamenaný výskok Cristiana Ronalda. V únoru 2013 předvedl Ronaldo při zápase Realu Madrid proti Manchesteru United v osmifinále Ligy mistrů UEFA výskok do výšky 2,93 metru. Když vememe, že výška Ronalda je 1.87 m, výška výskoku byla 1,06 m. V případě, že by před výskokem znížil své těžiště o 0,5 m, co je poměřně značná hodnota, jeho síla přůměrná síla odrazu by byla:</p>
+<div class="math notranslate nohighlight">
+\[\frac{h}{c} + 1 = \frac{F_\mathrm{equiv}}{W}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{1,06}{0.5} + 1 = \frac{F_\mathrm{equiv}}{W}\]</div>
+<div class="math notranslate nohighlight">
+\[{F_\mathrm{equiv}} \approx 3 W \]</div>
+<p>co je o 50% víc než u běžného člověka.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="4_2_Dostredive_a_odstredive_zrychleni.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Dostředivé a odstředivé zrychlení</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="5_2_Mechanicka_prace.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Práce v biomechanice</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#faze-skoku-z-mista">Fáze skoku z místa</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyza-skoku">Analýza skoku</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prumerna-reakcni-sila">Průměrná reakční síla</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#odrazova-rychlost">Odrazová rychlost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vyska-dosazena-behem-letu">Výška dosažená během letu</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skok-z-drepu-a-skok-s-protipohybem">Skok z dřepu a skok s protipohybem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nejvyssi-skok-christiana-ronalda">Nejvyšší skok Christiana Ronalda</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

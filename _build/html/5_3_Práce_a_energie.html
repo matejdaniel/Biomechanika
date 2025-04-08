@@ -1,0 +1,771 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Práce a energie &#8212; Biomechanika a biomateriály</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '5_3_Práce_a_energie';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Účinnost" href="5_4_%C3%9A%C4%8Dinnost_a_v%C3%BDkon.html" />
+    <link rel="prev" title="Kinetická a potenciální energie v biomechanice" href="5_1_Energie_kineticka_a_potencialni.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-light" alt="Biomechanika a biomateriály - Home"/>
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-dark pst-js-only" alt="Biomechanika a biomateriály - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Obsah
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_Uvod_historie_definice.html">Úvod do biomechaniky</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_MOCAP.html">Popis pohybu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_Rozd%C4%9Blen%C3%AD_pohyb%C5%AF.html">Rozdělení pohybů</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="4%20Ur%C4%8Den%C3%AD%20polohy.html">Určení polohy</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_Kinematika_bodu.html">Kinematika bodu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html">Souřadnicový systém</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_Pohyb_ve_v%C3%ADce_rozm%C4%9Brech.html">Pohyb ve více rozměrech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_Stupn%C4%9B_volnosti.html">Stupně volnosti</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="9_S%C3%ADla.html">Síly v biomechanice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="14_S%C3%ADly_v_biomechanice.html">Síly v biomechanice</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="12_Moment_s%C3%ADly.html">Moment síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_Rovnov%C3%A1ha.html">Rovnováha</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="10_T%C4%9B%C5%BEi%C5%A1t%C4%9B_t%C4%9Bla.html">Těžiště</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_Stabilita.html">Stabilita</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_1_Struktura_svalu.html">Mechanika svalu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_2_Princip_svalov%C3%A9_kontrakce.html">Princip svalové kontrakce</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="3_3_Svalov%C3%A1_s%C3%ADla.html">Svalová síla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_4_%C3%9A%C4%8Dinek_svalu.html">Účinek svalu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_5_V%C3%BDpo%C4%8Det_svalov%C3%BDch_sil.html">Výpočet svalových sil</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4_1_Inerci%C3%A1ln%C3%AD_s%C3%ADly_p%C5%99%C3%ADmo%C4%8Dar%C3%BD_pohyb.html">Inerciální vlastnosti lidského těla</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_2_Dostredive_a_odstredive_zrychleni.html">Dostředivé a odstředivé zrychlení</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_3_Biomechanika_skoku.html">Biomechanika skoku z místa</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="5_2_Mechanicka_prace.html">Práce v biomechanice</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="5_1_Energie_kineticka_a_potencialni.html">Kinetická a potenciální energie v biomechanice</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Práce a energie</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_4_%C3%9A%C4%8Dinnost_a_v%C3%BDkon.html">Účinnost</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="5_5_Z%C3%A1kon_zachov%C3%A1n%C3%AD_energie.html">Zákon zachování mechanické energie</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_6_Energie_skoku.html">Energie skoku</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_7_Priklady_zachovani_energie.html">Příklady zachování energie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_8_Periodicky_pohyb.html">Periodický pohyb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_9_Periodicky_pohyb_a_zakon_zachovani.html">Zákon zachování při periodickém pohybu</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="5_10_F%C3%A1ze_ch%C5%AFze.html">Fáze chůze</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_11_Parametry_ch%C5%AFze.html">Parametry chůze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_12_Ch%C5%AFze_svalov%C3%A1_aktivita.html">Svalová aktivita při chůzi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_13_Anal%C3%BDza_ch%C5%AFze.html">Analýza chůze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_13_Ch%C5%AFze_zachov%C3%A1n%C3%AD_energie.html">Chůze a zákony zachování</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_14_Inverzn%C3%AD_kyvadlo.html">Inverzní kyvadlo</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika/issues/new?title=Issue%20on%20page%20%2F5_3_Práce_a_energie.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/5_3_Práce_a_energie.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Práce a energie</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Práce a energie</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prenos-energie-pomoci-prace">Přenos energie pomocí práce</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#co-se-stane-s-energii-pri-vykonani-prace">Co se stane s energií při vykonání práce?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Práce a energie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#graficka-interpretace"><strong>Grafická interpretace</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prace-a-kineticka-energie">Práce a kinetická energie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prace-a-potencialni-energie">Práce a potenciální energie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#co-je-gravitacni-potencialni-energie">Co je gravitační potenciální energie?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referencni-hladina">Referenční hladina</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potencialni-energie-pruziny">Potenciální energie pružiny</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="prace-a-energie">
+<h1>Práce a energie<a class="headerlink" href="#prace-a-energie" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="prenos-energie-pomoci-prace">
+<h1>Přenos energie pomocí práce<a class="headerlink" href="#prenos-energie-pomoci-prace" title="Link to this heading">#</a></h1>
+<section id="co-se-stane-s-energii-pri-vykonani-prace">
+<h2>Co se stane s energií při vykonání práce?<a class="headerlink" href="#co-se-stane-s-energii-pri-vykonani-prace" title="Link to this heading">#</a></h2>
+<p>Když je na systém vykonána práce, energie je do něj přenesena. Energie může v systému zůstat uložena nebo být přenesena dál.</p>
+<ul class="simple">
+<li><p>Například pokud tlačíme sekačku jen tak, aby se pohybovala stálou rychlostí, pak je energie dodaná člověkem <strong>neustále odváděna třením</strong> a nakonec opouští systém <strong>ve formě tepla</strong>.</p></li>
+<li><p>Naproti tomu při <strong>nosení aktovky do schodů</strong> se práce <strong>ukládá jako potenciální energie</strong> v systému „aktovka-Země“. Tato energie může být kdykoliv znovu využita.</p></li>
+<li><p>Stavební techniky ve starověkém Egyptě (např. stavba pyramid) jsou historickým příkladem <strong>ukládání energie do systému</strong> pomocí vykonané práce.</p></li>
+</ul>
+</section>
+<section id="id1">
+<h2>Práce a energie<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>Ze <strong>Newtonových zákonů</strong> víme, že <strong>síla způsobuje zrychlení</strong>. Práce <span class="math notranslate nohighlight">\(W_{\text{net}}\)</span> je definována jako součet všech prací vykonaných <strong>vnějšími silami</strong> – tedy jako práce vykonaná výslednou silou <span class="math notranslate nohighlight">\(F\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+W  = F \cdot d \cdot \cos \theta
+\]</div>
+<p>kde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(d\)</span> je posunutí,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta\)</span> je úhel mezi vektorem síly a vektorem posunutí.</p></li>
+</ul>
+<section id="graficka-interpretace">
+<h3><strong>Grafická interpretace</strong><a class="headerlink" href="#graficka-interpretace" title="Link to this heading">#</a></h3>
+<img alt="https://pressbooks.bccampus.ca/humanbiomechanics/wp-content/uploads/sites/972/2020/04/Figure_08_02_02a-1-1.jpg" src="https://pressbooks.bccampus.ca/humanbiomechanics/wp-content/uploads/sites/972/2020/04/Figure_08_02_02a-1-1.jpg" />
+<ul>
+<li><p>Pokud je <span class="math notranslate nohighlight">\(F \cdot \cos\theta\)</span> konstantní, pak <strong>plocha pod grafem síly vůči dráze</strong> představuje vykonanou práci:</p>
+<div class="math notranslate nohighlight">
+\[
+  W = F \cdot d  \cos\theta
+  \]</div>
+</li>
+<li><p>Pokud se síla mění, rozdělíme oblast pod křivkou na úseky. Práce v každém úseku je:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+  W_i = (F \cos\theta)^{\text{ave}}_i  d_i
+  \]</div>
+<p>Celková práce je tedy <strong>součtem ploch pod křivkou</strong>, tj. celkovou energií přenesenou do systému.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="prace-a-kineticka-energie">
+<h2>Práce a kinetická energie<a class="headerlink" href="#prace-a-kineticka-energie" title="Link to this heading">#</a></h2>
+<p>Z druhého Newtonova zákona plyne:</p>
+<div class="math notranslate nohighlight">
+\[
+F = m  a
+\]</div>
+<p>Dosazením do vztahu pro práci:</p>
+<div class="math notranslate nohighlight">
+\[
+W = m a  d
+\]</div>
+<p>Použijeme známou rovnost pro pohyb s konstantním zrychlením:</p>
+<div class="math notranslate nohighlight">
+\[
+v = v_0 + a t
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+v^2 = v_0^2 + 2 v_0 a t + a^2 t^2
+\]</div>
+<p>a</p>
+<div class="math notranslate nohighlight">
+\[
+d = v_0 t + \frac{1}{2} a t^2
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+2 a d  = 2 v_0 a t + a^2 t^2
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+v^2 = v_0^2 + 2 a d
+\]</div>
+<p>Vyjádříme z ní zrychlení:</p>
+<div class="math notranslate nohighlight">
+\[
+a = \frac{v^2 - v_0^2}{2d}
+\]</div>
+<p>Dosadíme zpět:</p>
+<div class="math notranslate nohighlight">
+\[
+W = m  \left( \frac{v^2 - v_0^2}{2d} \right)  d
+\]</div>
+<p>Zkrátíme <span class="math notranslate nohighlight">\(d\)</span> a dostáváme:</p>
+<div class="math notranslate nohighlight">
+\[
+W = \frac{1}{2}mv^2 - \frac{1}{2}mv_0^2
+\]</div>
+<blockquote>
+<div><p>Práce je rovna změně kinetické energie</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[
+W = \Delta E_k = \frac{1}{2}mv^2 - \frac{1}{2}mv_0^2
+\]</div>
+<p><strong>Práce vykonaná na tělese</strong> vede ke <strong>změně jeho pohybové energie</strong>. Platí <strong>obecně</strong>, i pokud se síly mění nebo nejsou ve směru pohybu.</p>
+</section>
+<section id="prace-a-potencialni-energie">
+<h2>Práce a potenciální energie<a class="headerlink" href="#prace-a-potencialni-energie" title="Link to this heading">#</a></h2>
+<p><strong>Chůze do schodů nebo zvedání předmětů</strong> je práce – jak ve vědeckém, tak i v běžném smyslu slova. Jedná se o <strong>práci vykonanou proti gravitační síle</strong>.</p>
+<p>Když se vykonává práce, dochází ke <strong>změně energie</strong> – konkrétně ke vzniku <strong>uložené (potenciální) energie</strong>. V této části se zaměříme právě na <strong>gravitační potenciální energii</strong>.</p>
+<p>Představme si těleso o hmotnosti <span class="math notranslate nohighlight">\(m\)</span>, které zvedneme o výšku <span class="math notranslate nohighlight">\(h\)</span>. Pokud ho zvedáme <strong>rovnoměrně (bez zrychlení)</strong>, síla potřebná ke zvednutí je rovna jeho tíze <span class="math notranslate nohighlight">\(mg\)</span>.</p>
+<p>Práce vykonaná na tělese je pak:</p>
+<div class="math notranslate nohighlight">
+\[
+W = F  d = mg  h
+\]</div>
+<p>Tuto práci definujeme jako <strong>gravitační potenciální energii</strong> <span class="math notranslate nohighlight">\(E_p\)</span>, která byla <strong>předána</strong> (nebo získána) <strong>systému těleso-Země</strong>.</p>
+<section id="co-je-gravitacni-potencialni-energie">
+<h3>Co je gravitační potenciální energie?<a class="headerlink" href="#co-je-gravitacni-potencialni-energie" title="Link to this heading">#</a></h3>
+<p>Tato energie je spojena se <strong>stavem vzájemného oddělení</strong> dvou objektů, které se navzájem přitahují gravitační silou – tedy například <strong>Země a zvedaného předmětu</strong>.</p>
+<ul class="simple">
+<li><p>Pro zjednodušení mluvíme o „<strong>energie získané tělesem</strong>“, ale ve skutečnosti jde o <strong>energii uloženou v gravitačním poli Země</strong>.</p></li>
+<li><p>Používáme slovo <strong>„systém“</strong>, protože potenciální energie <strong>není vlastností samotného objektu</strong>, ale <strong>celého systému</strong> – tedy <strong>těleso + Země</strong>.</p></li>
+<li><p>Tato energie závisí na <strong>poloze tělesa vůči okolí</strong>, nikoliv pouze na něm samotném.</p></li>
+</ul>
+<p>Síla, kterou na těleso působíme (např. rukou), je <strong>vnější síla</strong> – pochází <strong>mimo systém těleso-Země</strong>. Tato síla vykonává <strong>kladnou práci</strong> a tím <strong>zvyšuje potenciální energii</strong> systému.</p>
+</section>
+<section id="referencni-hladina">
+<h3>Referenční hladina<a class="headerlink" href="#referencni-hladina" title="Link to this heading">#</a></h3>
+<p>Protože gravitační potenciální energie závisí na <strong>relativní poloze</strong>, potřebujeme si zvolit <strong>referenční bod</strong>, kde bude energie rovna <strong>nule</strong>.</p>
+<ul class="simple">
+<li><p>Nejčastěji volíme <strong>povrch Země</strong> jako hladinu, kde <span class="math notranslate nohighlight">\(E_p = 0\)</span>.</p></li>
+<li><p>Tento výběr je <strong>libovolný</strong> – důležité je, že ve fyzice záleží <strong>jen na rozdílu potenciálních energií</strong> mezi dvěma body, protože <strong>práce závisí právě na tomto rozdílu</strong>.</p></li>
+</ul>
+<p>Například rozdíl potenciální energie mezi dvěma příčkami žebříku je stejný, <strong>ať už se jedná o spodní nebo horní část žebříku</strong>.</p>
+</section>
+</section>
+<section id="potencialni-energie-pruziny">
+<h2>Potenciální energie pružiny<a class="headerlink" href="#potencialni-energie-pruziny" title="Link to this heading">#</a></h2>
+<p>Pružina vykonává sílu podle <strong>Hookeova zákona</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+F = -kx
+\]</div>
+<p>kde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(F\)</span> je síla vyvolaná deformací pružiny,</p></li>
+<li><p><span class="math notranslate nohighlight">\(k\)</span> je tuhost (pružinová konstanta),</p></li>
+<li><p><span class="math notranslate nohighlight">\(x\)</span> je prodloužení (nebo stlačení) pružiny vzhledem k rovnovážné poloze.</p></li>
+</ul>
+<p>Chceme spočítat <strong>práci vykonanou při natažení pružiny</strong> z rovnovážné polohy <span class="math notranslate nohighlight">\(x = 0\)</span> do nové polohy <span class="math notranslate nohighlight">\(x\)</span>, což odpovídá <strong>energii uložené v pružině</strong> – tzv. <strong>deformační energii</strong>.</p>
+<p>Síla při natahování pružiny <strong>není konstantní</strong>, ale roste lineárně od 0 do ( kx ). Na grafu závislosti síly <span class="math notranslate nohighlight">\(F_\)</span> na deformaci <span class="math notranslate nohighlight">\(x\)</span> (lineární růst), je <strong>práce vykonaná silou</strong> rovna <strong>ploše pod křivkou</strong>:</p>
+<img alt="https://phys.libretexts.org/&#64;api/deki/files/36467/Figure_17_01_05a.jpg?revision=1&amp;size=bestfit&amp;width=475" src="https://phys.libretexts.org/&#64;api/deki/files/36467/Figure_17_01_05a.jpg?revision=1&amp;size=bestfit&amp;width=475" />
+<ul>
+<li><p><strong>Metoda A</strong>:
+Plocha pod grafem síly je:</p>
+<div class="math notranslate nohighlight">
+\[
+    W = \frac{1}{2} k x^2
+    \]</div>
+</li>
+<li><p><strong>Metoda B</strong>:</p>
+<p>Síla roste lineárně od 0 do <span class="math notranslate nohighlight">\(kx\)</span> takže průměrná síla je:</p>
+<div class="math notranslate nohighlight">
+\[
+    F_{\text{prům}} = \frac{1}{2} kx
+    \]</div>
+<p>Práce je pak síla krát dráha:</p>
+<div class="math notranslate nohighlight">
+\[
+    W = F_{\text{prům}}  x = \left( \frac{1}{2} kx \right) x = \frac{1}{2} k x^2
+    \]</div>
+</li>
+</ul>
+<p>Tato energie je uložena v pružině v důsledku její deformace, a může být opět uvolněna při návratu do rovnovážné polohy.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Záporné znaménko v Hookeově zákonu značí, že síla pružiny je <strong>proti směru deformace</strong>, ale pro výpočet energie bereme <strong>kladnou práci vykonanou proti síle pružiny</strong>.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="5_1_Energie_kineticka_a_potencialni.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Kinetická a potenciální energie v biomechanice</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="5_4_%C3%9A%C4%8Dinnost_a_v%C3%BDkon.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Účinnost</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Práce a energie</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prenos-energie-pomoci-prace">Přenos energie pomocí práce</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#co-se-stane-s-energii-pri-vykonani-prace">Co se stane s energií při vykonání práce?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Práce a energie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#graficka-interpretace"><strong>Grafická interpretace</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prace-a-kineticka-energie">Práce a kinetická energie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prace-a-potencialni-energie">Práce a potenciální energie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#co-je-gravitacni-potencialni-energie">Co je gravitační potenciální energie?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referencni-hladina">Referenční hladina</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potencialni-energie-pruziny">Potenciální energie pružiny</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

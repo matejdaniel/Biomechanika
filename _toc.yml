@@ -3,25 +3,46 @@
 format: jb-book
 root: intro
 chapters:
-- file: 1_Uvod_historie_definice.ipynb
-- file: 2_MOCAP.ipynb
+- file: 1_Uvod_historie_definice
+- file: 2_MOCAP
   sections:
-  - file: 3_Rozdělení_pohybů.ipynb
-  - file: 4 Určení polohy.ipynb
-  - file: 5_Kinematika_bodu.ipynb
-  - file: 6_Souřadnicový_systém.ipynb
-  - file: 7_Pohyb_ve_více_rozměrech.ipynb
-  - file: 8_Stupně_volnosti.ipynb
-- file: 9_Síla.ipynb
+  - file: 3_Rozdělení_pohybů
+  - file: 4 Určení polohy
+  - file: 5_Kinematika_bodu
+  - file: 6_Souřadnicový_systém
+  - file: 7_Pohyb_ve_více_rozměrech
+  - file: 8_Stupně_volnosti
+- file: 9_Síla
   sections:
-  - file: 14_Síly_v_biomechanice.ipynb
-  - file: 12_Moment_síly.ipynb
-  - file: 11_Rovnováha.ipynb
-  - file: 10_Těžiště_těla.ipynb
-  - file: 13_Stabilita.ipynb
-- file: 3_1_Struktura_svalu.ipynb
+  - file: 14_Síly_v_biomechanice
+  - file: 12_Moment_síly
+  - file: 11_Rovnováha
+  - file: 10_Těžiště_těla
+  - file: 13_Stabilita
+- file: 3_1_Struktura_svalu
   sections:
-  - file: 3_2_Princip_svalové_kontrakce.ipynb
-  - file: 3_3_Svalová_síla.ipynb
-  - file: 3_4_Účinek_svalu.ipynb
-  - file: 3_5_Výpočet_svalových_sil.ipynb
+  - file: 3_2_Princip_svalové_kontrakce
+  - file: 3_3_Svalová_síla
+  - file: 3_4_Účinek_svalu
+  - file: 3_5_Výpočet_svalových_sil
+- file: 4_1_Inerciální_síly_přímočarý_pohyb
+  sections:
+  - file: 4_2_Dostredive_a_odstredive_zrychleni
+  - file: 4_3_Biomechanika_skoku
+- file: 5_2_Mechanicka_prace
+  sections:
+  - file: 5_1_Energie_kineticka_a_potencialni
+  - file: 5_3_Práce_a_energie
+  - file: 5_4_Účinnost_a_výkon
+  - file: 5_5_Zákon_zachování_energie
+  - file: 5_6_Energie_skoku
+  - file: 5_7_Priklady_zachovani_energie
+  - file: 5_8_Periodicky_pohyb
+  - file: 5_9_Periodicky_pohyb_a_zakon_zachovani
+- file: 5_10_Fáze_chůze
+  sections:
+  - file: 5_11_Parametry_chůze
+  - file: 5_12_Chůze_svalová_aktivita
+  - file: 5_13_Analýza_chůze
+  - file: 5_13_Chůze_zachování_energie
+  - file: 5_14_Inverzní_kyvadlo

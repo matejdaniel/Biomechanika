@@ -1,0 +1,765 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Inerciální vlastnosti lidského těla &#8212; Biomechanika a biomateriály</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '4_1_Inerciální_síly_přímočarý_pohyb';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Dostředivé a odstředivé zrychlení" href="4_2_Dostredive_a_odstredive_zrychleni.html" />
+    <link rel="prev" title="Výpočet svalových sil" href="3_5_V%C3%BDpo%C4%8Det_svalov%C3%BDch_sil.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-light" alt="Biomechanika a biomateriály - Home"/>
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-dark pst-js-only" alt="Biomechanika a biomateriály - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Obsah
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_Uvod_historie_definice.html">Úvod do biomechaniky</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_MOCAP.html">Popis pohybu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_Rozd%C4%9Blen%C3%AD_pohyb%C5%AF.html">Rozdělení pohybů</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="4%20Ur%C4%8Den%C3%AD%20polohy.html">Určení polohy</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_Kinematika_bodu.html">Kinematika bodu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html">Souřadnicový systém</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_Pohyb_ve_v%C3%ADce_rozm%C4%9Brech.html">Pohyb ve více rozměrech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_Stupn%C4%9B_volnosti.html">Stupně volnosti</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="9_S%C3%ADla.html">Síly v biomechanice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="14_S%C3%ADly_v_biomechanice.html">Síly v biomechanice</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="12_Moment_s%C3%ADly.html">Moment síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_Rovnov%C3%A1ha.html">Rovnováha</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="10_T%C4%9B%C5%BEi%C5%A1t%C4%9B_t%C4%9Bla.html">Těžiště</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_Stabilita.html">Stabilita</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_1_Struktura_svalu.html">Mechanika svalu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_2_Princip_svalov%C3%A9_kontrakce.html">Princip svalové kontrakce</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="3_3_Svalov%C3%A1_s%C3%ADla.html">Svalová síla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_4_%C3%9A%C4%8Dinek_svalu.html">Účinek svalu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_5_V%C3%BDpo%C4%8Det_svalov%C3%BDch_sil.html">Výpočet svalových sil</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Inerciální vlastnosti lidského těla</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_2_Dostredive_a_odstredive_zrychleni.html">Dostředivé a odstředivé zrychlení</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_3_Biomechanika_skoku.html">Biomechanika skoku z místa</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="5_2_Mechanicka_prace.html">Práce v biomechanice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_1_Energie_kineticka_a_potencialni.html">Kinetická a potenciální energie v biomechanice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_3_Pr%C3%A1ce_a_energie.html">Práce a energie</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_4_%C3%9A%C4%8Dinnost_a_v%C3%BDkon.html">Účinnost</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="5_5_Z%C3%A1kon_zachov%C3%A1n%C3%AD_energie.html">Zákon zachování mechanické energie</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_6_Energie_skoku.html">Energie skoku</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_7_Priklady_zachovani_energie.html">Příklady zachování energie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_8_Periodicky_pohyb.html">Periodický pohyb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_9_Periodicky_pohyb_a_zakon_zachovani.html">Zákon zachování při periodickém pohybu</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="5_10_F%C3%A1ze_ch%C5%AFze.html">Fáze chůze</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_11_Parametry_ch%C5%AFze.html">Parametry chůze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_12_Ch%C5%AFze_svalov%C3%A1_aktivita.html">Svalová aktivita při chůzi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_13_Anal%C3%BDza_ch%C5%AFze.html">Analýza chůze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_13_Ch%C5%AFze_zachov%C3%A1n%C3%AD_energie.html">Chůze a zákony zachování</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_14_Inverzn%C3%AD_kyvadlo.html">Inverzní kyvadlo</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika/issues/new?title=Issue%20on%20page%20%2F4_1_Inerciální_síly_přímočarý_pohyb.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/4_1_Inerciální_síly_přímočarý_pohyb.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Inerciální vlastnosti lidského těla</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inercialni-sily">Inerciální síly</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inercialni-sila-pri-primocarem-pohybu">Inerciální síla při přímočarém pohybu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#priklady-inercialni-sily-pri-primocarem-pohybu">Příklady inerciální síly při přímočarém pohybu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tolerance-lidskeho-tela">Tolerance lidského těla</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tolerance-vertikalniho-zrychleni">Tolerance vertikálního zrychlení</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tolerance-negativniho-zrychleni">Tolerance negativního zrychlení</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tolerance-horizontalniho-zrychleni">Tolerance horizontálního zrychlení</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="inercialni-vlastnosti-lidskeho-tela">
+<h1>Inerciální vlastnosti lidského těla<a class="headerlink" href="#inercialni-vlastnosti-lidskeho-tela" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="inercialni-sily">
+<h2>Inerciální síly<a class="headerlink" href="#inercialni-sily" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>Inerciální síly v biomechanice jsou síly, které vznikají při pohybu a jsou projevem setrvačnosti.</p>
+</div></blockquote>
+<blockquote>
+<div><p>Setrvačnost je základní vlastnost hmotných těles, která vyjadřuje jejich odpor vůči změně pohybového stavu.</p>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Inerciální síly jsou přímým důsledkem definice síly pomoci <strong>Newtonových pohybových zákonů</strong>.</p>
+<p><strong>1. Zákon setrvačnosti</strong></p>
+<ul class="simple">
+<li><p>Těleso zůstává v klidu nebo rovnoměrném přímočarém pohybu, není-li nuceno vnějšími silami tento stav změnit.</p></li>
+</ul>
+<p><strong>2. Zákon síly</strong></p>
+<ul class="simple">
+<li><p>Jestliže na těleso (hmotu) působí síla, pak se těleso pohybuje zrychlením, které je přímo úměrné působící síle a nepřímo úměrné hmotnosti tělesa.</p></li>
+</ul>
+</div>
+<p>V biomechanice se inerciální síly uplatňují při analýze pohybu lidského těla, zejména v soustavách, které nejsou inerciální (např. při rotaci nebo zrychleném pohybu). Tyto síly odpovídají reakcím na zrychlení soustavy souřadnic a zahrnují setrvačné, odstředivé a Coriolisovy síly. Jejich působení lze zahrnout do rovnic rovnováhy pomocí Newtonových pohybových zákonů ve formě:</p>
+<div class="math notranslate nohighlight">
+\[
+\sum \vec{F}_\text{skutečné} + \sum \vec{F}_\text{inerciální} = 0
+\]</div>
+<p>kde <span class="math notranslate nohighlight">\(\mathbf{F}_\text{skutečné}\)</span> jsou skutečné vnější a vnitřní síly (např. svalové síly, reakční síly kloubů, gravitace) a <span class="math notranslate nohighlight">\(\mathbf{F}_\text{inerciální}\)</span> jsou inerciální síly definované jako <span class="math notranslate nohighlight">\(-m\mathbf{a}\)</span> pro lineární pohyb nebo <span class="math notranslate nohighlight">\(m \omega^2 r\)</span> pro rotaci. Protože inerciální síly závisí na popisu pohybu označují se také jako síly <strong>zdánlivé</strong>. Tento popis platí, když uvažujeme souřadnicovou soustavu spojenou s pohybujícím se tělesem. Například, popisujeme síly působící na člověka v rozbíhajícím se vlaku.</p>
+<p>V praxi se s těmito silami setkáváme například při analýze běhu, kde segmenty těla podléhají zrychlení, nebo při studiu rovnováhy a stabilizace pohybů, kde Coriolisova síla a odstředivá síla ovlivňuje pohyb horních i dolních končetin při rotaci těla.</p>
+</section>
+<section id="inercialni-sila-pri-primocarem-pohybu">
+<h2>Inerciální síla při přímočarém pohybu<a class="headerlink" href="#inercialni-sila-pri-primocarem-pohybu" title="Link to this heading">#</a></h2>
+<p>Inerciální síla při změne rychlosti v pohybu po přímce je možné přímo odvodit ze Newtonových zákonů.</p>
+<div class="math notranslate nohighlight">
+\[\vec{F} = m\vec{a} \]</div>
+<div class="math notranslate nohighlight">
+\[ \vec{F} - m\vec{a} = 0\]</div>
+<blockquote>
+<div><p>Inerciální síla pro pro přímočarý pohyb přímo úměrně závisí na hmotnosti a zrychlení. Její směr je opačný ke směru zrychlení.</p>
+</div></blockquote>
+</section>
+<section id="priklady-inercialni-sily-pri-primocarem-pohybu">
+<h2>Příklady inerciální síly při přímočarém pohybu<a class="headerlink" href="#priklady-inercialni-sily-pri-primocarem-pohybu" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Rozjíždění vlaku</strong> – Pokud stojíte ve vlaku a ten se rozjede dopředu, vaše tělo se zdánlivě pohybuje dozadu. To je důsledek inerciální síly, která působí proti směru zrychlení vlaku.</p></li>
+<li><p><strong>Brzdění auta</strong> – Když řidič náhle zabrzdí, cestující se nakloní dopředu. Inerciální síla v jejich vztažné soustavě působí dozadu, proti zrychlení auta (záporné zrychlení = zpomalení).</p></li>
+<li><p><strong>Start letadla</strong> – Při vzletu letadla pasažéři cítí tlak do sedačky, protože jejich tělo chce setrvat v klidu, zatímco letadlo zrychluje dopředu.</p></li>
+<li><p><strong>Padající výtah</strong> – Pokud se výtah začne náhle pohybovat dolů, člověk uvnitř pocítí pocit “beztíže”, protože inerciální síla působí nahoru proti směru zrychlení výtahu.</p></li>
+</ol>
+<p>Všechny tyto příklady ukazují, že inerciální síla se chová jako “protiváha” vůči skutečné síle, která způsobuje zrychlení tělesa v neinerciální soustavě.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>John Paul Stapp
+<img alt="John Paul Stapp" src="https://assets-us-01.kc-usercontent.com/9dd25524-761a-000d-d79f-86a5086d4774/393720f0-2b68-4c66-a141-ad44499a95d7/stapp2.jpg?w=400&amp;h=527&amp;auto=format&amp;q=75&amp;fit=crop" /></p>
+<p>Dr. John Paul Stapp si vysloužil titul „nejrychlejší žijící muž“, když 10. prosince 1954 dosáhl na saních Sonic Wind I s raketovým pohonem pozemního rekordu 632 km/h za pět sekund. Utrpěl největší zrychlen9, kterou člověk vydržel při do té doby zaznamenaných zpomalovacích testech, 46,2 <span class="math notranslate nohighlight">\(g\)</span>, když se saně zastavily za 1,4 sekundy.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;JeC1ekTjoy8&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="800"
+            height="300"
+            src="https://www.youtube.com/embed/JeC1ekTjoy8"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+<section id="tolerance-lidskeho-tela">
+<h3>Tolerance lidského těla<a class="headerlink" href="#tolerance-lidskeho-tela" title="Link to this heading">#</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Florence + the Machine, Falling
+<em>“Falling’s not a problem,</em></p>
+<p><em>when I’m falling I’m at peace.</em></p>
+<p><em>It’s only when I hit the ground</em></p>
+<p><em>that causes all the grief.”</em></p>
+</div>
+<p>Lidské tělo dokáže bez problémů přežít velké rychlosti. To, co nás může zabít, je velké zrychlení. V tomto případě se jako jednotka zrychlení používá gravitační zrychlení ( g ). Pokud je zrychlení rovno gravitačnímu zrychlení, označuje se jako <strong>1g</strong>. Při hodnotě <strong>2g</strong> by váha ukázala dvojnásobnou hmotnost. V literatuře se pro dané zrychlení používá pojem <strong>G-Force</strong>.</p>
+<img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Human_linear_acceleration_tolerance.svg/1280px-Human_linear_acceleration_tolerance.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Human_linear_acceleration_tolerance.svg/1280px-Human_linear_acceleration_tolerance.svg.png" />
+<p>Tolerance lidského těla na zrychlení závisí na velikosti, délce doby působení, směru působení, místě působení a držení těla. Lidské tělo je pružné a deformovatelné, zejména měkčí tkáně. Tvrdý políček na obličeji může krátce uložit stovky <span class="math notranslate nohighlight">\(g\)</span> místně, ale nezpůsobí žádné skutečné škody; konstantní <strong>16g</strong> po dobu jedné minuty však může být smrtelné. Pokud dochází k vibracím, i relativně nízké hodnoty <span class="math notranslate nohighlight">\(g\)</span> mohou být značně škodlivé, pokud se shodují s rezonančním kmitočtem orgánů a pojivových tkání.</p>
+<p>Odolnost vůči zrychlení je možné do určité míry trénovat. Existují však velké vrozené rozdíly mezi jednotlivci. Navíc některé nemoci, zejména kardiovaskulární problémy, snižují <strong>g-toleranci</strong>.</p>
+<section id="tolerance-vertikalniho-zrychleni">
+<h4>Tolerance vertikálního zrychlení<a class="headerlink" href="#tolerance-vertikalniho-zrychleni" title="Link to this heading">#</a></h4>
+<p>Vertikální zrychlení se nejčastěji vyskytuje u pilotů. Rozlišujeme:</p>
+<ul class="simple">
+<li><p><strong>Kladné zrychlení</strong> (směrem nahoru) – tělo je tlačeno sedačkou nahoru, krev se hromadí v nohách. Organismus reaguje zvýšením tepové frekvence a zúžením periferních cév, aby zajistil návrat krve k mozku. Tento mechanismus je účinný, ale trvá přibližně 6 až 9 sekund, než se plně projeví.</p></li>
+</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Směr zrychlení</p></th>
+<th class="head"><p>Hodnota zrychlení</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Směrem k hlavě</p></td>
+<td><p>do <strong>25g</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>Směrem k nohám</p></td>
+<td><p>do <strong>15g</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Laterálně</p></td>
+<td><p><strong>20g</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>Od páteře k sternu</p></td>
+<td><p><strong>45g</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Od sternu k páteři</p></td>
+<td><p><strong>45g</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Typické příznaky kladného zrychlení</strong> v sestupném pořadí:</p>
+<ol class="arabic simple">
+<li><p><strong>Šeroslepota</strong> – vidění ztrácí odstín, reverzibilní stav.</p></li>
+<li><p><strong>Tunelové vidění</strong> – ztráta periferního vidění.</p></li>
+<li><p><strong>Ztráta zraku</strong> – při zachování vědomí kvůli nedostatku krve v hlavě.</p></li>
+<li><p><strong>G-LOC</strong> – <strong>Loss of Consciousness</strong> (ztráta vědomí).</p></li>
+<li><p><strong>Smrt</strong>, pokud se zrychlení rychle nesníží.</p></li>
+</ol>
+<p>Odolnost vůči kladnému <span class="math notranslate nohighlight">\(g\)</span> se liší. Běžný člověk snese přibližně <span class="math notranslate nohighlight">\(5g\)</span> (někteří lidé mohou omdlít na horské dráze, kde přetížení přesahuje tuto hodnotu). Trénovaní piloti mohou s pomocí speciálních obleků a tréninku zvládnout až <span class="math notranslate nohighlight">\(9g\)</span>.</p>
+<p>Kromě oběhových účinků kladné zrychlení ztěžuje dýchání, protože přesouvá krev do dolních částí plic. Tam dochází ke kolapsu alveol a nedostatečné perfuzi v horních částech plic, což vede k hypoxii mozku. Mezi další negativní efekty patří bolesti svalů a kostí (zejména zad a krku) a drobné podlitiny (tzv. <strong>G-measles</strong>, Geasles) způsobené přetížením kapilár.</p>
+</section>
+<section id="tolerance-negativniho-zrychleni">
+<h4>Tolerance negativního zrychlení<a class="headerlink" href="#tolerance-negativniho-zrychleni" title="Link to this heading">#</a></h4>
+<p>Odolnost proti negativnímu zrychlení (směrem dolů) je mnohem nižší, protože způsobuje proudění krve do hlavy. Typická tolerance je <strong>2–3g</strong>. Mezi příznaky patří:</p>
+<ul class="simple">
+<li><p><strong>Zčervenání zorného pole</strong> – posun krví nasyceného dolního víčka do zorného pole.</p></li>
+<li><p><strong>Deformace sítnicových cév až jejich prasknutí</strong> – může vést ke slepotě.</p></li>
+</ul>
+</section>
+<section id="tolerance-horizontalniho-zrychleni">
+<h4>Tolerance horizontálního zrychlení<a class="headerlink" href="#tolerance-horizontalniho-zrychleni" title="Link to this heading">#</a></h4>
+<p>Lidské tělo má obecně vyšší toleranci vůči horizontálnímu zrychlení. Směrem dopředu se snáší lépe než směrem dozadu, protože cévy v sítnici hůře zvládají přetížení.</p>
+<p>Experimenty ukázaly, že nevyškolení lidé snesou zrychlení v závislosti na době působení:</p>
+<ul class="simple">
+<li><p><strong>20g</strong> po dobu <strong>méně než 10 sekund</strong>,</p></li>
+<li><p><strong>10g</strong> po dobu <strong>1 minuty</strong>,</p></li>
+<li><p><strong>6g</strong> po dobu <strong>10 minut</strong>.</p></li>
+</ul>
+<p>Zrychlení v těchto mezích nevedlo k významným kognitivním poruchám, testované osoby byly schopny provádět manuální a komunikační úkoly. Nejvyšší experimentálně zaznamenané horizontální zrychlení přežil průkopník <strong>John Stapp</strong>, který v roce 1954 na raketových saních dosáhl <strong>46,2g</strong> dopředu a více než <strong>25g</strong> po dobu 1,1 sekundy. Tím dokázal, že lidské tělo může přežít extrémní přetížení. Stapp žil dalších <strong>45 let</strong>, avšak utrpěl trvalé poškození zraku.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Hodnoty zrychlení pro různé pohyby je možné najít na <a class="reference external" href="https://en.wikipedia.org/wiki/Orders_of_magnitude_(acceleration)">wikipedii</a>.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;FywlxoDJAl8&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="800"
+            height="300"
+            src="https://www.youtube.com/embed/FywlxoDJAl8"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+</section>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="3_5_V%C3%BDpo%C4%8Det_svalov%C3%BDch_sil.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Výpočet svalových sil</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="4_2_Dostredive_a_odstredive_zrychleni.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Dostředivé a odstředivé zrychlení</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inercialni-sily">Inerciální síly</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inercialni-sila-pri-primocarem-pohybu">Inerciální síla při přímočarém pohybu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#priklady-inercialni-sily-pri-primocarem-pohybu">Příklady inerciální síly při přímočarém pohybu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tolerance-lidskeho-tela">Tolerance lidského těla</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tolerance-vertikalniho-zrychleni">Tolerance vertikálního zrychlení</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tolerance-negativniho-zrychleni">Tolerance negativního zrychlení</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tolerance-horizontalniho-zrychleni">Tolerance horizontálního zrychlení</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

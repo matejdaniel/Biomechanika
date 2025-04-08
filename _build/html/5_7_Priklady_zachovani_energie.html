@@ -1,0 +1,671 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Příklady zachování energie &#8212; Biomechanika a biomateriály</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '5_7_Priklady_zachovani_energie';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Periodický pohyb" href="5_8_Periodicky_pohyb.html" />
+    <link rel="prev" title="Energie skoku" href="5_6_Energie_skoku.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-light" alt="Biomechanika a biomateriály - Home"/>
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-dark pst-js-only" alt="Biomechanika a biomateriály - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Obsah
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_Uvod_historie_definice.html">Úvod do biomechaniky</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_MOCAP.html">Popis pohybu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_Rozd%C4%9Blen%C3%AD_pohyb%C5%AF.html">Rozdělení pohybů</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="4%20Ur%C4%8Den%C3%AD%20polohy.html">Určení polohy</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_Kinematika_bodu.html">Kinematika bodu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html">Souřadnicový systém</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_Pohyb_ve_v%C3%ADce_rozm%C4%9Brech.html">Pohyb ve více rozměrech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_Stupn%C4%9B_volnosti.html">Stupně volnosti</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="9_S%C3%ADla.html">Síly v biomechanice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="14_S%C3%ADly_v_biomechanice.html">Síly v biomechanice</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="12_Moment_s%C3%ADly.html">Moment síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_Rovnov%C3%A1ha.html">Rovnováha</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="10_T%C4%9B%C5%BEi%C5%A1t%C4%9B_t%C4%9Bla.html">Těžiště</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_Stabilita.html">Stabilita</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_1_Struktura_svalu.html">Mechanika svalu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_2_Princip_svalov%C3%A9_kontrakce.html">Princip svalové kontrakce</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="3_3_Svalov%C3%A1_s%C3%ADla.html">Svalová síla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_4_%C3%9A%C4%8Dinek_svalu.html">Účinek svalu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_5_V%C3%BDpo%C4%8Det_svalov%C3%BDch_sil.html">Výpočet svalových sil</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4_1_Inerci%C3%A1ln%C3%AD_s%C3%ADly_p%C5%99%C3%ADmo%C4%8Dar%C3%BD_pohyb.html">Inerciální vlastnosti lidského těla</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_2_Dostredive_a_odstredive_zrychleni.html">Dostředivé a odstředivé zrychlení</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_3_Biomechanika_skoku.html">Biomechanika skoku z místa</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="5_2_Mechanicka_prace.html">Práce v biomechanice</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="5_1_Energie_kineticka_a_potencialni.html">Kinetická a potenciální energie v biomechanice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_3_Pr%C3%A1ce_a_energie.html">Práce a energie</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_4_%C3%9A%C4%8Dinnost_a_v%C3%BDkon.html">Účinnost</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="5_5_Z%C3%A1kon_zachov%C3%A1n%C3%AD_energie.html">Zákon zachování mechanické energie</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_6_Energie_skoku.html">Energie skoku</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Příklady zachování energie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_8_Periodicky_pohyb.html">Periodický pohyb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_9_Periodicky_pohyb_a_zakon_zachovani.html">Zákon zachování při periodickém pohybu</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="5_10_F%C3%A1ze_ch%C5%AFze.html">Fáze chůze</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_11_Parametry_ch%C5%AFze.html">Parametry chůze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_12_Ch%C5%AFze_svalov%C3%A1_aktivita.html">Svalová aktivita při chůzi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_13_Anal%C3%BDza_ch%C5%AFze.html">Analýza chůze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_13_Ch%C5%AFze_zachov%C3%A1n%C3%AD_energie.html">Chůze a zákony zachování</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_14_Inverzn%C3%AD_kyvadlo.html">Inverzní kyvadlo</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika/issues/new?title=Issue%20on%20page%20%2F5_7_Priklady_zachovani_energie.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/5_7_Priklady_zachovani_energie.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Příklady zachování energie</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prace-a-energie-sprintera">Práce a energie sprintera</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jak-vysoko-dokazete-skocit">Jak vysoko dokážete skočit?</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="priklady-zachovani-energie">
+<h1>Příklady zachování energie<a class="headerlink" href="#priklady-zachovani-energie" title="Link to this heading">#</a></h1>
+<section id="prace-a-energie-sprintera">
+<h2>Práce a energie sprintera<a class="headerlink" href="#prace-a-energie-sprintera" title="Link to this heading">#</a></h2>
+<p>Práce vykonaná pro zrychlení sprintera a zvýšení jeho kinetické energie pochází převážně ze stahování a natahování svalových vláken a šlach, které fungují podobně jako pružiny. Práce vykonaná svalem při kontrakci je součinem síly, kterou vyvine, a vzdálenosti, o kterou se zkrátí. Velikost síly, kterou sval dokáže vyvinout při dané kontrakci, závisí na rychlosti kontrakce; čím pomalejší je kontrakce, tím větší je síla.</p>
+<p>Film běžícího muže (hmotnost 70 kg) ukázal, že z klidu zrychlil na 3,0 m/s v prvním kroku, na 4,2 m/s ve druhém kroku (zatímco druhá noha byla na zemi) a na 5,0 m/s ve třetím kroku.</p>
+<p>Kinetickou energii sprintera lze vypočítat pro každý krok:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Krok</p></th>
+<th class="head"><p>Rychlost (m/s)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(E_k\)</span> (J)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\Delta E_k\)</span> (J)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>3.0</p></td>
+<td><p>315</p></td>
+<td><p>315</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>4.2</p></td>
+<td><p>617</p></td>
+<td><p>302</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>5.0</p></td>
+<td><p>875</p></td>
+<td><p>258</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Každá změna kinetické energie byla způsobena prací vykonanou jeho svaly. Změna se s každým krokem mírně snižuje, protože mezi kroky je méně času, což snižuje množství práce, kterou jeho svaly mohou vykonat při stejné kontrakci. Zvýšení energie tedy nemůže trvat věčně! Práce vykonaná svaly, když se sprinter pohybuje konstantní rychlostí, slouží k vyrovnání různých ztrát energie: tření v kloubech, odpor vzduchu a ztráty tepla v šlachách při jejich natahování a smršťování.</p>
+<p>Přibližně 2,5 % metabolické energie (měřené spotřebou kyslíku) se spotřebuje na překonání odporu vzduchu při rychlosti 6 m/s v klidném vzduchu, přibližně 13 % při sprinterské rychlosti 10 m/s. To odpovídá skutečnosti, že odpor vzduchu je funkcí rychlosti.</p>
+</section>
+<section id="jak-vysoko-dokazete-skocit">
+<h2>Jak vysoko dokážete skočit?<a class="headerlink" href="#jak-vysoko-dokazete-skocit" title="Link to this heading">#</a></h2>
+<p>Předpokládejme, že chcete vyskočit co nejvýše z klidové polohy. Ohnete nohy a pak je rychle natáhnete. Podívejte se, jak se mění vaše těžiště, dokud jste ještě na zemi:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Poloha</p></th>
+<th class="head"><p>Vzdálenost těžiště od země</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1. Stoj vzpřímený</p></td>
+<td><p>1.0 m</p></td>
+</tr>
+<tr class="row-odd"><td><p>2. Kolena ohnutá</p></td>
+<td><p>0.65 m</p></td>
+</tr>
+<tr class="row-even"><td><p>3. Konec odrazu</p></td>
+<td><p>1.05 m</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<img alt="https://ars.els-cdn.com/content/image/1-s2.0-S002192900800393X-gr1.jpg" src="https://ars.els-cdn.com/content/image/1-s2.0-S002192900800393X-gr1.jpg" />
+<p>O jakou vzdálenost jste zrychlili své těžiště? (Poloha 3 - Poloha 2) <strong>0.4 m</strong></p>
+<p>Studie sportovců skákajících z tenzometrických plošin ukazují, že maximální síla působící proti zemi je přibližně 2,3násobek tělesné hmotnosti <span class="math notranslate nohighlight">\(W\)</span> a že <strong>průměrná</strong> síla je přibližně <span class="math notranslate nohighlight">\(2W_B\)</span>.</p>
+<p>Práce vykonaná skokanem je rovna průměrné síle násobené dráhou zrychlení těžiště:</p>
+<div class="math notranslate nohighlight">
+\[W = (2W_B-W_B) \times 0.4 \, \text{m} = 0.4W \, \text{m}\]</div>
+<p>Změna potenciální energie je rovna hmotnosti skokana <span class="math notranslate nohighlight">\(m\)</span> krát tíhové zrychlení <span class="math notranslate nohighlight">\(g\)</span> krát výška <span class="math notranslate nohighlight">\(\Delta h\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\Delta E_p = mg\Delta h = W\Delta h$$, \\kde $W = mg$ je tíha skokana.\\Z rovnosti práce a změny potenciální energie: $0.4W = W\Delta h$, z čehož vyplývá $\Delta h = 0.4 \, \text{m}$.\\Konečná výška těžiště nad zemí bude počáteční výška těžiště při konci odrazu plus změna výšky: $1.05 \, \text{m} + 0.4 \, \text{m} = 1.45 \, \text{m}$.\\## Skok o tyči\\Dobrý odhad výšky dosažené tyčkařem vychází z výpočtu zachování energie. Zde je příklad. Konečná rychlost tyčkaře (právě když je tyč zapíchnuta do země) je 9,5 m/s. Těžiště skokana je 0,9 m nad zemí. Na vrcholu skoku je těžiště 0,1 m nad laťkou. Použijte zákon zachování energie k nalezení výšky laťky nad zemí. (Světový rekord je něco málo přes 6 metrů.) \\Počáteční energie tyčkaře je součtem kinetické energie a potenciální energie:\\$$E_1 = E_{k1} + E_{p1} = \frac{1}{2}mv^2 + mg h_1\end{aligned}\end{align} \]</div>
+<p>kde <span class="math notranslate nohighlight">\(m\)</span> je hmotnost, <span class="math notranslate nohighlight">\(v\)</span> je rychlost a <span class="math notranslate nohighlight">\(h_1\)</span> je počáteční výška těžiště.</p>
+<p>Na vrcholu skoku je energie rovna potenciální energii těžiště nad laťkou plus potenciální energii laťky:</p>
+<div class="math notranslate nohighlight">
+\[E_2 = E_{k2} + E_{p2} = \frac{1}{2}mv_2^2 + mg (h_{\text{bar}} + 0.1)\]</div>
+<p>kde <span class="math notranslate nohighlight">\(v_2\)</span> je horizontální rychlost na vrcholu (nenulová, ale pro jednoduchost zanedbáme, pokud není uvedena) a <span class="math notranslate nohighlight">\(h_\text{bar}\)</span> je výška laťky.</p>
+<p>Pokud zanedbáme ztráty energie, pak <span class="math notranslate nohighlight">\(E_1 = E_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{2}mv^2 + mg h_1 = \frac{1}{2}mv_2^2 + mg (h_{bar} + 0.1)\]</div>
+<p>Pokud zanedbáme horizontální rychlost na vrcholu (<span class="math notranslate nohighlight">\(v_f \approx 0\)</span>), pak:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{2}mv^2 + mg h_i = mg (h_{bar} + 0.1)\]</div>
+<p>Vydělíme celou rovnici hmotností <span class="math notranslate nohighlight">\(m\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{2}v^2 + g h_i = g (h_{bar} + 0.1)\]</div>
+<p>Nyní můžeme dosadit hodnoty (<span class="math notranslate nohighlight">\(v = 9.5 \, \text{m/s}\)</span>, <span class="math notranslate nohighlight">\(h_i = 0.9 \, \text{m}\)</span>, <span class="math notranslate nohighlight">\(g \approx 9.8 \, \text{m/s}^2\)</span>):</p>
+<p><span class="math notranslate nohighlight">\(\frac{1}{2}(9.5)^2 + 9.8(0.9) = 9.8 (h_{bar} + 0.1)\)</span></p>
+<p><span class="math notranslate nohighlight">\(45.125 + 8.82 = 9.8 h_{bar} + 0.98\)</span></p>
+<p><span class="math notranslate nohighlight">\(53.945 = 9.8 h_{bar} + 0.98\)</span></p>
+<p><span class="math notranslate nohighlight">\(52.965 = 9.8 h_{bar}\)</span></p>
+<p><span class="math notranslate nohighlight">\(h_{bar} = \frac{52.965}{9.8} \approx 5.4 \, \text{m}\)</span></p>
+<img alt="https://business.uoregon.edu/sites/default/files/styles/custom/public/SPM-Enews-banner-Research-Article-0716.jpg?itok=1SirkouC" src="https://business.uoregon.edu/sites/default/files/styles/custom/public/SPM-Enews-banner-Research-Article-0716.jpg?itok=1SirkouC" />
+<p>Hmotnost sportovce není potřeba znát, protože se z rovnice vykrátí, pokud zanedbáme ztráty energie a horizontální rychlost na vrcholu skoku.</p>
+<p>Procesy přenosu energie při skoku o tyči jsou poněkud složité, ale výše uvedený základní výpočet dává dobrý odhad konečného výsledku. Sportovec vykonává práci, táhne dolů tyč a zároveň stoupá. Velkou část práce na sportovci vykonává tyč uvolněním elastické potenciální energie. Dochází k určitým ztrátám energie – tyč se mírně zahřívá. A tyčkař má na vrcholu malou vodorovnou rychlost, a proto si zachovává část kinetické energie. Základní vztah přeměny energie však platí:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Kinetická energie → Elastická potenciální energie → Gravitační potenciální energie.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Pro maximalizaci výšky skoku o tyči tyčkaři ohýbají své tělo kolem laťky (jak je znázorněno na obrázku níže). Tímto způsobem může jejich těžiště (červená tečka) ve skutečnosti projít pod laťkou, zatímco jejich tělo je schopno laťku překonat (černá tečka). To znamená, že laťka může být ve skutečnosti umístěna výše, než je maximální výška dosažená těžištěm tyčkaře.</p>
+<img alt="data:image/webp;base64,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" src="data:image/webp;base64,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" />
+</div>
+<div class="docutils">
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="5_6_Energie_skoku.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Energie skoku</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="5_8_Periodicky_pohyb.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Periodický pohyb</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prace-a-energie-sprintera">Práce a energie sprintera</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jak-vysoko-dokazete-skocit">Jak vysoko dokážete skočit?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

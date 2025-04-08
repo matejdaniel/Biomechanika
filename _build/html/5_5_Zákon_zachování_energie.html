@@ -1,0 +1,636 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Zákon zachování mechanické energie &#8212; Biomechanika a biomateriály</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '5_5_Zákon_zachování_energie';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Energie skoku" href="5_6_Energie_skoku.html" />
+    <link rel="prev" title="Účinnost" href="5_4_%C3%9A%C4%8Dinnost_a_v%C3%BDkon.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-light" alt="Biomechanika a biomateriály - Home"/>
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-dark pst-js-only" alt="Biomechanika a biomateriály - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Obsah
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_Uvod_historie_definice.html">Úvod do biomechaniky</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_MOCAP.html">Popis pohybu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_Rozd%C4%9Blen%C3%AD_pohyb%C5%AF.html">Rozdělení pohybů</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="4%20Ur%C4%8Den%C3%AD%20polohy.html">Určení polohy</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_Kinematika_bodu.html">Kinematika bodu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html">Souřadnicový systém</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_Pohyb_ve_v%C3%ADce_rozm%C4%9Brech.html">Pohyb ve více rozměrech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_Stupn%C4%9B_volnosti.html">Stupně volnosti</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="9_S%C3%ADla.html">Síly v biomechanice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="14_S%C3%ADly_v_biomechanice.html">Síly v biomechanice</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="12_Moment_s%C3%ADly.html">Moment síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_Rovnov%C3%A1ha.html">Rovnováha</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="10_T%C4%9B%C5%BEi%C5%A1t%C4%9B_t%C4%9Bla.html">Těžiště</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_Stabilita.html">Stabilita</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_1_Struktura_svalu.html">Mechanika svalu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_2_Princip_svalov%C3%A9_kontrakce.html">Princip svalové kontrakce</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="3_3_Svalov%C3%A1_s%C3%ADla.html">Svalová síla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_4_%C3%9A%C4%8Dinek_svalu.html">Účinek svalu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_5_V%C3%BDpo%C4%8Det_svalov%C3%BDch_sil.html">Výpočet svalových sil</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4_1_Inerci%C3%A1ln%C3%AD_s%C3%ADly_p%C5%99%C3%ADmo%C4%8Dar%C3%BD_pohyb.html">Inerciální vlastnosti lidského těla</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_2_Dostredive_a_odstredive_zrychleni.html">Dostředivé a odstředivé zrychlení</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_3_Biomechanika_skoku.html">Biomechanika skoku z místa</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="5_2_Mechanicka_prace.html">Práce v biomechanice</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="5_1_Energie_kineticka_a_potencialni.html">Kinetická a potenciální energie v biomechanice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_3_Pr%C3%A1ce_a_energie.html">Práce a energie</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_4_%C3%9A%C4%8Dinnost_a_v%C3%BDkon.html">Účinnost</a></li>
+
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Zákon zachování mechanické energie</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_6_Energie_skoku.html">Energie skoku</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_7_Priklady_zachovani_energie.html">Příklady zachování energie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_8_Periodicky_pohyb.html">Periodický pohyb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_9_Periodicky_pohyb_a_zakon_zachovani.html">Zákon zachování při periodickém pohybu</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="5_10_F%C3%A1ze_ch%C5%AFze.html">Fáze chůze</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_11_Parametry_ch%C5%AFze.html">Parametry chůze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_12_Ch%C5%AFze_svalov%C3%A1_aktivita.html">Svalová aktivita při chůzi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_13_Anal%C3%BDza_ch%C5%AFze.html">Analýza chůze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_13_Ch%C5%AFze_zachov%C3%A1n%C3%AD_energie.html">Chůze a zákony zachování</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_14_Inverzn%C3%AD_kyvadlo.html">Inverzní kyvadlo</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika/issues/new?title=Issue%20on%20page%20%2F5_5_Zákon_zachování_energie.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/5_5_Zákon_zachování_energie.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Zákon zachování mechanické energie</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Zákon zachování mechanické energie</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#zakon-zachovani-energie">Zákon zachování energie</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jine-formy-energie-nez-mechanicka-energie">Jiné formy energie než mechanická energie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uzitecnost-principu-zachovani-energie">Užitečnost principu zachování energie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nektere-z-mnoha-forem-energie">Některé z mnoha forem energie</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="zakon-zachovani-mechanicke-energie">
+<h1>Zákon zachování mechanické energie<a class="headerlink" href="#zakon-zachovani-mechanicke-energie" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><p>V izolované soustavě, na kterou působí pouze <strong>konzervativní síly</strong> (jako je gravitační síla a síla pružnosti), zůstává <strong>celková mechanická energie konstantní</strong>.</p>
+</div></blockquote>
+<img alt="https://cdn.britannica.com/22/166422-050-20C95F10/energy-things.jpg" src="https://cdn.britannica.com/22/166422-050-20C95F10/energy-things.jpg" />
+<p>Celková mechanická energie (<span class="math notranslate nohighlight">\(E\)</span>) je součtem <strong>kinetické energie</strong> (<span class="math notranslate nohighlight">\(E_k\)</span>) a <strong>potenciální energie</strong> (<span class="math notranslate nohighlight">\(E_p\)</span>) těles v soustavě:</p>
+<div class="math notranslate nohighlight">
+\[E = E_k + E_p = \text{konstantní}\]</div>
+<p>To znamená, že se kinetická energie může přeměňovat na potenciální energii a naopak, ale jejich součet se nemění. Pokud jedna složka energie klesá, druhá musí o stejnou hodnotu vzrůst.</p>
+<div class="math notranslate nohighlight">
+\[E_{k1} + E_{p1} = E_{k2} + E_{p2}\]</div>
+<p>kde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(E_{k1}\)</span> je počáteční kinetická energie</p></li>
+<li><p><span class="math notranslate nohighlight">\(E_{p1}\)</span> je počáteční potenciální energie</p></li>
+<li><p><span class="math notranslate nohighlight">\(E_{k2}\)</span> je konečná kinetická energie</p></li>
+<li><p><span class="math notranslate nohighlight">\(E_{p2}\)</span> je konečná potenciální energie</p></li>
+</ul>
+<img alt="https://ars.els-cdn.com/content/image/3-s2.0-B9780323852128000018-f01-40-9780323852128.jpg" src="https://ars.els-cdn.com/content/image/3-s2.0-B9780323852128000018-f01-40-9780323852128.jpg" />
+<p><strong>Příklady:</strong></p>
+<ul class="simple">
+<li><p><strong>Volný pád:</strong> Když těleso padá, jeho potenciální energie (daná výškou) se mění na kinetickou energii (danou rychlostí). Celková mechanická energie (součet potenciální a kinetické) zůstává konstantní (za předpokladu zanedbání odporu vzduchu).</p></li>
+<li><p><strong>Kyvadlo:</strong> Při kmitání kyvadla se neustále přeměňuje potenciální energie (v krajních polohách) na kinetickou energii (v nejnižším bodě) a zpět. Celková mechanická energie je stálá (opět za ideálních podmínek bez tření).</p></li>
+<li><p><strong>Pohyb tělesa po nakloněné rovině (bez tření):</strong> Těleso klouzající dolů po nakloněné rovině mění svou potenciální energii na kinetickou, přičemž celková mechanická energie se zachovává.</p></li>
+<li><p><strong>Pružina:</strong> Stlačení nebo natažení pružiny ukládá potenciální energii. Po uvolnění se tato potenciální energie přemění na kinetickou energii pohybujícího se tělesa připojeného k pružině.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="zakon-zachovani-energie">
+<h1>Zákon zachování energie<a class="headerlink" href="#zakon-zachovani-energie" title="Link to this heading">#</a></h1>
+<p>Energie, jak jsme již zmínili, je zachována, což ji činí jednou z nejdůležitějších fyzikálních veličin v přírodě. Zákon zachování energie lze vyjádřit následujícím způsobem:</p>
+<blockquote>
+<div><p><strong>Celková energie je konstantní v jakémkoli procesu. Může se změnit ve formě nebo být přenesena z jednoho systému do druhého, ale celkový součet zůstává stejný.</strong></p>
+</div></blockquote>
+<p>Prozkoumali jsme některé formy energie a způsoby, jakými může být přenesena mezi systémy. Tento průzkum vedl k definici dvou hlavních typů mechanické energie (kinetická a potenciální energie). Energie však může existovat v mnoha dalších formách, projevujících se různými způsoby, a je potřeba se vypořádat se všemi těmito formami, než budeme schopni napsat rovnici pro výše uvedený obecný zákon zachování energie.</p>
+<section id="jine-formy-energie-nez-mechanicka-energie">
+<h2>Jiné formy energie než mechanická energie<a class="headerlink" href="#jine-formy-energie-nez-mechanicka-energie" title="Link to this heading">#</a></h2>
+<p>V tuto chvíli zahrnujeme všechny ostatní formy energie do jedné skupiny nazývané <strong>jiná energie (OE)</strong>. Pak můžeme vyjádřit zákon zachování energie ve formě rovnice:</p>
+<div class="math notranslate nohighlight">
+\[
+E_{k1} +  E_{p1} + W + OE_1 = E_{k2} +  E_{p2} + OE_2
+\]</div>
+<p>Všechny typy energie a práce mohou být zahrnuty do této velmi obecné formulace zákona zachování energie. Kinetická energie je označena jako <strong>E_k</strong>, práce vykonaná konzervativní silou je reprezentována <strong>E_p</strong>, práce vykonaná nenezachovávajícími silami je <strong>W</strong> a všechny ostatní energie jsou zahrnuty pod <strong>OE</strong>. Tato rovnice platí pro všechny předchozí příklady; v těchto situacích byla <strong>OE</strong> konstantní, a tedy byla odečtena a přímo nezohledněna.</p>
+</section>
+<section id="uzitecnost-principu-zachovani-energie">
+<h2>Užitečnost principu zachování energie<a class="headerlink" href="#uzitecnost-principu-zachovani-energie" title="Link to this heading">#</a></h2>
+<p>Skutečnost, že energie je zachována a existuje v mnoha formách, ji činí velmi důležitou. Energie je diskutována v mnoha kontextech, protože je zapojena do všech procesů. Bude také zřejmé, že mnoho situací je nejlépe pochopeno z hlediska energie a že problémy jsou často nejjednodušeji koncepčně řešeny a vyřešeny zohledněním energie.</p>
+<p><strong>Kdy hraje OE roli?</strong> Jedním z příkladů je, když člověk jí. Jídlo se oxiduje s uvolněním oxidu uhličitého, vody a energie. Některá z této chemické energie se přemění na kinetickou energii, když se člověk pohybuje, na potenciální energii, když mění výšku, a na tepelnou energii (další formu OE).</p>
+</section>
+<section id="nektere-z-mnoha-forem-energie">
+<h2>Některé z mnoha forem energie<a class="headerlink" href="#nektere-z-mnoha-forem-energie" title="Link to this heading">#</a></h2>
+<p>Existuje mnoho dalších forem energie kromě těch, které jsme již probrali. Některé z nich si nyní představíme:</p>
+<ul class="simple">
+<li><p><strong>Elektrická energie:</strong> Běžná forma energie, kterou lze snadno přeměnit na jiné formy a využít k vykonávání práce v mnoha zařízeních.</p></li>
+<li><p><strong>Chemická energie:</strong> Uložena v palivech (např. benzín, jídlo) a bateriích. Uvolňuje se chemickými reakcemi (např. oxidací) a může být přeměněna na jiné formy energie, včetně elektrické energie a tepla.</p></li>
+<li><p><strong>Energie záření (Elektromagnetické záření):</strong> Energie přicházející ze Slunce, zahrnující viditelné světlo, infračervené a ultrafialové záření. Je zdrojem většiny energie na Zemi.</p></li>
+<li><p><strong>Jaderná energie:</strong> Uvolňuje se při přeměnách hmoty na energii v atomových jádrech. Využívá se v jaderných elektrárnách k výrobě elektřiny a je zdrojem energie Slunce.</p></li>
+<li><p><strong>Tepelná energie:</strong> Vnitřní energie atomů a molekul v neustálém náhodném pohybu. Je spojena s teplotou objektu.</p></li>
+</ul>
+<p>Všechny tyto formy energie lze vzájemně přeměňovat a využívat k vykonávání práce.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="5_4_%C3%9A%C4%8Dinnost_a_v%C3%BDkon.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Účinnost</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="5_6_Energie_skoku.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Energie skoku</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Zákon zachování mechanické energie</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#zakon-zachovani-energie">Zákon zachování energie</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jine-formy-energie-nez-mechanicka-energie">Jiné formy energie než mechanická energie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uzitecnost-principu-zachovani-energie">Užitečnost principu zachování energie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nektere-z-mnoha-forem-energie">Některé z mnoha forem energie</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
