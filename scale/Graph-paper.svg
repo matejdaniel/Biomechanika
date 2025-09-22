@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="1249.8738"
+   height="403.74265"
+   id="svg2180"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Graph-paper.svg">
+  <metadata
+     id="metadata27">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1364"
+     inkscape:window-height="700"
+     id="namedview25"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.417193"
+     inkscape:cx="695.83191"
+     inkscape:cy="329.90266"
+     inkscape:window-x="0"
+     inkscape:window-y="40"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2180" />
+  <defs
+     id="defs2182" />
+  <g
+     id="g3060"
+     transform="translate(0,3.7426317)">
+    <g
+       id="g3037">
+      <g
+         style="display:inline"
+         id="layer1">
+        <g
+           style="stroke:#a9a9a9;stroke-opacity:1"
+           id="g8191">
+          <path
+             d="m 20,0 0,400"
+             style="fill:none;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             id="path1872"
+             inkscape:connector-curvature="0" />
+          <use
+             transform="translate(20,0)"
+             style="stroke:#a9a9a9;stroke-opacity:1"
+             id="use8185"
+             x="0"
+             y="0"
+             width="400"
+             height="400"
+             xlink:href="#path1872" />
+          <use
+             transform="translate(40,0)"
+             style="stroke:#a9a9a9;stroke-opacity:1"
+             id="use8187"
+             x="0"
+             y="0"
+             width="400"
+             height="400"
+             xlink:href="#path1872" />
+          <use
+             transform="translate(60,0)"
+             style="stroke:#a9a9a9;stroke-opacity:1"
+             id="use8189"
+             x="0"
+             y="0"
+             width="400"
+             height="400"
+             xlink:href="#path1872" />
+        </g>
+        <use
+           transform="translate(100,0)"
+           id="use8197"
+           x="0"
+           y="0"
+           width="400"
+           height="400"
+           xlink:href="#g8191" />
+        <use
+           transform="translate(200,0)"
+           id="use8199"
+           x="0"
+           y="0"
+           width="400"
+           height="400"
+           xlink:href="#g8191" />
+        <use
+           transform="translate(300,0)"
+           id="use8201"
+           x="0"
+           y="0"
+           width="400"
+           height="400"
+           xlink:href="#g8191" />
+        <use
+           transform="matrix(0,1,-1,0,400,0)"
+           id="use8203"
+           x="0"
+           y="0"
+           width="400"
+           height="400"
+           xlink:href="#g8191" />
+        <use
+           transform="translate(0,100)"
+           id="use8205"
+           x="0"
+           y="0"
+           width="400"
+           height="400"
+           xlink:href="#use8203" />
+        <use
+           transform="translate(0,200)"
+           id="use8207"
+           x="0"
+           y="0"
+           width="400"
+           height="400"
+           xlink:href="#use8203" />
+        <use
+           transform="translate(0,300)"
+           id="use8209"
+           x="0"
+           y="0"
+           width="400"
+           height="400"
+           xlink:href="#use8203" />
+      </g>
+      <g
+         style="display:inline"
+         id="layer2">
+        <g
+           style="stroke:#336666;stroke-opacity:1"
+           id="g8225">
+          <path
+             d="m 100,0 0,400"
+             style="fill:none;stroke:#336666;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             id="path8215"
+             inkscape:connector-curvature="0" />
+          <use
+             transform="translate(100,0)"
+             style="stroke:#336666;stroke-opacity:1"
+             id="use8217"
+             x="0"
+             y="0"
+             width="400"
+             height="400"
+             xlink:href="#path8215" />
+          <use
+             transform="translate(200,0)"
+             style="stroke:#336666;stroke-opacity:1"
+             id="use8219"
+             x="0"
+             y="0"
+             width="400"
+             height="400"
+             xlink:href="#path8215" />
+        </g>
+        <use
+           transform="matrix(0,1,-1,0,400,0)"
+           id="use8232"
+           x="0"
+           y="0"
+           width="400"
+           height="400"
+           xlink:href="#g8225" />
+      </g>
+      <g
+         id="layer3">
+        <rect
+           width="399"
+           height="399"
+           x="0.5"
+           y="0.5"
+           style="fill:none;stroke:#336666;stroke-opacity:1"
+           id="rect10078" />
+      </g>
+    </g>
+  </g>
+</svg>

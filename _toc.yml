@@ -4,6 +4,7 @@ format: jb-book
 root: intro
 chapters:
 - file: 1_Uvod_historie_definice
+- file: Scale
 - file: 2_MOCAP
   sections:
   - file: 3_Rozdělení_pohybů
