@@ -1,0 +1,1302 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Škálování &#8212; Biomechanika a biomateriály</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Scale';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Popis pohybu" href="2_MOCAP.html" />
+    <link rel="prev" title="Úvod do biomechaniky" href="1_Uvod_historie_definice.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-light" alt="Biomechanika a biomateriály - Home"/>
+    <img src="_static/CVUT_logo.jpg" class="logo__image only-dark pst-js-only" alt="Biomechanika a biomateriály - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Obsah
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_Uvod_historie_definice.html">Úvod do biomechaniky</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Škálování</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_MOCAP.html">Popis pohybu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_Rozd%C4%9Blen%C3%AD_pohyb%C5%AF.html">Rozdělení pohybů</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="4%20Ur%C4%8Den%C3%AD%20polohy.html">Určení polohy</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_Kinematika_bodu.html">Kinematika bodu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_Sou%C5%99adnicov%C3%BD_syst%C3%A9m.html">Souřadnicový systém</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_Pohyb_ve_v%C3%ADce_rozm%C4%9Brech.html">Pohyb ve více rozměrech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_Stupn%C4%9B_volnosti.html">Stupně volnosti</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="9_S%C3%ADla.html">Síly v biomechanice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="14_S%C3%ADly_v_biomechanice.html">Síly v biomechanice</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="12_Moment_s%C3%ADly.html">Moment síly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_Rovnov%C3%A1ha.html">Rovnováha</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="10_T%C4%9B%C5%BEi%C5%A1t%C4%9B_t%C4%9Bla.html">Těžiště</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_Stabilita.html">Stabilita</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_1_Struktura_svalu.html">Mechanika svalu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_2_Princip_svalov%C3%A9_kontrakce.html">Princip svalové kontrakce</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="3_3_Svalov%C3%A1_s%C3%ADla.html">Svalová síla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_4_%C3%9A%C4%8Dinek_svalu.html">Účinek svalu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_5_V%C3%BDpo%C4%8Det_svalov%C3%BDch_sil.html">Výpočet svalových sil</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4_1_Inerci%C3%A1ln%C3%AD_s%C3%ADly_p%C5%99%C3%ADmo%C4%8Dar%C3%BD_pohyb.html">Inerciální vlastnosti lidského těla</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_2_Dostredive_a_odstredive_zrychleni.html">Dostředivé a odstředivé zrychlení</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_3_Biomechanika_skoku.html">Biomechanika skoku z místa</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="5_2_Mechanicka_prace.html">Práce v biomechanice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_1_Energie_kineticka_a_potencialni.html">Kinetická a potenciální energie v biomechanice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_3_Pr%C3%A1ce_a_energie.html">Práce a energie</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_4_%C3%9A%C4%8Dinnost_a_v%C3%BDkon.html">Účinnost</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="5_5_Z%C3%A1kon_zachov%C3%A1n%C3%AD_energie.html">Zákon zachování mechanické energie</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_6_Energie_skoku.html">Energie skoku</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_7_Priklady_zachovani_energie.html">Příklady zachování energie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_8_Periodicky_pohyb.html">Periodický pohyb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_9_Periodicky_pohyb_a_zakon_zachovani.html">Zákon zachování při periodickém pohybu</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="5_10_F%C3%A1ze_ch%C5%AFze.html">Fáze chůze</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_11_Parametry_ch%C5%AFze.html">Parametry chůze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_12_Ch%C5%AFze_svalov%C3%A1_aktivita.html">Svalová aktivita při chůzi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_13_Anal%C3%BDza_ch%C5%AFze.html">Analýza chůze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_13_Ch%C5%AFze_zachov%C3%A1n%C3%AD_energie.html">Chůze a zákony zachování</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="5_14_Inverzn%C3%AD_kyvadlo.html">Inverzní kyvadlo</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/matejdaniel/Biomechanika/issues/new?title=Issue%20on%20page%20%2FScale.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Scale.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Škálování</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rozmery-zivych-organizmu">Rozměry živých organizmů</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#delka-plocha-objem">Délka, plocha, objem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pomer-objem-a-plocha">Poměr objem a plocha</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ponderalni-index">Ponderální index</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bmi-body-mass-index">BMI - body mass index</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kvantifikace-velikosti">Kvantifikace velikosti</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linearizace-grafu">Linearizace grafu</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skalovani-a-gallileo">Škálování a Gallileo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skalovani-a-energeticka-spotreba">Škálování a energetická spotřeba</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="skalovani">
+<h1>Škálování<a class="headerlink" href="#skalovani" title="Link to this heading">#</a></h1>
+<p>Nervy v páteřní míše mají délku až jednoho metru. Proč ale neexistuje buňka,
+která by měla nejen délku jednoho metru ale také šírku a výšku jednoho
+metru. Proč na úrovní centrimetrů je nejúspěšnejším žívočišným druhem
+hmyz, zatímco obratlovci dominují v rozměrech decimentrů až metrů.
+Odpověď na tuto otázku je až překvapivě jednoduchá a pro úvahu nám stačí
+znát poměr mezi objemem a plochou.</p>
+<section id="rozmery-zivych-organizmu">
+<h2>Rozměry živých organizmů<a class="headerlink" href="#rozmery-zivych-organizmu" title="Link to this heading">#</a></h2>
+<figure class="align-default">
+<img alt="https://study.com/cimages/multimages/16/organism_sizes3499042571070877048.jpeg" src="https://study.com/cimages/multimages/16/organism_sizes3499042571070877048.jpeg" />
+</figure>
+<p>Délka organizmu je, jak jsem si řekli v předešlé kapitole, jedna ze
+základních charakteristik organizmů. Živé organizmy existují v široké
+škále velikostí, který si můžeme lépe uvědomit, porovnáme-li velikost
+bakterie a velryby. Velryba má rozměr v desítkách metrů (10<span class="math notranslate nohighlight">\(^1s\)</span>),
+zatímco bakterie jsou mikroskopičtí živočichové o rozměrech desetin
+mikrometrů (<span class="math notranslate nohighlight">\(10^{-7}\)</span> m). Rozdíl v délce je tedy 8 řádů. Má-li jedna
+bakterie objem približně (0.1<span class="math notranslate nohighlight">\(\mu\)</span>m)<span class="math notranslate nohighlight">\(^3\)</span> a velryba objem (10 m)<span class="math notranslate nohighlight">\(^3\)</span>,
+vejde se do jedné velryby celkově 10<span class="math notranslate nohighlight">\(^{24}\)</span> bakterií.</p>
+<p>Protože my jsme spíš zvyklí posuzovat rozměry na základě délky než
+objemu a uvažujeme v relativně malých číslech, informace, že do objemu
+velryby se vejde 10<span class="math notranslate nohighlight">\(^{24}\)</span> bakterií je pro nás nepředstavitelné číslo.
+Jaká je to délka kdybychom tyto bakterie seřadili za sebou? Můžete si
+jednoduše spočítat, že takový řetezec bakterií by obtočil Zemi kolem
+rovníku 7.6 miliard krát, nebo bychom je mohli nátáhnout až ke Slunci a
+zpátky k Zemi až milionkrát. Případně bychom mohli tyto bakterie
+roztáhnout k nejbližší hvězdě, což je 3.3 světelného roku a zpátky
+celkově 5 krát. Samozřejmě, že tato úvaha není právě jednoduchá,
+poskytuje nám ovšem představu o složitosti živých organizmů.</p>
+</section>
+<section id="delka-plocha-objem">
+<h2>Délka, plocha, objem<a class="headerlink" href="#delka-plocha-objem" title="Link to this heading">#</a></h2>
+<figure class="align-default">
+<img alt="_images/krychle1.svg" src="_images/krychle1.svg" />
+</figure>
+<p>Představte si živý organizmus, který by měl tvar krychle, označme ho
+krychloid. Organizmus by byl tvořen z větší části z vody, měl by tedy
+hustotu 1000 kg m<span class="math notranslate nohighlight">\(^{-3}\)</span>. Krychle by měla stranu <span class="math notranslate nohighlight">\(l_1=\)</span>1 dm. Jaký by
+měla povrch a jaký by měla objem a hmotnost? Z geometrie víme, že
+krychle má 6 stran a každá strana je čtverec, povrch je tedy</p>
+<div class="math notranslate nohighlight">
+\[A_1=6l_1^2 = 6\,\mathrm{dm}^2.\]</div>
+<p>Objem krychle je úměrný třetí mocnině
+strany</p>
+<div class="math notranslate nohighlight">
+\[V_1 = l_1^3 = 1\,\mathrm{dm}^3.\]</div>
+<p>Jeden decimetr krychlový se
+rovná 0.001 m<span class="math notranslate nohighlight">\(^3\)</span> pro odvození hmotnosti můžeme vyjít z jednotek
+hustoty, které jsou definovány jako poměr hmotnosti na objem. Hustota se
+tedy počítá jako <span class="math notranslate nohighlight">\(\rho = m/V\)</span> a pro našeho krychloida bude mít hodnotu 1
+kg.</p>
+<figure class="align-default">
+<img alt="_images/krychle2.svg" src="_images/krychle2.svg" />
+</figure>
+<p>Krychloid je ve svém okolí spokojen a roste. Jeho hustota zůstává
+stejná, ale naroste do dvojnásobného rozměru, označme ho dolním indexem
+2. Znamená to, že jeho lineární rozměr, tedy délka je</p>
+<div class="math notranslate nohighlight">
+\[l_2 = 2\,l_1,\]</div>
+<p>tedy hrana krychloida měří 2 dm. Jak se změní jeho plocha,
+objem a hmotnost? Jeho plocha se určí stejným způsobem jako v předešlém
+případě. Plocha krychle je</p>
+<div class="math notranslate nohighlight">
+\[V_2 = 6 (l_2)^2\]</div>
+<p>tedy 24 dm<span class="math notranslate nohighlight">\(^3\)</span>. V porovnání s plochou jednotkového krychoidu je 4-násobně větší, tedy
+<span class="math notranslate nohighlight">\(2^2\)</span> větší. Z obázku je zjevné, že dvojnásobný krychloid můžeme
+sestavit z 8 jednotkových krychloidů. Objem dvojnásobného krychloidu
+určíme jako</p>
+<div class="math notranslate nohighlight">
+\[V_2 = l_2^3\]</div>
+<p>a bude tedy 8 dm<span class="math notranslate nohighlight">\(^3\)</span>. Při zvětšení
+krychloidu na dvojnásobek délky se jeho objem zvýšil 8-krát, tedy <span class="math notranslate nohighlight">\(2^3\)</span>.
+Hmotnost dvojnásobného krychloida je úměrná jeho objemu a proto se
+zvýšila také 8-krát (<span class="math notranslate nohighlight">\(2^3\)</span> krát) a bude 8 kg.</p>
+<figure class="align-default">
+<img alt="_images/krychle10.svg" src="_images/krychle10.svg" />
+</figure>
+<p>Uvažujme nyní, že krychloid dále roste a roste až nabude 10 násobku
+původní délky. Jeho délku můžeme napsat jako</p>
+<div class="math notranslate nohighlight">
+\[l_{10}=10\,l_1\]</div>
+<p>Jak už
+asi tušíme, plocha desetinásobného krychloidu se zvětší v porovnání s
+jednotkovým krychloidem 100 krát, tedy 10<span class="math notranslate nohighlight">\(^2\)</span> krát. Do objemu
+desetinásobného krychloidu se vejde 10x10 jednotkových krychloidů na
+jednu základnu a takových složení budeme mít nad sebou 10, objem se tedy
+zvýší 10 x 10 x 10 = 10<span class="math notranslate nohighlight">\(^3\)</span>, tedy tisíckrát. Hmotnost krychloidu také
+výrazně vzroste a dosáhne 10<span class="math notranslate nohighlight">\(^3\)</span> násobek původní hmotnosti 1 kg.
+Hmotnost desetinásobného krychloidu bude 1 tuna.</p>
+<p>Obdobným způsobem bychom mohli uvažovat o živočichovi ve tvaru koule o
+poloměru <span class="math notranslate nohighlight">\(r\)</span>, který má plochu <span class="math notranslate nohighlight">\(4\,\pi\,r^2\)</span> a objem <span class="math notranslate nohighlight">\(4/3\,\pi\,r^3\)</span>. Při
+zvýšení jeho poloměru na dvojnásobek by se jeho plocha změnila na
+<span class="math notranslate nohighlight">\(4 \pi 2^2 r = 2^2 V_1\)</span> a jeho objem by se změnil na
+<span class="math notranslate nohighlight">\(4/3\,\pi\, 2^3\,r^3 = 2^3 V_1\)</span>.</p>
+<p>Zjistili jsme tedy, že při zdvojnásobení objemu se plocha zvýší s druhou
+mocninou a objem se zvýší s třetí mocninou změny jeho lineárních
+rozměru. Tento poznatek obecně vychází z geometrie, protože vzorec pro
+výpočet plochy vždy obsahuje délku umocněnou na druhou a vzorec pro
+výpočet objemu délku umocněnou na třetí.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Těleso</strong></p></th>
+<th class="head"><p><strong>Plocha</strong></p></th>
+<th class="head"><p><strong>Objem</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Krychle</p></td>
+<td><p><span class="math notranslate nohighlight">\(6\,a^2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(a^3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Koule</p></td>
+<td><p><span class="math notranslate nohighlight">\(4 \pi r^2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{4}{3}\pi r^3\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Válec</p></td>
+<td><p><span class="math notranslate nohighlight">\(2\,\pi r^2+2\,\pi\,r\,h\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\pi r^2 h\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Naše zjištění tedy platí pro tzv. <strong>izometrické škálování</strong>, t.j.
+škálování při kterém dochází ke zvýšení lineárních rozměrů ve všech
+směrech.<a class="footnote-reference brackets" href="#id7" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> Příklad, kdy toto škálování neplatí si můžeme ukázat na
+příkladu válce. Představte si, že máte válec, např. konzervu tuňáka v
+oleji o poloměru základny <span class="math notranslate nohighlight">\(r_1\)</span> a výšce <span class="math notranslate nohighlight">\(h_1\)</span>. Chcete mít větší
+konzervu, tak zvýšíte její výšku (např. <span class="math notranslate nohighlight">\(h_2=2\,h_1\)</span>), její základnu
+necháte nezměnénou. Jak se změní její objem? Podle vztahu v
+tabulce dojde k lineárnímu zvýšení (<span class="math notranslate nohighlight">\(V_2 =
+\pi\,r^2 h_2 = 2 \pi\,r^2 h_1 = 2^1\,V_1\)</span>). Tento trik využívají
+výrobci, kteří při zvětšování obalu nezvětšují obal izometricky, ale
+jenom v jednom směru, nejlépe ve směru, který je ve vzorci pro výpočet
+objemu v první mocnině. Výrobek tak budí dojem výrazně většího výrobku
+bez zvýšení jeho objemu jenž by vyžadovalo izometrické škálování.
+Škálování, při kterém roste jen jeden z rozměrů nebo jednotlivé rozměry
+výška, šířka a délka nerostou rovnoměrně označujeme jako škálování
+<strong>alometrické</strong><a class="footnote-reference brackets" href="#id8" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. Typickým příkladem alometrického škálování je růst
+člověka. V případé, že by se tělo škálovalo izometricky rostla by váha s
+třetí mocninou výšky. Alometrické škálovaní nebo růst znamená také to,
+že se v průběhu růstu mění poměry mezi jednotlivými částmi lidského
+těla. Můžeme to vidět v porovnání antropometrických parametrů dospělého
+člověka a dítěte, kde vidíme např, že déti mají například vzhledem k
+tělu mnohem větší hlavu.</p>
+<figure class="align-default">
+<img alt="_images/allometric-growth.png" src="_images/allometric-growth.png" />
+</figure>
+<p>Stejně jako geometricky jednoduché objekty a tvary, můžeme takto
+škálovat i složitější objekty. Jako příklad může poslužit tvar listu na
+obrázku.</p>
+<figure class="align-default">
+<img alt="_images/list.svg" src="_images/list.svg" />
+</figure>
+<p>Jeho plochu můžeme určit tak, že list natřeme
+barvou a otlačíme ho na milimetrový papír. Následně spočítáme všechny
+zabarvené čtvrce a součtem jejich ploch určíme plochu listu. Když chceme
+vědet, jakou plochu bude mít list dvojnásobné velikosti, představte si,
+že nahradíme každý z počítaných čtverců čtvercem o dvojnásobné straně.
+Plocha každého ze čtverců bude čtyřnásobná a tedy i celková plocha bude
+čtyřnásobná.</p>
+</section>
+<section id="pomer-objem-a-plocha">
+<h2>Poměr objem a plocha<a class="headerlink" href="#pomer-objem-a-plocha" title="Link to this heading">#</a></h2>
+<p>Zkoumáme-li poměr mezi objemem a plochou u izometrického škálování,
+můžeme tuto závislot vyjádřit jednoduchým podělením plochy a objemu.
+Plocha k objemu je úměrná <span class="math notranslate nohighlight">\(A/V \propto l^2/l^3 =
+1/l\)</span>.<a class="footnote-reference brackets" href="#id9" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>. Tato závislost nám říká, že velký živočich bude mít méně
+povrchu vzhledem k objemu než malý živočích. Z daného pohledu je hlavním
+rozdílem mezi velrybou a bakterií, že bakterie má 100 000 000 krát více
+povrchu k objemu než má velryba.</p>
+<p>Poměr plochy povrchu k objemu také hrál klíčovou roli v evoluci, jak
+poukázal Haldane [&#64;Haldane1926]. Živý svět se skládá z buněk, které mají
+velmi podobné požadavky na kyslík. Mikroskopická zvířata, jako jsou
+například malí korýši v planktonu, pohlcují kyslík celou plochou těla a
+kyslík rychle difunduje do všech buněk. Pokud by se vyvinula větší
+zvířata ve stejném tvaru a složení těla jejich povrchová plocha by se
+snížila vzhledem k objemu, a tak by bylo mnohem obtížnější absorbovat
+dostatek kyslíku. Například hmyz používá k dýchání systém trubiček -
+vzdušnic otevřených průduchy na straně hrudi a zadečku. Vzduch se u
+hmyzu dostává přímo k vnitřním tkáním a dýchání je primárně pasivní
+proces. Výměna dýchacích plynů u hmyzu je tedy podmíněna difuzí, která
+je účinná do vzdálenosti 1 cm, takže to také omezuje velikost hmyzu.</p>
+<p>Evoluční průlom umožňující větší velikosti zvířat přišel s rozvojem
+krevního oběhu jako prostředku pro distribuci kyslíku a dalších živin. I
+tak pro zvířata naší velikosti musí být k dispozici obrovský povrch pro
+absorpci kyslíku. Toho bylo dosaženo vývojem plic.</p>
+<p>Vrátíme-li se ke korýšům, jejich trávící soustava má podobu jednoduché
+rovné trubky. Množství potravy, které musí přijmout vyšší zvířata je
+úměrné počtu buněk. Ve střevě povrch absorbuje živiny ve stejné míře a
+problémy vznikají proto, že plocha střevního povrchu se zvyšuje pomaleji
+než počet buněk, které musejí být vyživovány. Proto se v průběhu vývoje
+nahradila rovná trubka trubkou stočenou s mnoha vnitřnímy výběžky.
+Podíváme-li se na mnohé struktury vnitřní anatomie člověka, lze je
+chápat jako strategie, které se vyvinuly pro zvýšení disponibilní plochy
+povrchu zejména k výmeně dýchacích plynů a živin. To platí nejen pro
+živočichy ale také pro rostliny.</p>
+<ul class="simple">
+<li><p>V případě stromů je řešením vytvoření tenkých struktur - listů. K
+výměne dýchacích plynů dochází ve vnitřních strukturach listu, které
+jsou mnohem větší než povrch listu viditelný volným okem. Například
+strom, který má 2000 listů, jejich vnější plocha je přibližně 200
+m<span class="math notranslate nohighlight">\(^2\)</span>. Plocha vnitřních struktur listů je ovšem až 30 krát větší,
+6000 <span class="math notranslate nohighlight">\(m^2\)</span>, tedy 0,6 hektaru.</p></li>
+<li><p>U rostlin je důležité také zabezpečit co největší plochu pro
+příjmání živin. 1 m<span class="math notranslate nohighlight">\(^2\)</span> trávy má kořínky jejiž celková plocha
+dosahuje 350 m<span class="math notranslate nohighlight">\(^2\)</span>.</p></li>
+<li><p>K výměne dýchacích plynů dochází také v našich plících. Plíce
+obsahují struktury alveolů s tenkou stěnou a tudíž velkým povrchem.
+Celková kapacita plic je přibližně 6 litrů vzduchu. Plocha, na které
+se tento vzduch dostává k výměne dýchacích plynů je 50 a 100 m<span class="math notranslate nohighlight">\(^2\)</span>
+co je přibližně plocha školní třídy.</p></li>
+<li><p>To co platilo u rostlin pro kořeny, platí pro člověka v trávicím
+systému. Jednotlivé klky a mikroklky navyšují celkovou plochu
+střeva. Celková plocha tentkého střeva, které je dlouhé přibližně 7
+metrů je tak až 2000 m<span class="math notranslate nohighlight">\(^2\)</span>.</p></li>
+<li><p>Kromě výměny dychacích plynů s vnějším prostředím je nutno dostat
+tyto dýchací plyny efektivně k jednotlivým orgánům. Proto se krevní
+řečišté skládá z poměrně velkých cév, které mají dostatečně velký
+objem k transportu a zároveň z obrovského množství tenkých kapilár,
+u kterých je důležitá velká povrchová plocha. Celková plocha kapilár
+v lidském těle je 6000 m<span class="math notranslate nohighlight">\(^2\)</span>.</p></li>
+</ul>
+</section>
+<section id="ponderalni-index">
+<h2>Ponderální index<a class="headerlink" href="#ponderalni-index" title="Link to this heading">#</a></h2>
+<p>Hmotnost pacienta je důležitým parametrem pro určení obezity a
+měření hmotnosti u jednice v průběhu času vypovídá o jeho životním
+stylu. Jak ale porovnáme jednotlivé pacienty mezi sebou? Jakým
+způsobem zjistíme, je-li váhou dvou lidí různé velikosti srovnatelná
+nejsou-li stejné tělesné stavby.</p>
+<p>Při odhadu můžeme vyjít z našich znalostí škálování. Pro dva jednice
+stejné stavby bychom meli vydělením objemu a třetí mocniny rozměru
+získat konstantu. Vyšší hodnota bude odpovídat většímu objemu, než
+by měl být vzhledem k výšce a to může znamenat nadváhu.</p>
+<p>Objem člověka se ovšem měří těžko, ale vzhledem k tomu, že hustota
+lidských tkání je přibližně stejná, je možné jako míru objemu zvolit
+váhu. Z lineárních rozměrů člověka je nejlépe měřitelná výška. Ta má
+kromě jiného tu výhodu, že se na rozdíl od jiných rozměrů nemění při
+nadváze. Ponderální index, označován také někdy jako Queteletův
+index, je tak definován jako podíl hmotnosti a třetí mocniny výšky.</p>
+<p>Index by ovšem měl být bezrozměrný. Podíl objemu a třetí mocniny
+výšky získámé formálně stejné jednotky jenž má hustota kg m<span class="math notranslate nohighlight">\(^{-3}\)</span>.
+Proto můžeme získat bezrozměrný index, podělíme-li ho hustotou vody
+<span class="math notranslate nohighlight">\(\rho\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[PI = \frac{m}{\rho\,h^3}\]</div>
+<p>V daném vyjádření je normální
+ponderální index v rozsahu 0,0105 až 0,014.</p>
+<p>Tento index se používa i v jiných oblastech. Jeho modifikovaná verze
+je známá jako Rohrerův index stavby těla, nebo jen Rohrerův index.
+Rohrerův index není bezrozměrný, dosazuje hmotnost v gramech a výšku
+v centimetrech.</p>
+</section>
+<section id="bmi-body-mass-index">
+<h2>BMI - body mass index<a class="headerlink" href="#bmi-body-mass-index" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Klasifikace</strong></p></th>
+<th class="head"><p><strong>rozsah BMI(kg/m<span class="math notranslate nohighlight">\(^2\)</span>)</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Podváha</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(&lt;18.50\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Závažná podváha</p></td>
+<td><p><span class="math notranslate nohighlight">\(&lt;16.00\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Střední podváha</p></td>
+<td><p><span class="math notranslate nohighlight">\(16.00 - 16.99\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Mírná podváha</p></td>
+<td><p><span class="math notranslate nohighlight">\(17.00 - 18.49\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Normální váha</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(18.50 - 24.99\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Nadváha</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(\geq 25.00\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Pre-obezita</p></td>
+<td><p><span class="math notranslate nohighlight">\(25.00 - 29.99\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(27.50 - 29.99\)</span> Obezita</p></td>
+<td><p><span class="math notranslate nohighlight">\(\geq 30.00\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Obezita 1. stupně</p></td>
+<td><p><span class="math notranslate nohighlight">\(30.00 - 34.99\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Obezita 2. stupně</p></td>
+<td><p><span class="math notranslate nohighlight">\(35.00 - 39.99\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Obezita 3. stupně</p></td>
+<td><p><span class="math notranslate nohighlight">\(\geq 40.00 \)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Problémem vztahu mezi výškou a objemem se zaobíral také belgický
+statistik Adolphe Quetelet [&#64;Eknoyan2008]. Ve svém díle přímo tvrdí:
+Quetelet toto pozorování vysvětluje tím, že člověk roste více do
+šírky než do výšky.</p>
+<p>Z daného pozorování plyne zavedení <strong>indexu tělesné hmotnosti</strong>,
+obvykle označovaného zkratkou BMI (z anglického body mass index).
+Tento index vypočítáme podle vztahu</p>
+<div class="math notranslate nohighlight">
+\[BMI = \frac{m}{h^2}\]</div>
+<p>kde se hmotnost dosazuje v kilogramech a výška v metrech. Jednotkou BMI je
+kg m<span class="math notranslate nohighlight">\(^-2\)</span>. Tato jednotka se většinou, a z pohledu biomechaniky
+nesprávně, neuvádí.</p>
+<p>BMI se používá jako indikátor podváhy, normální tělesné hmotnosti,
+nadváhy a obezity, umožňující statistické porovnávání tělesné
+hmotnosti lidí s různou výškou. BMI jako parametr pro hodnocení
+obezity není vhodný při izometrickém škálování. Představme si
+zdravého člověka s výškou 170 cm a BMI 22 kg/m<span class="math notranslate nohighlight">\(^2\)</span>. Kdyby byl daný
+člověk o 10% zvětšen, pořád mu zůstane stejná stavba těla, ale jeho
+hmotnost se výrazně zvýší a tím pádem se dotane do kategorie lidí s
+nadváhou podle BMI. BMI tak předpokládá, že vysokí lidi budou
+štíhlí, zatímco u lidí s nižší výškou BMI toleruje relativně vyšší
+hmotnost.</p>
+<figure class="align-default">
+<img alt="_images/bmif.jpg" src="_images/bmif.jpg" />
+</figure>
+<p>Dalším nedostatkem BMI pro hodnocení obezity je, že tato míra nebere
+do úvahy množství tělesného tuku. Příkladem mohou být sportovci s
+velkým množstvím svalové hmoty, kteří podle BMI spadají do oblasti
+obezity. Pro hodnocení obezity se proto používají i jiné míry jako
+je poměr obvodu pasu a boků (WHR) nebo poměr mezi obvodem pasu a
+výškou (WHtR). Výhodou BMI je jeho oblíbenost, při určování
+zdravotních rizik je BMI uvedeno u většiny studií.</p>
+</section>
+<section id="kvantifikace-velikosti">
+<h2>Kvantifikace velikosti<a class="headerlink" href="#kvantifikace-velikosti" title="Link to this heading">#</a></h2>
+<p>Zatím jsme mluvily o délce a objemu v obecných termínech. Jakou
+velikost bychom měli měřit. Na výběr máme několik rozměru: délku,
+šírku, obvod, poloměr, průměr. Stejně tak u plochy můžeme určovat
+celkovou plochu nebo plochu přůřezu. Výjdeme-li z principu měření,
+je základem měření vzájmené porovnání.</p>
+<p>Nejjdednodušší je to pro určení objemu. Objem těla je jenom jeden a
+můžeme ho relativně jednoduše odhadnout na základě hmotnosti,
+protože hustota těla živočichů je přibližně stejná.</p>
+<p>Z toho, že známe objem, můžeme vyjít při určení délky. Na základě
+pravidel škálování je objem úměrný třetí mocnině délky. Můžeme tak
+třetí odmocninu délky označit jako tzv. <strong>nominální délku</strong><a class="footnote-reference brackets" href="#id10" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>.
+Nominální délka nemusí odpovídat žádnému z rozměrů organizmů. Proto
+můžeme pro porovnání určit tzv. <strong>charaketristickou délku</strong>.<a class="footnote-reference brackets" href="#id11" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>.
+Charakteristická délka nám neumožní porovnat živočichy různé
+konstituce (např. o kolik musí bý větší krychle aby byla větší než
+koule). Je však použitelná, chceme-li srovnat živočichy stejného
+tvaru (velikost dvou brouků), nebo tvar je irelevantní zrovnáme-li
+živočichy jejíchž rozměry se řádově liší (bakterie a velryba). Pro
+geometricky podobné živočichy se veškeré délky proporcionálně mění -
+zdvojnásobíme poloměr, zdvojnásobí se průměr a obvod.</p>
+<section id="linearizace-grafu">
+<h3>Linearizace grafu<a class="headerlink" href="#linearizace-grafu" title="Link to this heading">#</a></h3>
+<p>Vraťme se k našemu krychloidu. Představte si, že všechny živé
+organizmy na planetě Krychle mají tvar krychle. Známe jejich
+charakteristickou délku, plochu a hmotnost, která odpovídá objemu.
+Jak určíme závislosti mezi délkou a plochou nebo objemem, které jsme
+si teoreticky odvodili v předchozí
+části. Na rozdíl od výpočtu můžeme
+využít znázornění ve grafu.</p>
+<p>Představte si, že vezmeme data jednotlivých živočichů, jejich délku
+a jejich plochu a vyneseme je do grafu. Výsledkem bude množina bodů
+definujících křivku, v našem případě parabola. Tento graf nám ovšem
+neposkytne moc informací jak se plocha mění s délkou. Z grafu bychom
+rádi získali jednu informaci (jedno číslo), které nám určí tuto
+závislost.</p>
+<p>Delší nevýhodou daného grafu je jeho rozlišení. Rozměry živočichů
+pokrývají různou škálu: od mikrometrů až po desítky metrů. Na světě
+je ovšem mnohem větší počet druhů malých živočichů o rozměrech
+milimetrů, než velkých o rozměrech metrů. Proto bude mít graf velké
+množství bodů na začátku a malé množství bodů na konci rozsahu
+velikosti.</p>
+<p>Ukážeme si, jak můžeme vyřešit oba tyto problémy najednou,
+jednoduchým změněním vynášení dat na jednotlivé osy. Místo vynášení
+jednotlivých hodnot na osy grafu v lineárním měřítku budeme na
+jednotlivé osy vynášet v tzv. logratimickém měřítku. Znamená to, že
+vzdálenosti na ose nebude odpovídat skutečným poměrem velikostí ale
+násobku vzdálenosti, t.j. vzdálenost mezi 1 a 10 bude stejná jako
+vzdálenost mezi 100 a 10000. Stejně tak bude platit, že vzdálenost
+mezi 1 a 3 bude stejná jako vzdálenost 3 a 9 a vzdálenost mezi 9 a
+27. Stejně to platí na druhou stranu, vzdálenost mezi 0.1 a 0.01 je
+stejná jako vzdálenost mezi 0 a 1. Co se stane s grafem, uděláme-li
+danou změnu. Pro označení os v tomto grafu použijeme označení
+<span class="math notranslate nohighlight">\(x', y'\)</span>.</p>
+<figure class="align-default">
+<img alt="_images/linear_g.svg" src="_images/linear_g.svg" />
+</figure>
+<figure class="align-default">
+<img alt="_images/loglog_g.svg" src="_images/loglog_g.svg" />
+</figure>
+<p>Představme si tři živočichy, kteří mají charakteristický rozměr
+(<span class="math notranslate nohighlight">\(l\)</span>) 0.1 m, 1 m a 10 m. Jejich plocha se mění přesně podle zákona
+škálování a to v poměru <span class="math notranslate nohighlight">\(A=l^2\)</span>, t.j. mají plochu 0.01, 1 a 100.
+Jáké budou vzdálenosti na ose linearizovaného grafu
+<span class="math notranslate nohighlight">\(\mathrm{log}\,l\)</span> a <span class="math notranslate nohighlight">\(\mathrm{log}\,A\)</span>. Z definice zavedení logaritmu
+je zřejmé, že vzdálenosti na ose <span class="math notranslate nohighlight">\(\mathrm{log} l\)</span> jsou stejné. Na
+ose <span class="math notranslate nohighlight">\(\mathrm{log}\, A\)</span> je vzdálenost mezi 1 a 10 stejná jako mezi 10
+a 100, t.j. vzdálenost mezi 1 a 100 se rovná dvěma jednotkám
+vynášené vzdálenosti. Stejně to platí pro pro vzdálenosti mezi 0 a
+0,01. Výsledkem tedy bude lineární graf, kde pro jeden přírustek na
+ose <span class="math notranslate nohighlight">\(\mathrm{log}\, l\)</span> máme dva přírůstky na ose <span class="math notranslate nohighlight">\(\mathrm{log}\, A\)</span>.
+<a class="footnote-reference brackets" href="#id12" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a></p>
+<p>Původní graf, který měl lineární osy, byl vhodný pro kreslení funkcí
+ve tvaru
+$<span class="math notranslate nohighlight">\(y = ax + b\,\,.\)</span>$</p>
+<p>Grafem této funkce je přímka a přímo z
+grafu můžeme vyčíst parametry přímky. Bod na ose <span class="math notranslate nohighlight">\(y\)</span>, který protíná
+přímka se rovná parametru <span class="math notranslate nohighlight">\(b\)</span>. Parameter <span class="math notranslate nohighlight">\(a\)</span>, označovaný jako
+směrnice přímky, udává sklon přímky. Funkce s vyšší hodnotou <span class="math notranslate nohighlight">\(a\)</span>
+jsou strmější než ty, které mají malou hodnotu <span class="math notranslate nohighlight">\(a\)</span>. Můžeme ho přímo
+z grafu určit odměřením úhlu <span class="math notranslate nohighlight">\(\alpha\)</span>, který zvírá naše funkce s
+osou <span class="math notranslate nohighlight">\(x\)</span>; <span class="math notranslate nohighlight">\(a=\tan(\alpha)\)</span>. Jinými slovy, je sklon křivky <span class="math notranslate nohighlight">\(a\)</span> mírou
+toho nakolik při změne <span class="math notranslate nohighlight">\(x\)</span> roste hodnota <span class="math notranslate nohighlight">\(y\)</span>; <span class="math notranslate nohighlight">\(a\)</span> změna <span class="math notranslate nohighlight">\(x\)</span> =
+změna <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[a\,\Delta x = \Delta y\]</div>
+<p>V nově změneném grafu <span class="math notranslate nohighlight">\(x'y'\)</span> jsme vyřešili problém velikosti
+živočichů. Hmyzu, který má velikosti od mm (10<span class="math notranslate nohighlight">\(^{-3}\)</span> m) do
+centrimetrů (10<span class="math notranslate nohighlight">\(^{-2}\)</span> m), přináleží v grafu stejný rozsah os jako
+velkým savcům v rozměrech jednoho (<span class="math notranslate nohighlight">\(10^0\)</span> m) metru až několika metrů
+(10<span class="math notranslate nohighlight">\(^{1}\)</span> m).</p>
+<p>Co ovšem znamená sklon grafu? Předpokládejme, že máme graf ve
+změněných osách ve tvaru přímky <span class="math notranslate nohighlight">\(y' = a x'\)</span>, ve kterém na jednu
+jednotku přírustku na ose <span class="math notranslate nohighlight">\(x'\)</span> připadají dvě jednotky přírustku na
+ose <span class="math notranslate nohighlight">\(y'\)</span>. Osa <span class="math notranslate nohighlight">\(y'\)</span> ovšem není lineární, to znamená, že rozdílu mezi
+jednotkovou vzdálenost na ose <span class="math notranslate nohighlight">\(x\)</span> mezi 1 a 10 odpovídají dva
+jednotky na ose <span class="math notranslate nohighlight">\(y\)</span>, t.j. rozdíl mezi 1 a 100 (10<span class="math notranslate nohighlight">\(^2\)</span>). Máme-li na
+ose <span class="math notranslate nohighlight">\(x\)</span> číslo 3, musí ji na ose <span class="math notranslate nohighlight">\(y\)</span> náležet číslo, které je
+dvojnásobně tak daleko, t.j. číslo 9 (3<span class="math notranslate nohighlight">\(^2\)</span>). Kdybychom měli sklon
+3, t.j. na jednu jednotku na ose <span class="math notranslate nohighlight">\(x'\)</span> by připadaly tři jednotky na
+ose <span class="math notranslate nohighlight">\(y'\)</span>, znamenalo by to, že intervalu mezi 1 a 10 odpovídá
+interval mezi 1 a 1000 (10<span class="math notranslate nohighlight">\(^3\)</span>). Sklon křivky v grafu <span class="math notranslate nohighlight">\(x'y'\)</span> tak
+odpovída exponentu mocniny v grafu s lineárními osami <span class="math notranslate nohighlight">\(xy\)</span>.
+$<span class="math notranslate nohighlight">\(y = x^a\)</span>$ Zvolíme-li tento způsob vykreslení, z křivky, která byla
+exponenciální (parabola) se stane křivka lineární, u které můžeme
+jednoduše určit jednotlivé parametery. Tento postup se označuje jako
+linearizace grafu a umožní nám jednoduchým způsobem určování vztahů
+mezi veličinami, mezi kterými je mocninový vztah.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(y\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(a\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(b\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Plocha těla                     1.95</p></td>
+<td><p>0.11</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Hmotnost kostí (suchozemští)</p></td>
+<td><p>3.25</p></td>
+<td><p>0.0608</p></td>
+</tr>
+<tr class="row-even"><td><p>Hmotnost kostí (vodní)</p></td>
+<td><p>3.07</p></td>
+<td><p>0.137</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hmotnost svalů</p></td>
+<td><p>3.00</p></td>
+<td><p>0.45</p></td>
+</tr>
+<tr class="row-even"><td><p>Metabolická spotřeba</p></td>
+<td><p>2.25</p></td>
+<td><p>4.10</p></td>
+</tr>
+<tr class="row-odd"><td><p>Efektivní objem plic</p></td>
+<td><p>3.09</p></td>
+<td><p>0.0000567</p></td>
+</tr>
+<tr class="row-even"><td><p>Frekvence dýchání</p></td>
+<td><p>-0.78</p></td>
+<td><p>0.892</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hmotnost srdce</p></td>
+<td><p>2.94</p></td>
+<td><p>0.0058</p></td>
+</tr>
+<tr class="row-even"><td><p>Frekvence tepu</p></td>
+<td><p>-0.75</p></td>
+<td><p>4.02</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hmotnost ledvin</p></td>
+<td><p>2.55</p></td>
+<td><p>0.00732</p></td>
+</tr>
+<tr class="row-even"><td><p>Hmotnost jater</p></td>
+<td><p>2.61</p></td>
+<td><p>0.033</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hmotnost mozgu (neprimáti)</p></td>
+<td><p>2.10</p></td>
+<td><p>0.01</p></td>
+</tr>
+<tr class="row-even"><td><p>Hmotnost mozgu (člověk)</p></td>
+<td><p>1.98</p></td>
+<td><p>0.085</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="align-default">
+<img alt="_images/shingleton.jpg" src="_images/shingleton.jpg" />
+</figure>
+<p>Hodnotu <span class="math notranslate nohighlight">\(a\)</span> můžeme určit jednoduše z grafu tím, že určíme směrnici
+logaritmického grafu, <span class="math notranslate nohighlight">\(a\)</span> změna <span class="math notranslate nohighlight">\(x'\)</span> = změna <span class="math notranslate nohighlight">\(y'\)</span>. Máme-li
+kalkulačku, která umí počítat logaritmy můžeme to jednoduše určit
+jako</p>
+<div class="math notranslate nohighlight">
+\[a = \frac{\Delta \log y}{\Delta \log x}\]</div>
+<p>Samozřejmě ani přímka linearizovaného grafu nemusí procházet nulou. V případě
+linarizovaného grafu <span class="math notranslate nohighlight">\(b\)</span> závisí na volbě jednotek. Kdybychom
+například místo metrů používaly pro vynášení milimetry, všechny
+hodnoty jsou vynásobené parametrem 1000. Znamená to, že místo 1
+budeme omít 1000 a místo 10 budeme mít 10 000. V linearizovaném
+grafu se 1 posune o tři jednotky doprava a 10 a čtyři jednotky
+doprava. Přímka grafu se tak celá posune o tři jednotky doprava.
+Posun o <span class="math notranslate nohighlight">\(b =\)</span> tři jednotky znamená, že jsme násobili <span class="math notranslate nohighlight">\(10^3\)</span>. Hodnotu
+<span class="math notranslate nohighlight">\(b\)</span> můžeme z grafu vyčíst jako hodnotu <span class="math notranslate nohighlight">\(y'\)</span> při <span class="math notranslate nohighlight">\(x\)</span> rovné jedné,
+protože <span class="math notranslate nohighlight">\(1^a\)</span> se rovná jedné pro libovolné <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<p>Pro nás je zejména důležité znát faktor škálování <span class="math notranslate nohighlight">\(a\)</span>. Protože
+živočichové na zemi a ani člověk nemá právě tvar krychle, faktor
+škálování nemusí být přěsně 3. Nejjednodušší způsob, jak tuto
+hodnotu získat je právě graficky, kde do logaritmického grafu budeme
+vynášet na vodorovnou osu charakteristickou délku (např. výšku
+člověka) a na svislou osu vyneseme hmotnost, případně jiný parametr.</p>
+<p>Koeficienty škálování pro jednotlivé parametry lidského těla jsou
+uvedeny v tabulce. Je zajímavé, že hmota kostí roste
+rychleji než celková hmota organizmu, zatímco metabolická spotřeba
+celkově roste, ale ne tak rychle jako hmotnost. Tudíž větší
+živočichové mají menší spotřebu energie na kilogram hmotnosti.
+Tomuto fenomenu se budeme ještě věnovat.</p>
+</section>
+</section>
+<section id="skalovani-a-gallileo">
+<h2>Škálování a Gallileo<a class="headerlink" href="#skalovani-a-gallileo" title="Link to this heading">#</a></h2>
+<p>Galileo Galilei byl prvním, kto popsal podstatu škálování
+[&#64;Shingleton2010] tak, jak jsme si jí vysvětlili v předcházejícím
+textu. K danému poznání ho přivedlo kromě jiného jednoduché
+porovnání pevnosti kostry zvířat. Galileo začíná své dílo <em>Discorsi
+e Dimostrazioni Matematiche Intorno a Due Nuove Scienze</em> (stručně
+překládáno jako ) porovnáním pevnosti lodí různé konstrukce. Ptá se,
+proč musí mít větší loď více výstuh než malá, když je přímo její
+zvětšením. Galileo pozoruje, že daná závislost neplatí jen pro lodě
+ale také pro zvířata a přímo se ptá:</p>
+<p><em>Všichni vědí, že kůň si při pádu z výšky tří nebo čtyř loktů (1,3 m
+nebo 1,8 m) zlomí kosti , zatímco pes padající ze stejné výšky neba
+kočka padající z výšky osmi až desíti loktů neutrpí žádnou újmu?
+… A nejen menší zvířata jsou poměrně silnější a robustnější než
+větší, taky i menší rostliny jsou schopny vydržet víc. Oba víme, že
+dub dvěstě loktů vysoký (9 m) neudrží své vlastní větve když bude
+tvar jeho koruny stejný jako u stromu běžné velikosti; a že příroda
+nemůže vytvořit koně stejně velké jako dvacet obyčejných koní nebo
+obry desetkrát vyšší než obyčejný člověk, pokud by se zázrakem
+nezměnily proporce jejich končetin a zejména jejich kostí, které by
+musely být silnější než je obvyklé.</em></p>
+<figure class="align-default">
+<img alt="_images/2sc.png" src="_images/2sc.png" />
+</figure>
+<p>Galileo si také všímá, že kosti jednotlivých zvířat nejsou úměrné
+jejich velikosti. Na obrázku
+je znázorněna kostra kočky a slona.</p>
+<figure class="align-default">
+<img alt="_images/catel.png" src="_images/catel.png" />
+</figure>
+<p>I když
+jsou oba kostry na obrázku stejné velikosti, můžeme je lehce
+rozlišit na základě tloušťky kostí. Slon má vzhledem ke své
+velikosti mnohem větší kosti. Je zřejmé, že tato vlastnost bude
+souviset se zákonem třetí mocniny, který jsme si odvodili pro
+škálování.</p>
+<figure class="align-default">
+<img alt="_images/galb.jpg" src="_images/galb.jpg" />
+</figure>
+<p>Představte si drátěnné lano, na kterém je zavěsen výtah. Drátěné
+lano je druh lana, které je vyrobeno z několika kovových vláken.
+Pevnost lana je úměrná tomu, kolik je v průřezu lana kovových
+vláken, čím je větší průřez, tím je v něm více vláken a tím lano
+unese větší váhu. Jak se musí změnit průměr lana, když kabinu výtahu
+zvětšíme dvakrát (<span class="math notranslate nohighlight">\(l=2 l_0\)</span>). Víme, že na mezi lineárním rozměrem a
+hmotností platí zákon třetí mocniny a tudíž bude kabina vážit
+třikrát tolik (<span class="math notranslate nohighlight">\(m
+= 8 m_0\)</span>). Proto musí být lano 8-krát silnější a tedy jeho plocha
+průřezu musí být osminásobkem původní plochy průřezu. Má-li průřez
+lana tvar kruhu musí pro poloměr platit: $<span class="math notranslate nohighlight">\(A = 8 A_0\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(\pi r^2 = 8 \pi r_0^2\)</span><span class="math notranslate nohighlight">\( \)</span><span class="math notranslate nohighlight">\(r = 2^\frac{3}{2} r_0\)</span>$ Poloměr lana,
+což je mírou jeho lineárního rozměru tedy roste víc než lineární
+rozměr výtahu. Budeme-li pořád zvětšovat rozměr kabiny, dostaneme se
+do bodu, kdy průměr lana bude větší než samotná kabina a lano bude
+vážit tolik, že neunese vlastní váhu.</p>
+<p>Vztah mezi pevností v tahu nebo tlaku a průřezem platí obecně a ne
+jenom pro drátěné lano. Stejně tak pevnost kostí v tlaku je úměrná
+jejich ploše průřezu. Můžeme tuto závislost vyjádřit vztahem pro
+maximální sílu, která je pro danou kost úměrná průřezu:
+$<span class="math notranslate nohighlight">\(F_{max}=\sigma_P A\)</span><span class="math notranslate nohighlight">\( kde \)</span>\sigma_P<span class="math notranslate nohighlight">\( je koeficient úměrnosti a
+označuje se jako mez pevnosti. Tato mez je charakteristická pro
+každý materiál a pro kortikální kost má hodnotu přibližně 200
+N/mm\)</span>^2$.</p>
+<p>Představme si živočicha, který bude mít tvar krychle o straně <span class="math notranslate nohighlight">\(l\)</span> a
+bude mít jednu kost čtvercového průřezu o straně <span class="math notranslate nohighlight">\(a\)</span>. Dále
+předpokládejmě, že hustota kosti je dva krát větší než hustota běžné
+tkáně. Pro hmotnost živočicha tedy platí
+$<span class="math notranslate nohighlight">\(m = \rho (l^3-a^2 l) + 2 \rho a^2 l =  \rho l^3 + \rho
+ a^2 l\)</span>$ Unese-li kost přesně tíhu živočicha, musí platit</p>
+<div class="math notranslate nohighlight">
+\[F_{max} = m g = \sigma_P a^2\]</div>
+<p>Proto</p>
+<div class="math notranslate nohighlight">
+\[a^2 = \frac{l^3}{\frac{\sigma_P}{\rho g}- l}\]</div>
+<p>To kolik kostní
+hmoty potřebuje živočich musí záviset na jeho hmotnosti. Vyjádřeme si poměr mezi objemem kostí (<span class="math notranslate nohighlight">\(V_{\mathrm{kost}}\)</span>) a objemem živočicha (<span class="math notranslate nohighlight">\(V\)</span>) jako</p>
+<div class="math notranslate nohighlight">
+\[x = \frac{V_{\mathrm{kost}}}{V} =  \frac{a^2}{l^2}\]</div>
+<p>kde <span class="math notranslate nohighlight">\(A_{\mathrm{kost}}\)</span> je plocha kosti.</p>
+<div class="math notranslate nohighlight">
+\[\frac{m_\mathrm{kost}}{m} = \frac{2\rho V_\mathrm{kost}}{V} = 2 \frac{l}{\frac{\sigma_P}{\rho g}- l}\]</div>
+<p>Z daného vztahu vidíme, že tento poměr není konstatní a závisí na velikosti <span class="math notranslate nohighlight">\(l\)</span>. Je-li hustota <span class="math notranslate nohighlight">\(\rho\)</span> stejná jako hustota vody (1000 kg/m<span class="math notranslate nohighlight">\(^3\)</span>) a gravitační zrychlení je približně 10 m/s<span class="math notranslate nohighlight">\(^2\)</span>, můžeme pro mez pevnosti 200 N/mm<span class="math notranslate nohighlight">\(^2\)</span> napsat:</p>
+<div class="math notranslate nohighlight">
+\[\frac{m_\mathrm{kost}}{m} = \frac{l}{10^4 [\mathrm{m}] - l}\]</div>
+<p>Protože hmotnost je při izometrickém škálování funkcí třetí mocniny délky <span class="math notranslate nohighlight">\(m \propto l^3\)</span>,
+měla by se hmotnost kostry při zachování stálé pevnosti škálovat se čtvrtou mocninou lineárního rozměru. Podle
+tabulky  se hmotnost kosti zvyšuje více než
+celková hmotnost (koeficient <span class="math notranslate nohighlight">\(a=3\)</span>), nicméně méně než s čtvrtou
+mocninou. To znamená, že větší živočichové mají hrubší kosti a ne natolik, jak by potřebovali pro dosažení stejné mechanické odolnosti jako mají malí živočichové. A tím se vracíme k pozorování Galilea o pádu koně z 1.5 metru.</p>
+</section>
+<section id="skalovani-a-energeticka-spotreba">
+<h2>Škálování a energetická spotřeba<a class="headerlink" href="#skalovani-a-energeticka-spotreba" title="Link to this heading">#</a></h2>
+<p>Může se zdát, že velikost těla je nevýhodou, protože s rostoucí
+délkou a hmotností rostou požadavky na pevnost kostí. Na druhé
+straně, může být velká hmotnost, resp. velký poměr objemu těla k
+povrchu výhodou. Při relativně menším povrchu těla je výhodnější
+udržet konstantní tělesnou teplotu, což má několik výhod. Například
+je možné nastavit biochemické pochody tak, aby fungovaly optimálně
+při dané teplotě. Také činnost svalů je efektivnější když fungují
+jenom v úzkém rozsahu teplot.</p>
+<figure class="align-default">
+<img alt="_images/kleiber.jpg" src="_images/kleiber.jpg" />
+</figure>
+<p>Udržování tělesné teploty je metabolicky náročné. Pro dospělého
+člověka je to až kilogram potravin denně. Myš, která má rozměr asi
+jedné dvacetiny rozměru člověka, má asi větší plochu a musí
+spotřebovat až dvacetkrát tolik jídla jako člověk, samozřejmě
+přepočteno na hmotnost myší. Myš tedy musí spotřebovat čtvrtinu své
+vlastní tělesné hmotnosti denně jen aby zůstala v teple. To je
+důvod, proč v arktických oblastech Špicberků je nejmenším savcem
+liška. Tato úměra platí i na druhou stranu. Kdyby měla kráva
+metabolizmus stejně rychlý jako myš, teplota uvnitř jejího těla by
+přesáhla bod varu. Vztah, který říká, že energetická spotřeba
+živočicha neroste úměrně s jeho hmotností se označuje jako
+<strong>Kleiberův zákon</strong>.</p>
+<p>Na základě této úvahy můžeme vysvetlit také alometrický růst dětí,
+nebo obecně teplokrevních živočichů. Plazi a ryby nejsou nuceni
+udržovat zvýšenou teplotu, takže je tepelné ztráty netrápí. Ale
+savci a ptáci musí udržovat svou zvýšenou teplotu přes svůj život,
+jak rostou ve velikosti od dítěte k dospělému. Vzhledem k tomu, že
+rostou ve velikosti, tyto obratlovci začínají život s tělěm, které
+má relativně vysoký poměr povrchu k objemu.</p>
+<p>U dětí znamená jejich malá hmotnost to, že vzhledem k relativně
+velkému povrchu rychle ztrácí teplo. Proto mají děti problém udržet
+stálou tělesnou teplotu. Pro zvládnutí této nevýhody došlo u mláďat
+savců k několika adaptacím. Teplokrevné nebo endotermické děti musí
+být při narození mnohem větší, než mláďata chladnokrevných
+ektotermických plazů. Větší velikost každého narozeného jednotlivce
+znamená méně potomků z každého období těhotenství endotermické
+obratlovců. Tak zatímco každý savčí období těhotenství přivede na
+svět jednoho až deset potomků, typický plazí období těhotenství
+povede k narození zhruba desti až sta potomků. Problém splnění
+minimální velikosti potřebné k udržení konstantní tělesné teploty je
+zvláště akutní pro nejmenší teplokrevní obratlovce. Nově narozených
+netopýr může mít až 25% hmotnosti dospělé matky.</p>
+<p>Dalším přizpůsobením endotermických obratlovců je, že teplokrevné
+děti nerostou úměrně od dítěte k dospělému. Jinými slovy, zatímco plazi
+se jeví jako miniaturní dospělí většina mláďat savců nemůže být
+zaměněna za dospělého. Endotermické děti mají menší plochu, t.j.
+kratší končetiny, zaoblené rysy a kulatou hlavu. Tyto úpravy
+pomáhají teplokrevným dětem snížit tepelné ztráty povrchem a udržet
+konstantní zvýšenou tělesnou teplotu.</p>
+<p>Význam udržení stálé tělesné teploty můžeme doložit na základě
+pravidel přežití. Člověk může přežít tři týdny bez jídla, nebo tři
+dny bez vody, ale v případě, že nemá dostatečnou izolaci od chladu
+může být mrtvý do tří hodin. Fyzika a měřítka vlastností jsou
+základem pro pochopení většiny pozorování v biologie a medicíně.</p>
+<p><strong>Izometrický růst</strong>: rovnoměrné zvýšení všech rozměrů ve stejném poměru.</p>
+<p><strong>Alometrický růst:</strong> nerovnoměrné zvyšování jednotlivých rozměrů.</p>
+<p>Podíl plochy k objemu je nepřímo úměrný délce.
+<span class="math notranslate nohighlight">\(\frac{S}{V} \propto l^{-1}\)</span></p>
+<p><strong>Nominální délka</strong>: třetí odmocnina objemu živočicha</p>
+<p><strong>Charakteristická délka</strong>: fyzikální rozměr živočicha</p>
+<p><strong>Logaritmus</strong>: je matematická operace, která udává kolikrát musíme násobit
+určité číslo označované jako báze sebou samým proto, aby jsme
+dostali jiné číslo. Např. logaritmus 100 s bází 10 se rovná 2
+(<span class="math notranslate nohighlight">\(\log_{10} 100 = 2\)</span>), protože 10 musíme mezi sebou vynásobit
+2-krát (<span class="math notranslate nohighlight">\(10\,10=100\)</span>). Kůli jednoduchosti označujeme dekadický
+logaritmus <span class="math notranslate nohighlight">\(\log_{10}\)</span> jen jako <span class="math notranslate nohighlight">\(\log\)</span>.</p>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id7" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+</aside>
+<aside class="footnote brackets" id="id8" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+</aside>
+<aside class="footnote brackets" id="id9" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+</aside>
+<aside class="footnote brackets" id="id10" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+</aside>
+<aside class="footnote brackets" id="id11" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
+</aside>
+<aside class="footnote brackets" id="id12" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
+</aside>
+</aside>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="1_Uvod_historie_definice.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Úvod do biomechaniky</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="2_MOCAP.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Popis pohybu</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rozmery-zivych-organizmu">Rozměry živých organizmů</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#delka-plocha-objem">Délka, plocha, objem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pomer-objem-a-plocha">Poměr objem a plocha</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ponderalni-index">Ponderální index</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bmi-body-mass-index">BMI - body mass index</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kvantifikace-velikosti">Kvantifikace velikosti</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linearizace-grafu">Linearizace grafu</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skalovani-a-gallileo">Škálování a Gallileo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skalovani-a-energeticka-spotreba">Škálování a energetická spotřeba</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matej Daniel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
