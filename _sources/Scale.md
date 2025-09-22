@@ -719,3 +719,6 @@ $\frac{S}{V} \propto l^{-1}$
         ($\log_{10} 100 = 2$), protože 10 musíme mezi sebou vynásobit
         2-krát ($10\,10=100$). Kůli jednoduchosti označujeme dekadický
         logaritmus $\log_{10}$ jen jako $\log$.
+
+
+* **Kleiberův zákon** uvádí, že rychlost metabolismu zvířete je úměrná ohybuje 3/4 organizmu. 
