@@ -123,7 +123,7 @@ výpočet objemu délku umocněnou na třetí.
 
 Naše zjištění tedy platí pro tzv. **izometrické škálování**, t.j.
 škálování při kterém dochází ke zvýšení lineárních rozměrů ve všech
-směrech.[^1] Příklad, kdy toto škálování neplatí si můžeme ukázat na
+směrech. Příklad, kdy toto škálování neplatí si můžeme ukázat na
 příkladu válce. Představte si, že máte válec, např. konzervu tuňáka v
 oleji o poloměru základny $r_1$ a výšce $h_1$. Chcete mít větší
 konzervu, tak zvýšíte její výšku (např. $h_2=2\,h_1$), její základnu
@@ -136,7 +136,7 @@ objemu v první mocnině. Výrobek tak budí dojem výrazně většího výrobku
 bez zvýšení jeho objemu jenž by vyžadovalo izometrické škálování.
 Škálování, při kterém roste jen jeden z rozměrů nebo jednotlivé rozměry
 výška, šířka a délka nerostou rovnoměrně označujeme jako škálování
-**alometrické**[^2]. Typickým příkladem alometrického škálování je růst
+**alometrické**. Typickým příkladem alometrického škálování je růst
 člověka. V případé, že by se tělo škálovalo izometricky rostla by váha s
 třetí mocninou výšky. Alometrické škálovaní nebo růst znamená také to,
 že se v průběhu růstu mění poměry mezi jednotlivými částmi lidského
@@ -334,7 +334,7 @@ protože hustota těla živočichů je přibližně stejná.
 
 Z toho, že známe objem, můžeme vyjít při určení délky. Na základě
 pravidel škálování je objem úměrný třetí mocnině délky. Můžeme tak
-třetí odmocninu délky označit jako tzv. **nominální délku**[^4].
+třetí odmocninu délky označit jako tzv. **nominální délku**.
 Nominální délka nemusí odpovídat žádnému z rozměrů organizmů. Proto
 můžeme pro porovnání určit tzv. **charaketristickou délku**.[^5].
 Charakteristická délka nám neumožní porovnat živočichy různé
@@ -401,7 +401,7 @@ a 100, t.j. vzdálenost mezi 1 a 100 se rovná dvěma jednotkám
 vynášené vzdálenosti. Stejně to platí pro pro vzdálenosti mezi 0 a
 0,01. Výsledkem tedy bude lineární graf, kde pro jeden přírustek na
 ose $\mathrm{log}\, l$ máme dva přírůstky na ose $\mathrm{log}\, A$.
-[^6]
+
 
 Původní graf, který měl lineární osy, byl vhodný pro kreslení funkcí
 ve tvaru 
@@ -663,30 +663,57 @@ dny bez vody, ale v případě, že nemá dostatečnou izolaci od chladu
 může být mrtvý do tří hodin. Fyzika a měřítka vlastností jsou
 základem pro pochopení většiny pozorování v biologie a medicíně.
 
-[^1]: 
+## Kleiberův zákon
 
-**Izometrický růst**: rovnoměrné zvýšení všech rozměrů ve stejném poměru.
+Kleiberův zákon je biologický princip, který popisuje vztah mezi bazálním metabolismem (minimálním množstvím energie, které organismus potřebuje k přežití) a tělesnou hmotností. Zákon říká, že metabolismus není přímo úměrný hmotnosti organismu, ale spíše roste s mocninou hmotnosti.
 
-[^2]: 
+$$Q \propto m^{3/4}$$
+ 
+kde:
+* $Q$ je bazální metabolická rychlost organismu (měřená v jednotkách energie za jednotku času, např. watty).
+* $M$ je tělesná hmotnost (měřená v kilogramech).
 
-**Alometrický růst:** nerovnoměrné zvyšování jednotlivých rozměrů.
+Konstanta úměrnosti a se liší podle skupiny organismů (např. savci, ptáci, rostliny), ale exponent  3/4 (nebo 0,75) je překvapivě konstantní napříč širokým spektrem živých organismů.
 
-[^3]: 
+Hlavní myšlenka Kleiberova zákona spočívá v tom, že ačkoliv větší zvířata potřebují více energie celkově, spotřebovávají **méně energie na každý kilogram své hmotnosti** než zvířata menší.
 
-Podíl plochy k objemu je nepřímo úměrný délce.
+Představme si slona a myš. Pro zjednodušení předpokládejme, že slon má hmotnost 5800 kg a myš 58 g (což je 0,058 kg). Hmotnost slona je tedy přibližně **100 000krát** větší než hmotnost myši.
+
+Podle Kleiberova zákona se jejich bazální metabolismus neřídí tímto poměrem 1:100 000, ale roste s mocninou $3/4$.
+
+1.  **Hmotnostní poměr (lineární):**
+    $M_{slon} / M_{myš} \approx 100\,000$
+
+2.  **Metabolický poměr (podle Kleiberova zákona):**
+    Poměr metabolických rychlostí je dán poměrem hmotností umocněným na $3/4$.
+    $Q_{0, slon} / Q_{0, myš} \approx (100\,000)^{3/4}$
+
+    Vypočítáním zjistíme, že $(100\,000)^{3/4}$ je přibližně $10\,000$.
+
+To znamená, že ačkoli je slon 100 000krát těžší než myš, jeho celkový metabolismus je jen asi 10 000krát vyšší.
+
+Tento rozdíl je ještě markantnější, když se podíváme na spotřebu energie na jeden kilogram tělesné hmotnosti.
+
+* Slon má metabolismus **10 000x** větší a hmotnost **100 000x** větší. Z toho vyplývá, že na každý kilogram své hmotnosti spotřebuje **10krát méně** energie než myš.
+* Myš má naopak velmi rychlý metabolismus. Na každý kilogram svého těla potřebuje mnohem více energie, aby si udržela stálou tělesnou teplotu a základní životní funkce. Proto myši potřebují jíst téměř nepřetržitě, zatímco velká zvířata mohou jíst méně často.
+
+Kleiberův zákon ukazuje, že bazální metabolismus velkých živočichů je sice vyšší než u malých, ale ne proporčně. To znamená, že menší zvířata spotřebovávají relativně více energie na jednotku hmotnosti. Tento jev má dalekosáhlé důsledky v biologii, od vysvětlení rozdílů v srdeční frekvenci a délce života po fungování ekosystémů.
+
+## Opakování
+
+* **Izometrický růst**: rovnoměrné zvýšení všech rozměrů ve stejném poměru.
+
+* **Alometrický růst:** nerovnoměrné zvyšování jednotlivých rozměrů.
+
+* Podíl plochy k objemu je nepřímo úměrný délce.
 $\frac{S}{V} \propto l^{-1}$
 
-[^4]: 
 
-**Nominální délka**: třetí odmocnina objemu živočicha
+* **Nominální délka**: třetí odmocnina objemu živočicha
 
-[^5]: 
+* **Charakteristická délka**: fyzikální rozměr živočicha
 
-**Charakteristická délka**: fyzikální rozměr živočicha
-
-[^6]: 
-
-**Logaritmus**: je matematická operace, která udává kolikrát musíme násobit
+* **Logaritmus**: je matematická operace, která udává kolikrát musíme násobit
         určité číslo označované jako báze sebou samým proto, aby jsme
         dostali jiné číslo. Např. logaritmus 100 s bází 10 se rovná 2
         ($\log_{10} 100 = 2$), protože 10 musíme mezi sebou vynásobit
