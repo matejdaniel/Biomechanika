@@ -663,7 +663,7 @@ dny bez vody, ale v případě, že nemá dostatečnou izolaci od chladu
 může být mrtvý do tří hodin. Fyzika a měřítka vlastností jsou
 základem pro pochopení většiny pozorování v biologie a medicíně.
 
-## Kleiberův zákon
+### Kleiberův zákon
 
 Kleiberův zákon je biologický princip, který popisuje vztah mezi bazálním metabolismem (minimálním množstvím energie, které organismus potřebuje k přežití) a tělesnou hmotností. Zákon říká, že metabolismus není přímo úměrný hmotnosti organismu, ale spíše roste s mocninou hmotnosti.
 
